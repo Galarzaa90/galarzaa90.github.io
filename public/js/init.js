@@ -1,7 +1,11 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+closeOnClick: true,
+'edge': 'left'
+});
+$('.collapsible').collapsible();
 
-  }); // end of document ready
+  });
 })(jQuery); // end of jQuery name space
