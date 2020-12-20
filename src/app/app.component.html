@@ -4,11 +4,11 @@
 <div class="container">
   <mat-card>
     <div fxLayout="row" fxLayoutAlign="space-between center">
-      <div>
+      <div fxFlex="25">
         <div class="profile-picture"
           style="background-image:url('assets/img/profile.jpg')"></div>
       </div>
-      <div>
+      <div fxFlex="75">
         <h1>
           {{profile.headline}}
         </h1>
@@ -19,16 +19,17 @@
     </div>
   </mat-card>
   <div fxLayout="row" fxLayout="none top">
-    <div>
+    <div fxFlex="25">
       <mat-card>
         <h2>Online</h2>
         <h2>Languages</h2>
         <h2>Interests</h2>
       </mat-card>
     </div>
-    <div>
+    <div fxFlex="75">
+      <h2>Work Experience</h2>
       <mat-accordion>
-        <mat-expansion-panel hideToggle *ngFor="let job of profile.workExperience">
+        <mat-expansion-panel [expanded]="i === 0" *ngFor="let job of profile.workExperience; let i = index">
           <mat-expansion-panel-header>
             <mat-panel-title>
               {{job.company}}
