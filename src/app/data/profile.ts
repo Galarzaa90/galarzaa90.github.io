@@ -93,5 +93,22 @@ export let profile = {
             position: 'Intern Developer',
             description: 'Developing an alternative control system for Heliostats solar tracking. A economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
         }
+    ],
+    education: [
+        {
+            name: 'Universidad de Sonora',
+            start: new Date('2009-08-01'),
+            end: new Date('2014-04-01'),
+            level: 'Bachelor\s Degree',
+            title: 'Mechatronics Engineering (Ingeniería Mecatrónica)',
+            logo: 'UNISON.png',
+        },
+        {
+            name: 'CBTis 11',
+            start: new Date('2006-08-01'),
+            end: new Date('2009-06-01'),
+            level: 'High School Diploma',
+            title: 'Specialization in Mechatronics'
+        }
     ]
 };
