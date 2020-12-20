@@ -27,6 +27,7 @@ export let profile = {
             start: new Date('2019-05-13'),
             end: new Date('2020-10-27'),
             position: 'Software Engineer',
+            logo: 'GilaSW.png',
             items: [
                 'Development of microservices and orchestrators based on Azure Functions.',
                 'Code-First Database design and management.',
@@ -38,6 +39,7 @@ export let profile = {
             start: new Date('2018-01-16'),
             end: new Date('2019-05-17'),
             position: 'Software Engineer',
+            logo: 'LYF.png',
             description: 'Development of applications and libraries for money management devices.',
             items: [
                 'Creation of applications for end-users, deployed in kiosks with multiple money devices.',
@@ -68,6 +70,7 @@ export let profile = {
             start: new Date('2015-03-01'),
             end: new Date('2020-05-01'),
             position: 'Technical Manager Assistant',
+            logo: 'UNISON.png',
             description: 'Assisting the technical manager and planning of the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
             items: [
                 'Development of applications and libraries for money management devices.',
@@ -86,6 +89,7 @@ export let profile = {
             company: 'Plataforma Solar de Hermosillo',
             start: new Date('2014-01-01'),
             end: new Date('2014-06-01'),
+            logo: 'PSH.png',
             position: 'Intern Developer',
             description: 'Developing an alternative control system for Heliostats solar tracking. A economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
         }
