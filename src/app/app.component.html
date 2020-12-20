@@ -1,41 +1,52 @@
 <mat-toolbar color="primary">
   <span>Allan Galarza</span>
 </mat-toolbar>
-<div class="container">
-  <mat-card>
-    <div fxLayout="row" fxLayoutAlign="space-between center">
-      <div fxFlex="25">
-        <div class="profile-picture"
-          style="background-image:url('assets/img/profile.jpg')"></div>
+<div class="container" fxLayout="column" fxLayoutGap="2%">
+  <div>
+    <mat-card>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxFlex="25">
+          <div class="profile-picture"
+            style="background-image:url('assets/img/profile.jpg')"></div>
+        </div>
+        <div fxFlex="75">
+          <h1>
+            {{profile.headline}}
+          </h1>
+          <p class="about-me">
+            {{profile.aboutMe}}
+          </p>
+        </div>
       </div>
-      <div fxFlex="75">
-        <h1>
-          {{profile.headline}}
-        </h1>
-        <p class="about-me">
-          {{profile.aboutMe}}
-        </p>
-      </div>
-    </div>
-  </mat-card>
-  <div fxLayout="row" fxLayout="none top">
-    <div fxFlex="25">
+    </mat-card>
+  </div>
+  <div fxLayout="row" fxLayout="none top" fxLayoutGap="1%">
+    <div fxFlex="20">
       <mat-card>
         <h2>Online</h2>
         <h2>Languages</h2>
+        <ul>
+          <li *ngFor="let language of profile.languages">
+            {{language.name}} ({{language.level}})
+          </li>
+        </ul>
         <h2>Interests</h2>
       </mat-card>
     </div>
-    <div fxFlex="75">
+    <div fxFlex="79">
       <h2>Work Experience</h2>
-      <mat-accordion>
-        <mat-expansion-panel [expanded]="i === 0" *ngFor="let job of profile.workExperience; let i = index">
+      <mat-accordion class="experience-panels">
+        <mat-expansion-panel [expanded]="i === 0"
+          *ngFor="let job of profile.workExperience; let i = index">
           <mat-expansion-panel-header>
             <mat-panel-title>
               {{job.company}}
             </mat-panel-title>
-            <mat-panel-description>
-              This is a summary of the content
+            <mat-panel-description *ngIf="job.end === undefined">
+              {{job.start | date: 'MMMM y'}} — Present
+            </mat-panel-description>
+            <mat-panel-description *ngIf="job.end != undefined">
+              {{job.start | date: 'MMMM y'}} — {{job.end | date: 'MMMM y'}}
             </mat-panel-description>
           </mat-expansion-panel-header>
           <p>This is the primary content of the panel.</p>
