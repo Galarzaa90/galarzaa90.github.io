@@ -49,7 +49,20 @@
               {{job.start | date: 'MMMM y'}} — {{job.end | date: 'MMMM y'}}
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>This is the primary content of the panel.</p>
+          <div fxLayout="row" fxLayoutAlign="space-between start">
+            <div fxFlex="90">
+              <p><b>{{job.position}}</b></p>
+              <p *ngIf="job.description != undefined"
+                [innerHTML]="job.description"></p>
+              <ul *ngIf="job.items != undefined">
+                <li *ngFor="let item of job.items">{{item}}</li>
+              </ul>
+            </div>
+            <div fxFlex="10">
+              <img class="company-logo" *ngIf="job.logo != undefined"
+                src="./assets/img/{{job.logo}}">
+            </div>
+          </div>
         </mat-expansion-panel>
       </mat-accordion>
     </div>
