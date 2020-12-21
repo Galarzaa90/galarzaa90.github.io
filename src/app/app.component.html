@@ -5,11 +5,11 @@
   <div>
     <mat-card>
       <div fxLayout="row" fxLayoutAlign="space-between center">
-        <div fxFlex="25">
+        <div fxFlex="20">
           <div class="profile-picture"
             style="background-image:url('assets/img/profile.jpg')"></div>
         </div>
-        <div fxFlex="75">
+        <div fxFlex="80">
           <h1>
             {{profile.headline}}
           </h1>
@@ -21,9 +21,11 @@
     </mat-card>
   </div>
   <div fxLayout="row" fxLayout="none top" fxLayoutGap="1%">
-    <div fxFlex="20">
+    <div fxFlex="30">
       <mat-card>
         <h2>Online</h2>
+          <p *ngFor="let link of profile.onlineProfiles"><fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a [href]="link.url">{{link.title}}</a></p>
+        
         <h2>Languages</h2>
         <ul>
           <li *ngFor="let language of profile.languages">
@@ -33,7 +35,7 @@
         <h2>Interests</h2>
       </mat-card>
     </div>
-    <div fxFlex="79">
+    <div fxFlex="69">
       <h2>Work Experience</h2>
       <mat-accordion class="experience-panels">
         <mat-expansion-panel [expanded]="i === 0"

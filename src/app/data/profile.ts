@@ -1,3 +1,6 @@
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 export let profile = {
     headline: 'Hello, my name is Allan!',
     aboutMe: 'I am a mechatronics engineer and software developer. I\'m mainly a backend developer, my favorite is Python. I love electronics, gaming and learning new things.',
@@ -15,12 +18,32 @@ export let profile = {
             level: 'Basic'
         }
     ],
+    onlineProfiles: [
+        {
+            icon: faEnvelope,
+            url: 'mailto:allan.galarza@gmail.com',
+            title: 'Email'
+        },
+        {
+            icon: faLinkedin,
+            url: 'https://www.linkedin.com/in/galarzaa/',
+            title: 'LinkedIn'
+        },
+        {
+            icon: faGithub,
+            url: 'https://github.com/Galarzaa90',
+            title: 'GitHub'
+        }
+    ],
     workExperience: [
         {
             company: 'Encora',
             start: new Date('2020-11-09'),
             logo: 'Encora.png',
             position: 'Software Engineer',
+            items: [
+                'API Design and development.'
+            ]
         },
         {
             company: 'Gila Software',
@@ -108,7 +131,16 @@ export let profile = {
             start: new Date('2006-08-01'),
             end: new Date('2009-06-01'),
             level: 'High School Diploma',
-            title: 'Specialization in Mechatronics'
+            title: 'Specialization in Mechatronics',
+            logo: 'cbtis11.png'
+        }
+    ],
+    projects: [
+        {
+            name: 'NabBot',
+            url: 'https://nabbot.xyz',
+            logo: 'NabBot'
         }
     ]
+
 };

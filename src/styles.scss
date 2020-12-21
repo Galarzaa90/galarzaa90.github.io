@@ -1,18 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: #fafafa;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+    background-color: #eeeeee;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: #4287f5;
+        text-decoration: none;
+    }
+}
 
 .container {
-    margin: 1% 20%;
+    margin: 1% 17%;
 }
 
 .profile-picture {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-  
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -29,4 +46,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .company-logo {
     width: 100%;
     height: auto;
-  }
+}
