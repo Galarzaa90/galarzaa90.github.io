@@ -1,15 +1,10 @@
-.experience-panels .mat-expansion-panel-header-title,
-.experience-panels .mat-expansion-panel-header-description {
-  flex-basis: 60%;
-}
 
 h2 {
   font-size: 150%;
 }
 
-.experience-panels .mat-expansion-panel-header-description {
-  justify-content: space-between;
-  align-items: center;
+.entry-dates.mat-expansion-panel-header-description {
+  flex-grow: 0;
 }
 
 .icon svg {
