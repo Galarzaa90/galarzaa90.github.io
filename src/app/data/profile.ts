@@ -1,9 +1,13 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { SimpleIcon } from 'simple-icons';
+const python: SimpleIcon = require('simple-icons/icons/python');
+const mysql: SimpleIcon = require('simple-icons/icons/mysql');
 
 export let profile = {
     headline: 'Hello, my name is Allan!',
     aboutMe: 'I am a mechatronics engineer and software developer. I\'m mainly a backend developer, my favorite is Python. I love electronics, gaming and learning new things.',
+    locatiomn: 'Mexico',
     languages: [
         {
             name: 'Spanish',
@@ -33,7 +37,18 @@ export let profile = {
             icon: faGithub,
             url: 'https://github.com/Galarzaa90',
             title: 'GitHub'
+        },
+        {
+            icon: faGitlab,
+            url: 'https://gitlab.com/Galarzaa90',
+            title: 'GitLab'
         }
+    ],
+    interests: [
+        'Electronics',
+        'Internet of Things',
+        'Gaming',
+        'PC Building'
     ],
     workExperience: [
         {
@@ -43,6 +58,21 @@ export let profile = {
             position: 'Software Engineer',
             items: [
                 'API Design and development.'
+            ],
+            skills: [
+                'python', 'mysql'
+            ]
+        },
+        {
+            company: 'Joybyte',
+            start: new Date('2020-06-15'),
+            end: new Date('2020-10-31'),
+            position: 'Freelancer Developer',
+            logo: 'joybyte.png',
+            items: [
+                'Design of APIs for mobile consumers.',
+                'Database First design and management.',
+                'Design and maintenance of stored procedures and other database logic.',
             ]
         },
         {
@@ -76,7 +106,7 @@ export let profile = {
             ]
         },
         {
-            company: 'I3',
+            company: 'i3',
             start: new Date('2015-06-12'),
             end: new Date('2017-12-31'),
             position: 'Consultant',
@@ -141,6 +171,15 @@ export let profile = {
             url: 'https://nabbot.xyz',
             logo: 'NabBot'
         }
-    ]
-
+    ],
+    skills: {
+        python: {
+            icon: python,
+            text: 'Python'
+        },
+        mysql: {
+            icon: mysql,
+            text: 'MySQL'
+        }
+    }
 };

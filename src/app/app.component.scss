@@ -3,7 +3,28 @@
   flex-basis: 60%;
 }
 
+h2 {
+  font-size: 150%;
+}
+
 .experience-panels .mat-expansion-panel-header-description {
   justify-content: space-between;
   align-items: center;
+}
+
+.icon svg {
+  height: 1em;
+  width: 1em;
+}
+
+.job-skill {
+  font-size: 2.2em;
+  svg {
+    margin: 0 2px 0 2px;
+  }
+}
+
+.sidebar > p {
+  margin:  0.7rem;
+  font-size: 1.1em;
 }

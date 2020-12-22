@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatCardModule,
     MatGridListModule,
     MatExpansionModule,
+    MatTooltipModule,
     FontAwesomeModule,
   ],
   providers: [],
