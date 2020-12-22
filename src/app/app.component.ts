@@ -12,7 +12,7 @@ const python: SimpleIcon = require('simple-icons/icons/python');
 export class AppComponent {
   title = 'galarzaa';
   profile = profile;
-  hover = {};
+  hover: { [name: string]: boolean } = {};
   python = python;
 
   constructor(public sanitizer: DomSanitizer) {

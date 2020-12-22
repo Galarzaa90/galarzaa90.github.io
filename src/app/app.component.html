@@ -1,31 +1,23 @@
 <mat-toolbar color="primary">
-  <span>Allan Galarza</span>
+  <span class="header-title">Allan Galarza</span>
 </mat-toolbar>
-<div class="container" fxLayout="column" fxLayoutGap="2%">
-  <div>
-    <mat-card>
-      <div fxLayout="row" fxLayoutAlign="space-between center">
-        <div fxFlex="20">
-          <div class="profile-picture"
-            style="background-image:url('assets/img/profile.jpg')"></div>
-        </div>
-        <div fxFlex="80">
-          <h1>
-            {{profile.headline}}
-          </h1>
-          <p class="about-me">
-            {{profile.aboutMe}}
-          </p>
-          <p>
-          </p>
-        </div>
+<div class="container">
+  <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="1%">
+    <div fxFlex="25" fxLayout="column" fxLayoutGap="2%">
+      <div>
+        <mat-card>
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <div class="profile-picture"></div>
+            <div>
+              <p class="about-me">
+                {{profile.aboutMe}}
+              </p>
+            </div>
+          </div>
+        </mat-card>
       </div>
-    </mat-card>
-  </div>
-  <div fxLayout="row" fxLayout="none top" fxLayoutGap="1%">
-    <div fxFlex="30">
       <mat-card class="sidebar">
-        <h2>Online</h2>
+        <h2>Contact</h2>
         <p *ngFor="let link of profile.onlineProfiles">
           <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a
             [href]="link.url">{{link.title}}</a>
@@ -65,11 +57,12 @@
                 <li *ngFor="let item of job.items">{{item}}</li>
               </ul>
               <span class="icon job-skill" *ngIf="job.skills != undefined">
-                <svg *ngFor="let skill of job.skills" [matTooltip]="profile.skills[skill].text" role="img" viewBox="0 0 24 24" 
-                (mouseover)="hover[job.company+skill] = true" 
-                (mouseleave)="hover[job.company+skill] = false" [style.fill]="hover[job.company+skill] ? toColor(profile.skills[skill].icon.hex) : null">
-                  
-                <path [attr.d]="profile.skills[skill].icon.path" />
+                <svg *ngFor="let skill of job.skills" [matTooltip]="skill.text"
+                  role="img" viewBox="0 0 24 24"
+                  (mouseover)="hover[job.company+skill.text] = true"
+                  (mouseleave)="hover[job.company+skill.text] = false"
+                  [style.fill]="hover[job.company+skill.text] ? toColor(skill.icon.hex) : null">
+                  <path [attr.d]="skill.icon.path" />
                 </svg>
               </span>
             </div>
@@ -80,6 +73,51 @@
           </div>
         </mat-expansion-panel>
       </mat-accordion>
+      <h2>Projects</h2>
+      <mat-accordion class="experience-panels">
+        <mat-expansion-panel hideToggle
+          *ngFor="let project of profile.projects; let i = index">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{project.name}}
+            </mat-panel-title>
+            <mat-panel-description *ngIf="project.end === undefined">
+              {{project.start | date: 'MMMM y'}} — Present
+            </mat-panel-description>
+            <mat-panel-description *ngIf="project.end != undefined">
+              {{project.start | date: 'MMMM y'}} —
+              {{project.end | date: 'MMMM y'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div fxLayout="row" fxLayoutAlign="space-between start">
+            <div fxFlex="90">
+              <p *ngIf="project.description != undefined"
+                [innerHTML]="project.description"></p>
+              <span class="icon job-skill" *ngIf="project.skills != undefined">
+                <svg *ngFor="let skill of project.skills"
+                  [matTooltip]="skill.text" role="img" viewBox="0 0 24 24"
+                  (mouseover)="hover[project.name+skill.text] = true"
+                  (mouseleave)="hover[project.name+skill.text] = false"
+                  [style.fill]="hover[project.name+skill.text] ? toColor(skill.icon.hex) : null">
+
+                  <path [attr.d]="skill.icon.path" />
+                </svg>
+              </span>
+            </div>
+            <div fxFlex="10">
+              <img class="company-logo" *ngIf="project.logo != undefined"
+                src="./assets/img/projects/{{project.logo}}">
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <h2>Skills & Tools</h2>
+      <mat-card>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip *ngFor="let skill of profile.skills">{{skill.name}}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card>
       <h2>Education</h2>
       <mat-accordion class="experience-panels">
         <mat-expansion-panel hideToggle
@@ -92,8 +130,8 @@
               {{school.start | date: 'MMMM y'}} — Present
             </mat-panel-description>
             <mat-panel-description *ngIf="school.end != undefined">
-              {{school.start | date: 'MMMM y'}} — {{school.end | date: 'MMMM
-              y'}}
+              {{school.start | date: 'MMMM y'}} —
+              {{school.end | date: 'MMMM y'}}
             </mat-panel-description>
           </mat-expansion-panel-header>
           <div fxLayout="row" fxLayoutAlign="space-between start">

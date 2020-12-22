@@ -14,6 +14,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -31,6 +33,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatGridListModule,
     MatExpansionModule,
     MatTooltipModule,
+    MatChipsModule,
+    MatCheckboxModule,
     FontAwesomeModule,
   ],
   providers: [],

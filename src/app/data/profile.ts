@@ -1,5 +1,6 @@
-import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Socket } from 'dgram';
 import { SimpleIcon } from 'simple-icons';
 const python: SimpleIcon = require('simple-icons/icons/python');
 const mysql: SimpleIcon = require('simple-icons/icons/mysql');
@@ -16,14 +17,182 @@ const arduino: SimpleIcon = require('simple-icons/icons/arduino');
 const raspberrypi: SimpleIcon = require('simple-icons/icons/raspberrypi');
 const cplusplus: SimpleIcon = require('simple-icons/icons/cplusplus');
 const angularjs: SimpleIcon = require('simple-icons/icons/angularjs');
+const angular: SimpleIcon = require('simple-icons/icons/angular');
 const electron: SimpleIcon = require('simple-icons/icons/electron');
 const javascript: SimpleIcon = require('simple-icons/icons/javascript');
+const typescript: SimpleIcon = require('simple-icons/icons/typescript');
+const postgresql: SimpleIcon = require('simple-icons/icons/postgresql');
+const socketio: SimpleIcon = require('simple-icons/icons/socket-dot-io');
+const redis: SimpleIcon = require('simple-icons/icons/redis');
+const ubuntu: SimpleIcon = require('simple-icons/icons/ubuntu');
+const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
 
+interface Profile {
+    headline: string;
+    aboutMe: string;
+    location: string;
+    languages: Array<Language>;
+    onlineProfiles: Array<OnlineProfile>;
+    interests: Array<string>;
+    workExperience: Array<JobEntry>;
+    education: Array<School>;
+    projects: Array<Project>;
+    skills: Array<Skill>;
+}
 
-export let profile = {
+interface Language {
+    name: string;
+    level: string;
+}
+
+interface OnlineProfile {
+    icon: IconDefinition;
+    url: string;
+    title: string;
+}
+
+interface JobEntry {
+    company: string;
+    start: Date;
+    end?: Date;
+    logo?: string;
+    position: string;
+    description?: string;
+    items?: Array<string>;
+    skills?: Array<SkillIcon>;
+}
+
+interface School {
+    name: string;
+    start: Date;
+    end?: Date;
+    level: string;
+    title: string;
+    logo: string;
+}
+
+interface Project {
+    name: string;
+    url: string;
+    start: Date;
+    end?: Date;
+    logo?: string;
+    description: string;
+    skills: Array<SkillIcon>;
+}
+
+interface Skill {
+    name: string;
+    type: string;
+}
+interface SkillIcon {
+    icon: SimpleIcon;
+    text: string;
+}
+
+const icons = {
+    python: {
+        icon: python,
+        text: 'Python'
+    },
+    mysql: {
+        icon: mysql,
+        text: 'MySQL'
+    },
+    csharp: {
+        icon: csharp,
+        text: 'C#'
+    },
+    azurefunctions: {
+        icon: azurefunction,
+        text: 'Azure Functions'
+    },
+    mssql: {
+        icon: microsoftsqlserver,
+        text: 'Microsoft SQL Server'
+    },
+    xamarin: {
+        icon: xamarin,
+        text: 'Xamarin'
+    },
+    django: {
+        icon: django,
+        text: 'Django'
+    },
+    kotlin: {
+        icon: kotlin,
+        text: 'Kotlin'
+    },
+    nodejs: {
+        icon: nodejs,
+        text: 'NodeJS'
+    },
+    android: {
+        icon: android,
+        text: 'Android'
+    },
+    java: {
+        icon: java,
+        text: 'Java'
+    },
+    raspberrypi: {
+        icon: raspberrypi,
+        text: 'Raspberry Pi'
+    },
+    cplusplus: {
+        icon: cplusplus,
+        text: 'C++'
+    },
+    arduino: {
+        icon: arduino,
+        text: 'Arduino'
+    },
+    angularjs: {
+        icon: angularjs,
+        text: 'AngularJS'
+    },
+    javascript: {
+        icon: javascript,
+        text: 'JavaScript'
+    },
+    electron: {
+        icon: electron,
+        text: 'Electron'
+    },
+    postgresql: {
+        icon: postgresql,
+        text: 'PostgreSQL'
+    },
+    angular: {
+        icon: angular,
+        text: 'Angular'
+    },
+    socketio: {
+        icon: socketio,
+        text: 'Socket.io'
+    },
+    ubuntu: {
+        icon: ubuntu,
+        text: 'Ubuntu'
+    },
+    redis: {
+        icon: redis,
+        text: 'Redis'
+    },
+    sqlite: {
+        icon: sqlite,
+        text: 'SQLite'
+    },
+    typescript: {
+        icon: typescript,
+        text: 'TypeScript'
+    }
+};
+
+export let profile: Profile = {
     headline: 'Hello, my name is Allan!',
     aboutMe: 'I am a mechatronics engineer and software developer. I\'m mainly a backend developer, my favorite is Python. I love electronics, gaming and learning new things.',
-    locatiomn: 'Mexico',
+    location: 'Mexico',
     languages: [
         {
             name: 'Spanish',
@@ -76,7 +245,7 @@ export let profile = {
                 'API Design and development.'
             ],
             skills: [
-                'python', 'mysql'
+                icons.python, icons.mysql
             ]
         },
         {
@@ -91,7 +260,7 @@ export let profile = {
                 'Design and maintenance of stored procedures and other database logic.',
             ],
             skills: [
-                'csharp', 'azurefunctions', 'mssql'
+                icons.csharp, icons.azurefunctions, icons.mssql
             ]
         },
         {
@@ -106,7 +275,7 @@ export let profile = {
                 'Application of scrum methodology.',
             ],
             skills: [
-                'csharp', 'azurefunctions', 'mssql', 'xamarin', 'python', 'django'
+                icons.csharp, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
             ]
         },
         {
@@ -127,14 +296,14 @@ export let profile = {
                 'Temporary outsourced at Qualisys to aid in development of SAP Business One addons.'
             ],
             skills: [
-                'csharp', 'nodejs', 'javascript', 'kotlin', 'raspberrypi', 'angularjs', 'electron'
+                icons.csharp, icons.nodejs, icons.kotlin, icons.raspberrypi, icons.angularjs, icons.electron
             ]
         },
         {
             company: 'i3',
             start: new Date('2015-06-12'),
             end: new Date('2017-12-31'),
-            position: 'Consultant',
+            position: 'Innovation Development Engineer',
             description: 'Development of innovation oriented projects in different areas. My work was focused on electronics, microcontrollers and software.',
             items: [
                 'Creation of an Android app that uses Bluetooth LE technology to communicate with an embedded device controlling headlights on ATV vehicles.',
@@ -143,7 +312,7 @@ export let profile = {
                 'Development and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
             ],
             skills: [
-                'android', 'java', 'cplusplus', 'arduino'
+                icons.android, icons.java, icons.cplusplus, icons.arduino
             ]
         },
         {
@@ -159,7 +328,7 @@ export let profile = {
                 'Design of solar tracking mechanical structures for photovoltaic cells.'
             ],
             skills: [
-                'android', 'java', 'cplusplus', 'arduino'
+                icons.android, icons.java, icons.cplusplus, icons.arduino
             ]
         },
         {
@@ -169,7 +338,7 @@ export let profile = {
             position: 'Developer',
             description: 'Developing of an energy saving control system, focus on school classrooms, based on configurable schedules obtained from a server.',
             skills: [
-                'cplusplus', 'arduino', 'java', 'android'
+                icons.cplusplus, icons.arduino, icons.java, icons.android
             ]
         },
         {
@@ -180,7 +349,7 @@ export let profile = {
             position: 'Intern Developer',
             description: 'Developing an alternative control system for Heliostats solar tracking. A economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
             skills: [
-                'cplusplus', 'arduino'
+                icons.cplusplus, icons.arduino
             ]
         }
     ],
@@ -206,77 +375,117 @@ export let profile = {
         {
             name: 'NabBot',
             url: 'https://nabbot.xyz',
-            logo: 'NabBot'
+            start: new Date('2016-03-02'),
+            logo: 'NabBot.png',
+            description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.',
+            skills: [
+                icons.python, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis
+            ]
+        },
+        {
+            name: 'android-things-rc522',
+            url: '',
+            start: new Date('2017-03-28'),
+            end: new Date('2017-11-03'),
+            description: 'Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
+            skills: [
+                icons.java,
+                icons.android
+            ]
+        },
+        {
+            name: 'tibiawiki-sql',
+            url: '',
+            start: new Date('2017-10-27'),
+            description: 'Python script that fetches TibiaWiki via its MediaWiki API. Article information is parsed and stored in a SQLite database.',
+            skills: [
+                icons.python,
+                icons.sqlite
+            ]
+        },
+        {
+            name: 'tibia.py',
+            url: 'https://github.com/Galarzaa90/tibia.py',
+            start: new Date('2018-06-31'),
+            description: 'API to parse tibia.com content into python objects.',
+            skills: [
+                icons.python,
+            ]
         }
     ],
-    skills: {
-        python: {
-            icon: python,
-            text: 'Python'
+    skills: [
+        {
+            name: 'Python',
+            type: 'Programming Language'
         },
-        mysql: {
-            icon: mysql,
-            text: 'MySQL'
+        {
+            name: 'Kotlin',
+            type: 'Programming Language'
         },
-        csharp: {
-            icon: csharp,
-            text: 'C#'
+        {
+            name: 'C#',
+            type: 'Programming Language'
         },
-        azurefunctions: {
-            icon: azurefunction,
-            text: 'Azure Functions'
+        {
+            name: 'Java',
+            type: 'Programming Language'
         },
-        mssql: {
-            icon: microsoftsqlserver,
-            text: 'Microsoft SQL Server'
+        {
+            name: 'JavaScript',
+            type: 'Programming Language'
         },
-        xamarin: {
-            icon: xamarin,
-            text: 'Xamarin'
+        {
+            name: 'TypeScript',
+            type: 'Programming Language'
         },
-        django: {
-            icon: django,
-            text: 'Django'
+        {
+            name: 'C++',
+            type: 'Programming Language'
         },
-        kotlin: {
-            icon: kotlin,
-            text: 'Kotlin'
+        {
+            name: 'Android',
+            type: 'Platforms'
         },
-        nodejs: {
-            icon: nodejs,
-            text: 'NodeJS'
+        {
+            name: '.NET',
+            type: 'Platforms'
         },
-        android: {
-            icon: android,
-            text: 'Android'
+        {
+            name: 'Angular',
+            type: 'Platforms'
         },
-        java: {
-            icon: java,
-            text: 'Java'
+        {
+            name: 'Raspberry Pi',
+            type: 'Platforms'
         },
-        raspberrypi: {
-            icon: raspberrypi,
-            text: 'Raspberry Pi'
+        {
+            name: 'Arduino',
+            type: 'Platforms'
         },
-        cplusplus: {
-            icon: cplusplus,
-            text: 'C++'
+        {
+            name: 'Processing',
+            type: 'Platforms'
         },
-        arduino: {
-            icon: arduino,
-            text: 'Arduino'
+        {
+            name: 'PostgreSQL',
+            type: 'Platforms'
         },
-        angularjs: {
-            icon: angularjs,
-            text: 'AngularJS'
+        {
+            name: 'git',
+            type: 'Other'
         },
-        javascript: {
-            icon: javascript,
-            text: 'JavaScript'
+        {
+            name: 'SolidWorks',
+            type: 'Other'
         },
-        electron: {
-            icon: electron,
-            text: 'Electron'
-        }
-    }
+        {
+            name: 'PCB Design',
+            type: 'Other'
+        },
+
+        {
+            name: 'Digital Electronics',
+            type: 'Other'
+        },
+    ]
 };
