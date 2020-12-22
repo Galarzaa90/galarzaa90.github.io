@@ -3,6 +3,22 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SimpleIcon } from 'simple-icons';
 const python: SimpleIcon = require('simple-icons/icons/python');
 const mysql: SimpleIcon = require('simple-icons/icons/mysql');
+const csharp: SimpleIcon = require('simple-icons/icons/csharp');
+const azurefunction: SimpleIcon = require('simple-icons/icons/azurefunctions');
+const microsoftsqlserver: SimpleIcon = require('simple-icons/icons/microsoftsqlserver');
+const django: SimpleIcon = require('simple-icons/icons/django');
+const xamarin: SimpleIcon = require('simple-icons/icons/xamarin');
+const nodejs: SimpleIcon = require('simple-icons/icons/node-dot-js');
+const kotlin: SimpleIcon = require('simple-icons/icons/kotlin');
+const android: SimpleIcon = require('simple-icons/icons/android');
+const java: SimpleIcon = require('simple-icons/icons/java');
+const arduino: SimpleIcon = require('simple-icons/icons/arduino');
+const raspberrypi: SimpleIcon = require('simple-icons/icons/raspberrypi');
+const cplusplus: SimpleIcon = require('simple-icons/icons/cplusplus');
+const angularjs: SimpleIcon = require('simple-icons/icons/angularjs');
+const electron: SimpleIcon = require('simple-icons/icons/electron');
+const javascript: SimpleIcon = require('simple-icons/icons/javascript');
+
 
 export let profile = {
     headline: 'Hello, my name is Allan!',
@@ -73,6 +89,9 @@ export let profile = {
                 'Design of APIs for mobile consumers.',
                 'Database First design and management.',
                 'Design and maintenance of stored procedures and other database logic.',
+            ],
+            skills: [
+                'csharp', 'azurefunctions', 'mssql'
             ]
         },
         {
@@ -85,6 +104,9 @@ export let profile = {
                 'Development of microservices and orchestrators based on Azure Functions.',
                 'Code-First Database design and management.',
                 'Application of scrum methodology.',
+            ],
+            skills: [
+                'csharp', 'azurefunctions', 'mssql', 'xamarin', 'python', 'django'
             ]
         },
         {
@@ -103,6 +125,9 @@ export let profile = {
                 'Management of local and remote databases.',
                 'Implementation of quality coding practices.',
                 'Temporary outsourced at Qualisys to aid in development of SAP Business One addons.'
+            ],
+            skills: [
+                'csharp', 'nodejs', 'javascript', 'kotlin', 'raspberrypi', 'angularjs', 'electron'
             ]
         },
         {
@@ -116,6 +141,9 @@ export let profile = {
                 'Design and manufacturing of protective cases for electronic control devices.',
                 'Development of an Android app to remotely monitor ambient conditions of Aquaponic greenhouses.',
                 'Development and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
+            ],
+            skills: [
+                'android', 'java', 'cplusplus', 'arduino'
             ]
         },
         {
@@ -129,6 +157,9 @@ export let profile = {
                 'Development of applications and libraries for money management devices.',
                 'Design of printed circuit boards.',
                 'Design of solar tracking mechanical structures for photovoltaic cells.'
+            ],
+            skills: [
+                'android', 'java', 'cplusplus', 'arduino'
             ]
         },
         {
@@ -136,7 +167,10 @@ export let profile = {
             start: new Date('2014-06-01'),
             end: new Date('2014-11-01'),
             position: 'Developer',
-            description: 'Developing of an energy saving control system, focus on school classrooms, based on configurable schedules obtained from a server.'
+            description: 'Developing of an energy saving control system, focus on school classrooms, based on configurable schedules obtained from a server.',
+            skills: [
+                'cplusplus', 'arduino', 'java', 'android'
+            ]
         },
         {
             company: 'Plataforma Solar de Hermosillo',
@@ -145,6 +179,9 @@ export let profile = {
             logo: 'PSH.png',
             position: 'Intern Developer',
             description: 'Developing an alternative control system for Heliostats solar tracking. A economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
+            skills: [
+                'cplusplus', 'arduino'
+            ]
         }
     ],
     education: [
@@ -180,6 +217,66 @@ export let profile = {
         mysql: {
             icon: mysql,
             text: 'MySQL'
+        },
+        csharp: {
+            icon: csharp,
+            text: 'C#'
+        },
+        azurefunctions: {
+            icon: azurefunction,
+            text: 'Azure Functions'
+        },
+        mssql: {
+            icon: microsoftsqlserver,
+            text: 'Microsoft SQL Server'
+        },
+        xamarin: {
+            icon: xamarin,
+            text: 'Xamarin'
+        },
+        django: {
+            icon: django,
+            text: 'Django'
+        },
+        kotlin: {
+            icon: kotlin,
+            text: 'Kotlin'
+        },
+        nodejs: {
+            icon: nodejs,
+            text: 'NodeJS'
+        },
+        android: {
+            icon: android,
+            text: 'Android'
+        },
+        java: {
+            icon: java,
+            text: 'Java'
+        },
+        raspberrypi: {
+            icon: raspberrypi,
+            text: 'Raspberry Pi'
+        },
+        cplusplus: {
+            icon: cplusplus,
+            text: 'C++'
+        },
+        arduino: {
+            icon: arduino,
+            text: 'Arduino'
+        },
+        angularjs: {
+            icon: angularjs,
+            text: 'AngularJS'
+        },
+        javascript: {
+            icon: javascript,
+            text: 'JavaScript'
+        },
+        electron: {
+            icon: electron,
+            text: 'Electron'
         }
     }
 };
