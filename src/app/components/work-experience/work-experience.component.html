@@ -23,14 +23,8 @@
                 <ul *ngIf="job.items != undefined">
                     <li *ngFor="let item of job.items">{{item}}</li>
                 </ul>
-                <span class="icon job-skill" *ngIf="job.skills != undefined">
-                    <svg *ngFor="let skill of job.skills"
-                        [matTooltip]="skill.text" role="img" viewBox="0 0 24 24"
-                        (mouseover)="hover[job.company+skill.text] = true"
-                        (mouseleave)="hover[job.company+skill.text] = false"
-                        [style.fill]="hover[job.company+skill.text] ? toColor(skill.icon.hex) : null">
-                        <path [attr.d]="skill.icon.path" />
-                    </svg>
+                <span class="job-skills" *ngIf="job.skills != undefined">
+                    <app-skill-icon [skill]="skill" *ngFor="let skill of job.skills"></app-skill-icon>
                 </span>
             </div>
             <div fxFlex="10">

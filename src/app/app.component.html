@@ -36,46 +36,9 @@
       <div>
         <app-work-experience [entries]="profile.workExperience"></app-work-experience>
       </div>
-      <h2>Projects</h2>
-      <mat-accordion class="experience-panels">
-        <mat-expansion-panel hideToggle
-          *ngFor="let project of profile.projects; let i = index">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{project.name}}
-            </mat-panel-title>
-            <mat-panel-description *ngIf="project.end === undefined"
-              class="entry-dates">
-              {{project.start | date: 'MMMM y'}} — Present
-            </mat-panel-description>
-            <mat-panel-description *ngIf="project.end != undefined"
-              class="entry-dates">
-              {{project.start | date: 'MMMM y'}} —
-              {{project.end | date: 'MMMM y'}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <div fxLayout="row" fxLayoutAlign="space-between start">
-            <div fxFlex="90">
-              <p *ngIf="project.description != undefined"
-                [innerHTML]="project.description"></p>
-              <span class="icon job-skill" *ngIf="project.skills != undefined">
-                <svg *ngFor="let skill of project.skills"
-                  [matTooltip]="skill.text" role="img" viewBox="0 0 24 24"
-                  (mouseover)="hover[project.name+skill.text] = true"
-                  (mouseleave)="hover[project.name+skill.text] = false"
-                  [style.fill]="hover[project.name+skill.text] ? toColor(skill.icon.hex) : null">
-
-                  <path [attr.d]="skill.icon.path" />
-                </svg>
-              </span>
-            </div>
-            <div fxFlex="10">
-              <img class="company-logo" *ngIf="project.logo != undefined"
-                src="./assets/img/projects/{{project.logo}}">
-            </div>
-          </div>
-        </mat-expansion-panel>
-      </mat-accordion>
+      <div>
+        <app-projects [projects]="profile.projects"></app-projects>
+      </div>
       <h2>Skills & Tools</h2>
       <mat-card>
         <mat-chip-list aria-label="Fish selection">

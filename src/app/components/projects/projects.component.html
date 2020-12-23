@@ -1,0 +1,34 @@
+<h2>Projects</h2>
+<mat-accordion class="experience-panels">
+    <mat-expansion-panel hideToggle *ngFor="let project of projects">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{project.name}}
+            </mat-panel-title>
+            <mat-panel-description *ngIf="project.end === undefined"
+                class="entry-dates">
+                {{project.start | date: 'MMMM y'}} — Present
+            </mat-panel-description>
+            <mat-panel-description *ngIf="project.end != undefined"
+                class="entry-dates">
+                {{project.start | date: 'MMMM y'}} —
+                {{project.end | date: 'MMMM y'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout="row" fxLayoutAlign="space-between start">
+            <div fxFlex="90">
+                <p *ngIf="project.description != undefined"
+                    [innerHTML]="project.description"></p>
+                <span class="project-skills"
+                    *ngIf="project.skills != undefined">
+                    <app-skill-icon [skill]="skill"
+                        *ngFor="let skill of project.skills"></app-skill-icon>
+                </span>
+            </div>
+            <div fxFlex="10">
+                <img class="company-logo" *ngIf="project.logo != undefined"
+                    src="./assets/img/projects/{{project.logo}}">
+            </div>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

@@ -71,7 +71,7 @@ interface School {
     logo: string;
 }
 
-interface Project {
+export interface Project {
     name: string;
     url: string;
     start: Date;
@@ -85,7 +85,7 @@ interface Skill {
     name: string;
     type: string;
 }
-interface SkillIcon {
+export interface SkillIcon {
     icon: SimpleIcon;
     text: string;
 }

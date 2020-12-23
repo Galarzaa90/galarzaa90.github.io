@@ -3,20 +3,8 @@ h2 {
   font-size: 150%;
 }
 
-.entry-dates.mat-expansion-panel-header-description {
+::ng-deep .entry-dates.mat-expansion-panel-header-description {
   flex-grow: 0;
-}
-
-.icon svg {
-  height: 1em;
-  width: 1em;
-}
-
-.job-skill {
-  font-size: 2.2em;
-  svg {
-    margin: 0 2px 0 2px;
-  }
 }
 
 .sidebar > p {

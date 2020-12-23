@@ -8,15 +8,9 @@ import { JobEntry } from 'src/app/data/profile';
 })
 export class WorkExperienceComponent implements OnInit {
   @Input() entries: Array<JobEntry> = [];
-  hover: { [name: string]: boolean } = {};
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  toColor(hex: string): string {
-    return `#${hex}`;
-  }
-
 }
