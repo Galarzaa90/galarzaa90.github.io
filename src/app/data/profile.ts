@@ -1,6 +1,5 @@
 import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Socket } from 'dgram';
 import { SimpleIcon } from 'simple-icons';
 const python: SimpleIcon = require('simple-icons/icons/python');
 const mysql: SimpleIcon = require('simple-icons/icons/mysql');
@@ -243,6 +242,7 @@ export let profile: Profile = {
             logo: 'Encora.png',
             url: 'https://www.encora.com',
             position: 'Software Engineer',
+            description: 'Previously known as Nearsoft. Working as a backend developend, at the moment focusing in Python.',
             items: [
                 'API Design and development.'
             ],
@@ -257,6 +257,7 @@ export let profile: Profile = {
             url: 'https://www.joybyte.com/',
             position: 'Freelancer Developer',
             logo: 'joybyte.png',
+            description: 'Supported the backend team off-hours with the development of a new release for a mobile pregnancy tracking app.',
             items: [
                 'Design of APIs for mobile consumers.',
                 'Database First design and management.',
@@ -273,6 +274,7 @@ export let profile: Profile = {
             url: 'https://gilasw.com/',
             position: 'Software Engineer',
             logo: 'GilaSW.png',
+            description: 'Worked on multiple projects for multiple clients as part of the backend development team. Mainly using C#.',
             items: [
                 'Development of microservices and orchestrators based on Azure Functions.',
                 'Code-First Database design and management.',
@@ -342,7 +344,7 @@ export let profile: Profile = {
             start: new Date('2014-06-01'),
             end: new Date('2014-11-01'),
             position: 'Developer',
-            description: 'Developing of an energy saving control system, focus on school classrooms, based on configurable schedules obtained from a server.',
+            description: 'Developing of an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server.',
             skills: [
                 icons.cplusplus, icons.arduino, icons.java, icons.android
             ]

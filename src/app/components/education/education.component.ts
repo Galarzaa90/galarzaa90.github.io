@@ -18,6 +18,12 @@ export class EducationComponent implements OnInit {
       shareReplay()
     );
 
+  isLarge$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Large)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {

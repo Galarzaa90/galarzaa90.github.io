@@ -1,27 +1,36 @@
 <h2>Education</h2>
 <mat-accordion class="experience-panels">
-    <mat-expansion-panel hideToggle
-        *ngFor="let school of entries"[hideToggle]="!(isXSmall$ | async)">
+    <mat-expansion-panel hideToggle *ngFor="let school of entries"
+        [hideToggle]="!(isXSmall$ | async)">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 {{school.name}}
             </mat-panel-title>
             <mat-panel-description class="entry-dates" fxHide.lt-sm="true">
                 <span *ngIf="school.end === undefined">
-                    {{school.start | date: 'MMMM y'}} — Present
+                    {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}} — Present
                 </span>
                 <span *ngIf="school.end !== undefined">
-                    {{school.start | date: 'MMMM y'}} —
-                    {{school.end | date: 'MMMM y'}}
+                    {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}} —
+                    {{school.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
                 </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
         <div fxLayout="row" fxLayoutAlign="space-between start">
             <div fxFlex="90">
-                <p>{{school.title}}</p>
-                <p>{{school.level}}</p>
+                <p>{{school.title}}<br>
+                {{school.level}}<br>
+                <span fxShow.lt-sm="true" fxHide class="date-subtitle">
+                    <span *ngIf="school.end === undefined">
+                        {{school.start | date: 'MMMM y'}} — Present
+                    </span>
+                    <span *ngIf="school.end !== undefined">
+                        {{school.start | date: 'MMMM y'}} —
+                        {{school.end | date: 'MMMM y'}}
+                    </span>
+                </span>
             </div>
-            <div fxFlex="10">
+            <div fxFlex="10" fxFlex.lt-lg="20">
                 <img class="company-logo" *ngIf="school.logo != undefined"
                     src="./assets/img/{{school.logo}}">
             </div>

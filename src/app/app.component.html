@@ -32,20 +32,22 @@
         </p>
       </mat-card>
     </div>
-    <div fxFlex="69">
+    <div fxFlex="69" fxLayout="column" fxLayoutGap="2%">
       <div>
         <app-work-experience [entries]="profile.workExperience"></app-work-experience>
       </div>
       <div>
         <app-projects [projects]="profile.projects"></app-projects>
       </div>
-      <h2>Skills & Tools</h2>
-      <mat-card>
-        <mat-chip-list aria-label="Skills">
-          <mat-chip *ngFor="let skill of profile.skills">{{skill.name}}
-          </mat-chip>
-        </mat-chip-list>
-      </mat-card>
+      <div>
+        <h2>Skills & Tools</h2>
+        <mat-card>
+          <mat-chip-list aria-label="Skills">
+            <mat-chip *ngFor="let skill of profile.skills">{{skill.name}}
+            </mat-chip>
+          </mat-chip-list>
+        </mat-card>
+      </div>
       <app-education [entries]="profile.education"></app-education>
     </div>
   </div>

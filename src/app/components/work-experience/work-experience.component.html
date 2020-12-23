@@ -9,17 +9,27 @@
             </mat-panel-title>
             <mat-panel-description class="entry-dates" fxHide.lt-sm="true">
                 <span *ngIf="job.end === undefined">
-                    {{job.start | date: 'MMMM y'}} — Present
+                    {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}} — Present
                 </span>
                 <span *ngIf="job.end !== undefined">
-                    {{job.start | date: 'MMMM y'}} —
-                    {{job.end | date: 'MMMM y'}}
+                    {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}} —
+                    {{job.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
                 </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
         <div fxLayout="row" fxLayoutAlign="space-between start">
             <div fxFlex="90">
-                <p><b>{{job.position}}</b></p>
+                <p><b>{{job.position}}</b><br>
+                    <span fxShow.lt-sm="true" fxHide class="date-subtitle">
+                        <span *ngIf="job.end === undefined">
+                            {{job.start | date: 'MMMM y'}} — Present
+                        </span>
+                        <span *ngIf="job.end !== undefined">
+                            {{job.start | date: 'MMMM y'}} —
+                            {{job.end | date: 'MMMM y'}}
+                        </span>
+                    </span>
+                </p>
                 <p *ngIf="job.description != undefined"
                     [innerHTML]="job.description"></p>
                 <ul *ngIf="job.items != undefined">
@@ -30,7 +40,7 @@
                         *ngFor="let skill of job.skills"></app-skill-icon>
                 </span>
             </div>
-            <div fxFlex="10">
+            <div fxFlex="10" fxFlex.lt-lg="20">
                 <a [href]="job.url"
                     *ngIf="job.logo != undefined && job.url != undefined"
                     target="_blank">
