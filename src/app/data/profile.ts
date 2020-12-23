@@ -51,7 +51,7 @@ interface OnlineProfile {
     title: string;
 }
 
-interface JobEntry {
+export interface JobEntry {
     company: string;
     start: Date;
     end?: Date;

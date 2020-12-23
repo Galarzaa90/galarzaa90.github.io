@@ -33,46 +33,9 @@
       </mat-card>
     </div>
     <div fxFlex="69">
-      <h2>Work Experience</h2>
-      <mat-accordion class="experience-panels">
-        <mat-expansion-panel [expanded]="i === 0" hideToggle
-          *ngFor="let job of profile.workExperience; let i = index">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{job.company}}
-            </mat-panel-title>
-            <mat-panel-description *ngIf="job.end === undefined" class="entry-dates">
-              {{job.start | date: 'MMMM y'}} — Present
-            </mat-panel-description>
-            <mat-panel-description *ngIf="job.end != undefined" class="entry-dates">
-              {{job.start | date: 'MMMM y'}} — {{job.end | date: 'MMMM y'}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <div fxLayout="row" fxLayoutAlign="space-between start">
-            <div fxFlex="90">
-              <p><b>{{job.position}}</b></p>
-              <p *ngIf="job.description != undefined"
-                [innerHTML]="job.description"></p>
-              <ul *ngIf="job.items != undefined">
-                <li *ngFor="let item of job.items">{{item}}</li>
-              </ul>
-              <span class="icon job-skill" *ngIf="job.skills != undefined">
-                <svg *ngFor="let skill of job.skills" [matTooltip]="skill.text"
-                  role="img" viewBox="0 0 24 24"
-                  (mouseover)="hover[job.company+skill.text] = true"
-                  (mouseleave)="hover[job.company+skill.text] = false"
-                  [style.fill]="hover[job.company+skill.text] ? toColor(skill.icon.hex) : null">
-                  <path [attr.d]="skill.icon.path" />
-                </svg>
-              </span>
-            </div>
-            <div fxFlex="10">
-              <img class="company-logo" *ngIf="job.logo != undefined"
-                src="./assets/img/{{job.logo}}">
-            </div>
-          </div>
-        </mat-expansion-panel>
-      </mat-accordion>
+      <div>
+        <app-work-experience [entries]="profile.workExperience"></app-work-experience>
+      </div>
       <h2>Projects</h2>
       <mat-accordion class="experience-panels">
         <mat-expansion-panel hideToggle
@@ -81,10 +44,12 @@
             <mat-panel-title>
               {{project.name}}
             </mat-panel-title>
-            <mat-panel-description *ngIf="project.end === undefined" class="entry-dates">
+            <mat-panel-description *ngIf="project.end === undefined"
+              class="entry-dates">
               {{project.start | date: 'MMMM y'}} — Present
             </mat-panel-description>
-            <mat-panel-description *ngIf="project.end != undefined" class="entry-dates">
+            <mat-panel-description *ngIf="project.end != undefined"
+              class="entry-dates">
               {{project.start | date: 'MMMM y'}} —
               {{project.end | date: 'MMMM y'}}
             </mat-panel-description>
@@ -126,10 +91,12 @@
             <mat-panel-title>
               {{school.name}}
             </mat-panel-title>
-            <mat-panel-description *ngIf="school.end === undefined" class="entry-dates">
+            <mat-panel-description *ngIf="school.end === undefined"
+              class="entry-dates">
               {{school.start | date: 'MMMM y'}} — Present
             </mat-panel-description>
-            <mat-panel-description *ngIf="school.end != undefined" class="entry-dates">
+            <mat-panel-description *ngIf="school.end != undefined"
+              class="entry-dates">
               {{school.start | date: 'MMMM y'}} —
               {{school.end | date: 'MMMM y'}}
             </mat-panel-description>
