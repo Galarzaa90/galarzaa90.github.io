@@ -24,12 +24,15 @@
                     <li *ngFor="let item of job.items">{{item}}</li>
                 </ul>
                 <span class="job-skills" *ngIf="job.skills != undefined">
-                    <app-skill-icon [skill]="skill" *ngFor="let skill of job.skills"></app-skill-icon>
+                    <app-skill-icon [skill]="skill"
+                        *ngFor="let skill of job.skills"></app-skill-icon>
                 </span>
             </div>
             <div fxFlex="10">
-                <img class="company-logo" *ngIf="job.logo != undefined"
-                    src="./assets/img/{{job.logo}}">
+                <a [href]="job.url" *ngIf="job.logo != undefined && job.url != undefined" target="_blank">
+                    <img class="company-logo" src="./assets/img/{{job.logo}}">
+                </a>
+                <img class="company-logo" src="./assets/img/{{job.logo}}" *ngIf="job.logo != undefined && job.url == undefined">
             </div>
         </div>
     </mat-expansion-panel>

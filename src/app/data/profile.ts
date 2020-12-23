@@ -56,6 +56,7 @@ export interface JobEntry {
     start: Date;
     end?: Date;
     logo?: string;
+    url?: string;
     position: string;
     description?: string;
     items?: Array<string>;
@@ -240,6 +241,7 @@ export let profile: Profile = {
             company: 'Encora',
             start: new Date('2020-11-09'),
             logo: 'Encora.png',
+            url: 'https://www.encora.com',
             position: 'Software Engineer',
             items: [
                 'API Design and development.'
@@ -252,6 +254,7 @@ export let profile: Profile = {
             company: 'Joybyte',
             start: new Date('2020-06-15'),
             end: new Date('2020-10-31'),
+            url: 'https://www.joybyte.com/',
             position: 'Freelancer Developer',
             logo: 'joybyte.png',
             items: [
@@ -267,6 +270,7 @@ export let profile: Profile = {
             company: 'Gila Software',
             start: new Date('2019-05-13'),
             end: new Date('2020-10-27'),
+            url: 'https://gilasw.com/',
             position: 'Software Engineer',
             logo: 'GilaSW.png',
             items: [
@@ -284,6 +288,7 @@ export let profile: Profile = {
             end: new Date('2019-05-17'),
             position: 'Software Engineer',
             logo: 'LYF.png',
+            url: 'https://lopez-fernandez.com/',
             description: 'Development of applications and libraries for money management devices.',
             items: [
                 'Creation of applications for end-users, deployed in kiosks with multiple money devices.',
@@ -321,9 +326,10 @@ export let profile: Profile = {
             end: new Date('2020-05-01'),
             position: 'Technical Manager Assistant',
             logo: 'UNISON.png',
+            url: 'https://www.unison.mx/',
             description: 'Assisting the technical manager and planning of the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
             items: [
-                'Development of applications and libraries for money management devices.',
+                'Implementation of solar tracking algorithms in microcontroller based systems.',
                 'Design of printed circuit boards.',
                 'Design of solar tracking mechanical structures for photovoltaic cells.'
             ],
@@ -346,6 +352,7 @@ export let profile: Profile = {
             start: new Date('2014-01-01'),
             end: new Date('2014-06-01'),
             logo: 'PSH.png',
+            url: 'http://psh.isi.uson.mx/',
             position: 'Intern Developer',
             description: 'Developing an alternative control system for Heliostats solar tracking. A economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
             skills: [
