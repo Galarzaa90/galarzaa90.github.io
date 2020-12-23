@@ -2,7 +2,7 @@
   <span class="header-title">Allan Galarza</span>
 </mat-toolbar>
 <div class="container">
-  <div fxLayout.gt-sm="row" fxLayout="column" fxLayoutGap="1%">
+  <div fxLayout.gt-xs="row" fxLayout="column" fxLayoutGap="1%">
     <div fxFlex="25" fxLayout="column" fxLayoutGap="2%">
       <div>
         <mat-card>
@@ -46,36 +46,7 @@
           </mat-chip>
         </mat-chip-list>
       </mat-card>
-      <h2>Education</h2>
-      <mat-accordion class="experience-panels">
-        <mat-expansion-panel hideToggle
-          *ngFor="let school of profile.education; let i = index">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{school.name}}
-            </mat-panel-title>
-            <mat-panel-description *ngIf="school.end === undefined"
-              class="entry-dates">
-              {{school.start | date: 'MMMM y'}} — Present
-            </mat-panel-description>
-            <mat-panel-description *ngIf="school.end != undefined"
-              class="entry-dates">
-              {{school.start | date: 'MMMM y'}} —
-              {{school.end | date: 'MMMM y'}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <div fxLayout="row" fxLayoutAlign="space-between start">
-            <div fxFlex="90">
-              <p>{{school.title}}</p>
-              <p>{{school.level}}</p>
-            </div>
-            <div fxFlex="10">
-              <img class="company-logo" *ngIf="school.logo != undefined"
-                src="./assets/img/{{school.logo}}">
-            </div>
-          </div>
-        </mat-expansion-panel>
-      </mat-accordion>
+      <app-education [entries]="profile.education"></app-education>
     </div>
   </div>
 </div>

@@ -1,18 +1,19 @@
 <h2>Projects</h2>
 <mat-accordion class="experience-panels">
-    <mat-expansion-panel hideToggle *ngFor="let project of projects">
+    <mat-expansion-panel hideToggle *ngFor="let project of projects"
+        [hideToggle]="!(isXSmall$ | async)">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 {{project.name}}
             </mat-panel-title>
-            <mat-panel-description *ngIf="project.end === undefined"
-                class="entry-dates">
-                {{project.start | date: 'MMMM y'}} — Present
-            </mat-panel-description>
-            <mat-panel-description *ngIf="project.end != undefined"
-                class="entry-dates">
-                {{project.start | date: 'MMMM y'}} —
-                {{project.end | date: 'MMMM y'}}
+            <mat-panel-description class="entry-dates" fxHide.lt-sm="true">
+                <span *ngIf="project.end === undefined">
+                    {{project.start | date: 'MMMM y'}} — Present
+                </span>
+                <span *ngIf="project.end !== undefined">
+                    {{project.start | date: 'MMMM y'}} —
+                    {{project.end | date: 'MMMM y'}}
+                </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
         <div fxLayout="row" fxLayoutAlign="space-between start">

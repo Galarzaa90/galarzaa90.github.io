@@ -2,15 +2,15 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { JobEntry } from 'src/app/data/profile';
+import { School } from 'src/app/data/profile';
 
 @Component({
-  selector: 'app-work-experience',
-  templateUrl: './work-experience.component.html',
-  styleUrls: ['./work-experience.component.scss']
+  selector: 'app-education',
+  templateUrl: './education.component.html',
+  styleUrls: ['./education.component.scss']
 })
-export class WorkExperienceComponent implements OnInit {
-  @Input() entries: Array<JobEntry> = [];
+export class EducationComponent implements OnInit {
+  @Input() entries: Array<School> = [];
 
   isXSmall$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.XSmall)
     .pipe(
@@ -22,4 +22,5 @@ export class WorkExperienceComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }

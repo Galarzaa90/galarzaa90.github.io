@@ -20,13 +20,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
 import { ProjectComponent } from './components/projects/projects.component';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkExperienceComponent,
     SkillIconComponent,
-    ProjectComponent
+    ProjectComponent,
+    EducationComponent
   ],
   imports: [
     FlexLayoutModule,

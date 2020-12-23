@@ -63,7 +63,7 @@ export interface JobEntry {
     skills?: Array<SkillIcon>;
 }
 
-interface School {
+export interface School {
     name: string;
     start: Date;
     end?: Date;
@@ -192,7 +192,7 @@ const icons = {
 
 export let profile: Profile = {
     headline: 'Hello, my name is Allan!',
-    aboutMe: 'I am a mechatronics engineer and software developer. I\'m mainly a backend developer, my favorite is Python. I love electronics, gaming and learning new things.',
+    aboutMe: 'I\'m a mechatronics engineer and software developer. I\'m mainly a backend developer, my favorite is Python. I love electronics, gaming and learning new things.',
     location: 'Mexico',
     languages: [
         {

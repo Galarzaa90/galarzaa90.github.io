@@ -1,18 +1,20 @@
 <h2>Work Experience</h2>
 <mat-accordion class="experience-panels">
-    <mat-expansion-panel [expanded]="i === 0" hideToggle
+    <mat-expansion-panel [expanded]="i === 0"
+        [hideToggle]="!(isXSmall$ | async)"
         *ngFor="let job of entries; let i = index">
         <mat-expansion-panel-header>
             <mat-panel-title>
                 {{job.company}}
             </mat-panel-title>
-            <mat-panel-description *ngIf="job.end === undefined"
-                class="entry-dates">
-                {{job.start | date: 'MMMM y'}} — Present
-            </mat-panel-description>
-            <mat-panel-description *ngIf="job.end != undefined"
-                class="entry-dates">
-                {{job.start | date: 'MMMM y'}} — {{job.end | date: 'MMMM y'}}
+            <mat-panel-description class="entry-dates" fxHide.lt-sm="true">
+                <span *ngIf="job.end === undefined">
+                    {{job.start | date: 'MMMM y'}} — Present
+                </span>
+                <span *ngIf="job.end !== undefined">
+                    {{job.start | date: 'MMMM y'}} —
+                    {{job.end | date: 'MMMM y'}}
+                </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
         <div fxLayout="row" fxLayoutAlign="space-between start">
@@ -29,10 +31,13 @@
                 </span>
             </div>
             <div fxFlex="10">
-                <a [href]="job.url" *ngIf="job.logo != undefined && job.url != undefined" target="_blank">
+                <a [href]="job.url"
+                    *ngIf="job.logo != undefined && job.url != undefined"
+                    target="_blank">
                     <img class="company-logo" src="./assets/img/{{job.logo}}">
                 </a>
-                <img class="company-logo" src="./assets/img/{{job.logo}}" *ngIf="job.logo != undefined && job.url == undefined">
+                <img class="company-logo" src="./assets/img/{{job.logo}}"
+                    *ngIf="job.logo != undefined && job.url == undefined">
             </div>
         </div>
     </mat-expansion-panel>
