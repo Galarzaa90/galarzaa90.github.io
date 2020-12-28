@@ -25,6 +25,8 @@ const socketio: SimpleIcon = require('simple-icons/icons/socket-dot-io');
 const redis: SimpleIcon = require('simple-icons/icons/redis');
 const ubuntu: SimpleIcon = require('simple-icons/icons/ubuntu');
 const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
+const singlestore: SimpleIcon = require('simple-icons/icons/singlestore');
+const swagger: SimpleIcon = require('simple-icons/icons/swagger');
 
 interface Profile {
     headline: string;
@@ -186,6 +188,14 @@ const icons = {
     typescript: {
         icon: typescript,
         text: 'TypeScript'
+    },
+    singlestore: {
+        icon: singlestore,
+        text: 'SingleStore (previously MemSQL)'
+    },
+    swagger: {
+        icon: swagger,
+        text: 'Swagger'
     }
 };
 
@@ -247,7 +257,7 @@ export let profile: Profile = {
                 'API Design and development.'
             ],
             skills: [
-                icons.python, icons.mysql
+                icons.python, icons.swagger, icons.singlestore
             ]
         },
         {
@@ -393,7 +403,7 @@ export let profile: Profile = {
         },
         {
             name: 'android-things-rc522',
-            url: '',
+            url: 'https://github.com/Galarzaa90/android-things-rc522',
             start: new Date('2017-03-28'),
             end: new Date('2017-11-03'),
             description: 'Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
@@ -404,7 +414,7 @@ export let profile: Profile = {
         },
         {
             name: 'tibiawiki-sql',
-            url: '',
+            url: 'https://tibiawiki-sql.rtfd.io/',
             start: new Date('2017-10-27'),
             description: 'Python script that fetches TibiaWiki via its MediaWiki API. Article information is parsed and stored in a SQLite database.',
             skills: [
@@ -414,7 +424,7 @@ export let profile: Profile = {
         },
         {
             name: 'tibia.py',
-            url: 'https://github.com/Galarzaa90/tibia.py',
+            url: 'http://tibiapy.rtfd.io/',
             start: new Date('2018-06-31'),
             description: 'API to parse tibia.com content into python objects.',
             skills: [

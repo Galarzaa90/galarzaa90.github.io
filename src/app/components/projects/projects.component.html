@@ -36,8 +36,18 @@
                 </span>
             </div>
             <div fxFlex="10" fxFlex.lt-lg="20">
-                <img class="company-logo" *ngIf="project.logo != undefined"
-                    src="./assets/img/projects/{{project.logo}}">
+                <a [href]="project.url"
+                    *ngIf="project.logo != undefined && project.url != undefined"
+                    target="_blank">
+                    <img class="company-logo" src="./assets/img/projects/{{project.logo}}">
+                </a>
+                <img class="company-logo" src="./assets/img/{{project.logo}}"
+                    *ngIf="project.logo != undefined && project.url == undefined">
+                <a [href]="project.url"
+                    *ngIf="project.logo == undefined && project.url != undefined"
+                    target="_blank">
+                    Website
+                </a>
             </div>
         </div>
     </mat-expansion-panel>
