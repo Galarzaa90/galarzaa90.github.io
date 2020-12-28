@@ -284,11 +284,12 @@ export let profile: Profile = {
             url: 'https://gilasw.com/',
             position: 'Software Engineer',
             logo: 'GilaSW.png',
-            description: 'Worked on multiple projects for multiple clients as part of the backend development team. Mainly using C#.',
+            description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology',
             items: [
-                'Development of microservices and orchestrators based on Azure Functions.',
-                'Code-First Database design and management.',
-                'Application of scrum methodology.',
+                'Development of the backend for a web application to manage dynamically generated inspections and inventory. From the design of the database, to development of the microservice and orchestrator layer.',
+                'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic.',
+                'Development of a mobile social media platform for entrepeneurs and startups.',
+                'Maintenance of a booking and travel CMS.'
             ],
             skills: [
                 icons.csharp, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
