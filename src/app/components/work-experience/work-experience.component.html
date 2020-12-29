@@ -44,7 +44,7 @@
                 <a [href]="job.url"
                     *ngIf="job.logo != undefined && job.url != undefined"
                     target="_blank">
-                    <img class="company-logo" src="./assets/img/{{job.logo}}">
+                    <img class="company-logo img-link" src="./assets/img/{{job.logo}}">
                 </a>
                 <img class="company-logo" src="./assets/img/{{job.logo}}"
                     *ngIf="job.logo != undefined && job.url == undefined">
