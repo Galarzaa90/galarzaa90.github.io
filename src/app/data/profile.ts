@@ -80,6 +80,7 @@ export interface Project {
     end?: Date;
     logo?: string;
     description: string;
+    items?: Array<string>;
     skills: Array<SkillIcon>;
 }
 
@@ -398,6 +399,11 @@ export let profile: Profile = {
             start: new Date('2016-03-02'),
             logo: 'NabBot.png',
             description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.',
+            items: [
+                'In over 8,000 Discord servers.',
+                'Over 10,000 monthly users.',
+                'Recognized as a <b>Promoted Fansite</b> by the game developers.',
+            ],
             skills: [
                 icons.python, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis
             ]

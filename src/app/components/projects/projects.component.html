@@ -29,6 +29,9 @@
                 </span>
                 <p *ngIf="project.description != undefined"
                     [innerHTML]="project.description"></p>
+                <ul *ngIf="project.items != undefined">
+                    <li *ngFor="let item of project.items" [innerHTML]="item"></li>
+                </ul>
                 <span class="project-skills"
                     *ngIf="project.skills != undefined">
                     <app-skill-icon [skill]="skill"
@@ -39,7 +42,8 @@
                 <a [href]="project.url"
                     *ngIf="project.logo != undefined && project.url != undefined"
                     target="_blank">
-                    <img class="company-logo" src="./assets/img/projects/{{project.logo}}">
+                    <img class="company-logo"
+                        src="./assets/img/projects/{{project.logo}}">
                 </a>
                 <img class="company-logo" src="./assets/img/{{project.logo}}"
                     *ngIf="project.logo != undefined && project.url == undefined">
