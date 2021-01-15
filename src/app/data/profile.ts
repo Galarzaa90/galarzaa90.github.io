@@ -27,6 +27,7 @@ const ubuntu: SimpleIcon = require('simple-icons/icons/ubuntu');
 const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
 const singlestore: SimpleIcon = require('simple-icons/icons/singlestore');
 const swagger: SimpleIcon = require('simple-icons/icons/swagger');
+const aiohttp: SimpleIcon = require('simple-icons/icons/aiohttp');
 
 interface Profile {
     headline: string;
@@ -172,7 +173,7 @@ const icons = {
     },
     socketio: {
         icon: socketio,
-        text: 'Socket.io'
+        text: 'Socket.IO'
     },
     ubuntu: {
         icon: ubuntu,
@@ -197,6 +198,10 @@ const icons = {
     swagger: {
         icon: swagger,
         text: 'Swagger'
+    },
+    aiohttp: {
+        icon: aiohttp,
+        text: 'aiohttp'
     }
 };
 
@@ -258,7 +263,7 @@ export let profile: Profile = {
                 'API Design and development.'
             ],
             skills: [
-                icons.python, icons.swagger, icons.singlestore
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore
             ]
         },
         {
@@ -405,7 +410,7 @@ export let profile: Profile = {
                 'Recognized as a <b>Promoted Fansite</b> by the game developers.',
             ],
             skills: [
-                icons.python, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis
+                icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis
             ]
         },
         {
