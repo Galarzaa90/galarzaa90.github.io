@@ -8,6 +8,7 @@ import { SkillIcon } from 'src/app/data/profile';
 })
 export class SkillIconComponent implements OnInit {
   @Input() skill: SkillIcon | null = null;
+  @Input() tooltip = true;
   hover = false;
 
   constructor() { }

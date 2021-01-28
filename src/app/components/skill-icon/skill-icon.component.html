@@ -1,6 +1,6 @@
 
 <svg
-    [matTooltip]="skill!.text" role="img" viewBox="0 0 24 24"
+    [matTooltip]="tooltip ? skill!.text : null" role="img" viewBox="0 0 24 24"
     (mouseover)="hover = true"
     (mouseleave)="hover = false"
     [style.fill]="hover ? toColor(skill!.icon.hex) : null">

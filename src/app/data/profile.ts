@@ -1,8 +1,10 @@
+import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SimpleIcon } from 'simple-icons';
 const python: SimpleIcon = require('simple-icons/icons/python');
 const mysql: SimpleIcon = require('simple-icons/icons/mysql');
+const dotnet: SimpleIcon = require('simple-icons/icons/dot-net');
 const csharp: SimpleIcon = require('simple-icons/icons/csharp');
 const azurefunction: SimpleIcon = require('simple-icons/icons/azurefunctions');
 const microsoftsqlserver: SimpleIcon = require('simple-icons/icons/microsoftsqlserver');
@@ -28,6 +30,10 @@ const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
 const singlestore: SimpleIcon = require('simple-icons/icons/singlestore');
 const swagger: SimpleIcon = require('simple-icons/icons/swagger');
 const aiohttp: SimpleIcon = require('simple-icons/icons/aiohttp');
+const grafana: SimpleIcon = require('simple-icons/icons/grafana');
+const prometheus: SimpleIcon = require('simple-icons/icons/prometheus');
+const docker: SimpleIcon = require('simple-icons/icons/docker');
+const git: SimpleIcon = require('simple-icons/icons/git');
 
 interface Profile {
     headline: string;
@@ -88,6 +94,7 @@ export interface Project {
 interface Skill {
     name: string;
     type: string;
+    icon?: SkillIcon;
 }
 export interface SkillIcon {
     icon: SimpleIcon;
@@ -202,6 +209,26 @@ const icons = {
     aiohttp: {
         icon: aiohttp,
         text: 'aiohttp'
+    },
+    docker: {
+        icon: docker,
+        text: 'Docker'
+    },
+    grafana: {
+        icon: grafana,
+        text: 'Grafana'
+    },
+    prometheus: {
+        icon: prometheus,
+        text: 'Prometheus'
+    },
+    dotnet: {
+        icon: dotnet,
+        text: '.NET'
+    },
+    git: {
+        icon: git,
+        text: 'git'
     }
 };
 
@@ -410,7 +437,8 @@ export let profile: Profile = {
                 'Recognized as a <b>Promoted Fansite</b> by the game developers.',
             ],
             skills: [
-                icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis
+                icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
+                icons.docker, icons.prometheus, icons.grafana
             ]
         },
         {
@@ -447,51 +475,63 @@ export let profile: Profile = {
     skills: [
         {
             name: 'Python',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.python
         },
         {
             name: 'Kotlin',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.kotlin,
         },
         {
             name: 'C#',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.csharp
         },
         {
             name: 'Java',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.java
         },
         {
             name: 'JavaScript',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.javascript
         },
         {
             name: 'TypeScript',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.typescript
         },
         {
             name: 'C++',
-            type: 'Programming Language'
+            type: 'Programming Language',
+            icon: icons.cplusplus
         },
         {
             name: 'Android',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.android
         },
         {
             name: '.NET',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.dotnet
         },
         {
             name: 'Angular',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.angular
         },
         {
             name: 'Raspberry Pi',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.raspberrypi
         },
         {
             name: 'Arduino',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.arduino
         },
         {
             name: 'Processing',
@@ -499,11 +539,18 @@ export let profile: Profile = {
         },
         {
             name: 'PostgreSQL',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.postgresql
+        },
+        {
+            name: 'Docker',
+            type: 'Platforms',
+            icon: icons.docker
         },
         {
             name: 'git',
-            type: 'Other'
+            type: 'Other',
+            icon: icons.git
         },
         {
             name: 'SolidWorks',
@@ -513,7 +560,6 @@ export let profile: Profile = {
             name: 'PCB Design',
             type: 'Other'
         },
-
         {
             name: 'Digital Electronics',
             type: 'Other'
