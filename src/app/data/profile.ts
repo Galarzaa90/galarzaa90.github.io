@@ -369,7 +369,7 @@ export let profile: Profile = {
         {
             company: 'Universidad de Sonora',
             start: new Date('2015-03-01'),
-            end: new Date('2020-05-01'),
+            end: new Date('2015-05-01'),
             position: 'Technical Manager Assistant',
             logo: 'UNISON.png',
             url: 'https://www.unison.mx/',
