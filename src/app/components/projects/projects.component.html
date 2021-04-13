@@ -45,7 +45,7 @@
                     <img class="company-logo img-link"
                         src="./assets/img/projects/{{project.logo}}">
                 </a>
-                <img class="company-logo" src="./assets/img/{{project.logo}}"
+                <img class="company-logo" src="./assets/img/projects/{{project.logo}}"
                     *ngIf="project.logo != undefined && project.url == undefined">
                 <a [href]="project.url"
                     *ngIf="project.logo == undefined && project.url != undefined"

@@ -82,7 +82,7 @@ export interface School {
 
 export interface Project {
     name: string;
-    url: string;
+    url?: string;
     start: Date;
     end?: Date;
     logo?: string;
@@ -432,7 +432,7 @@ export let profile: Profile = {
             logo: 'NabBot.png',
             description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.',
             items: [
-                'In over 8,000 Discord servers.',
+                'In over 9,000 Discord servers.',
                 'Over 10,000 monthly users.',
                 'Recognized as a <b>Promoted Fansite</b> by the game developers.',
             ],
@@ -469,6 +469,19 @@ export let profile: Profile = {
             description: 'API to parse tibia.com content into python objects.',
             skills: [
                 icons.python,
+            ]
+        },
+        {
+            name: 'Dodo',
+            logo: 'Dodo.png',
+            start: new Date('2016-08-16'),
+            end: new Date('2019-04-06'),
+            description: 'Android application and web service featuring a two-sided network for odd jobs.',
+            skills: [
+                icons.java,
+                icons.kotlin,
+                icons.android,
+                icons.mysql,
             ]
         }
     ],
