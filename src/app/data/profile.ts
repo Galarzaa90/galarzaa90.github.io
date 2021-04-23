@@ -287,10 +287,10 @@ export let profile: Profile = {
             position: 'Software Engineer',
             description: 'Previously known as Nearsoft. Working as a backend developend, at the moment focusing in Python.',
             items: [
-                'API Design and development.'
+                'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics.'
             ],
             skills: [
-                icons.python, icons.swagger, icons.aiohttp, icons.singlestore
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis
             ]
         },
         {
@@ -317,7 +317,7 @@ export let profile: Profile = {
             url: 'https://gilasw.com/',
             position: 'Software Engineer',
             logo: 'GilaSW.png',
-            description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology',
+            description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology.',
             items: [
                 'Development of the backend for a web application to manage dynamically generated inspections and inventory. From the design of the database, to development of the microservice and orchestrator layer.',
                 'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic.',
@@ -347,7 +347,15 @@ export let profile: Profile = {
                 'Temporary outsourced at Qualisys to aid in development of SAP Business One addons.'
             ],
             skills: [
-                icons.csharp, icons.nodejs, icons.kotlin, icons.raspberrypi, icons.angularjs, icons.electron
+                icons.csharp,
+                icons.javascript,
+                icons.nodejs,
+                icons.kotlin,
+                icons.raspberrypi,
+                icons.angularjs,
+                icons.electron,
+                icons.sqlite,
+                icons.mysql
             ]
         },
         {
@@ -432,7 +440,7 @@ export let profile: Profile = {
             logo: 'NabBot.png',
             description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.',
             items: [
-                'In over 9,000 Discord servers.',
+                'In over 10,000 Discord servers.',
                 'Over 10,000 monthly users.',
                 'Recognized as a <b>Promoted Fansite</b> by the game developers.',
             ],
@@ -459,7 +467,7 @@ export let profile: Profile = {
             description: 'Python script that fetches TibiaWiki via its MediaWiki API. Article information is parsed and stored in a SQLite database.',
             skills: [
                 icons.python,
-                icons.sqlite
+                icons.sqlite,
             ]
         },
         {
@@ -469,6 +477,7 @@ export let profile: Profile = {
             description: 'API to parse tibia.com content into python objects.',
             skills: [
                 icons.python,
+                icons.aiohttp,
             ]
         },
         {
@@ -554,6 +563,16 @@ export let profile: Profile = {
             name: 'PostgreSQL',
             type: 'Platforms',
             icon: icons.postgresql
+        },
+        {
+            name: 'MySQL',
+            type: 'Platforms',
+            icon: icons.mysql
+        },
+        {
+            name: 'Redis',
+            type: 'Platforms',
+            icon: icons.redis
         },
         {
             name: 'Docker',
