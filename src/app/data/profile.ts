@@ -4,13 +4,13 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SimpleIcon } from 'simple-icons';
 const python: SimpleIcon = require('simple-icons/icons/python');
 const mysql: SimpleIcon = require('simple-icons/icons/mysql');
-const dotnet: SimpleIcon = require('simple-icons/icons/dot-net');
+const dotnet: SimpleIcon = require('simple-icons/icons/dotnet');
 const csharp: SimpleIcon = require('simple-icons/icons/csharp');
 const azurefunction: SimpleIcon = require('simple-icons/icons/azurefunctions');
 const microsoftsqlserver: SimpleIcon = require('simple-icons/icons/microsoftsqlserver');
 const django: SimpleIcon = require('simple-icons/icons/django');
 const xamarin: SimpleIcon = require('simple-icons/icons/xamarin');
-const nodejs: SimpleIcon = require('simple-icons/icons/node-dot-js');
+const nodejs: SimpleIcon = require('simple-icons/icons/nodedotjs');
 const kotlin: SimpleIcon = require('simple-icons/icons/kotlin');
 const android: SimpleIcon = require('simple-icons/icons/android');
 const java: SimpleIcon = require('simple-icons/icons/java');
@@ -23,7 +23,7 @@ const electron: SimpleIcon = require('simple-icons/icons/electron');
 const javascript: SimpleIcon = require('simple-icons/icons/javascript');
 const typescript: SimpleIcon = require('simple-icons/icons/typescript');
 const postgresql: SimpleIcon = require('simple-icons/icons/postgresql');
-const socketio: SimpleIcon = require('simple-icons/icons/socket-dot-io');
+const socketio: SimpleIcon = require('simple-icons/icons/socketdotio');
 const redis: SimpleIcon = require('simple-icons/icons/redis');
 const ubuntu: SimpleIcon = require('simple-icons/icons/ubuntu');
 const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
@@ -34,6 +34,7 @@ const grafana: SimpleIcon = require('simple-icons/icons/grafana');
 const prometheus: SimpleIcon = require('simple-icons/icons/prometheus');
 const docker: SimpleIcon = require('simple-icons/icons/docker');
 const git: SimpleIcon = require('simple-icons/icons/git');
+const processing: SimpleIcon = require('simple-icons/icons/processingfoundation');
 
 interface Profile {
     headline: string;
@@ -229,7 +230,11 @@ const icons = {
     git: {
         icon: git,
         text: 'git'
-    }
+    },
+    processing: {
+        icon: processing,
+        text: 'Processing'
+    },
 };
 
 export let profile: Profile = {
@@ -371,7 +376,7 @@ export let profile: Profile = {
                 'Development and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
             ],
             skills: [
-                icons.android, icons.java, icons.cplusplus, icons.arduino
+                icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing
             ]
         },
         {
@@ -388,7 +393,7 @@ export let profile: Profile = {
                 'Design of solar tracking mechanical structures for photovoltaic cells.'
             ],
             skills: [
-                icons.android, icons.java, icons.cplusplus, icons.arduino
+                icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing
             ]
         },
         {
@@ -546,6 +551,11 @@ export let profile: Profile = {
             icon: icons.angular
         },
         {
+            name: 'Django',
+            type: 'Platforms',
+            icon: icons.django
+        },
+        {
             name: 'Raspberry Pi',
             type: 'Platforms',
             icon: icons.raspberrypi
@@ -557,7 +567,8 @@ export let profile: Profile = {
         },
         {
             name: 'Processing',
-            type: 'Platforms'
+            type: 'Platforms',
+            icon: icons.processing
         },
         {
             name: 'PostgreSQL',
