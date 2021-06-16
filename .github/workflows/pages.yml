@@ -12,5 +12,6 @@ jobs:
       - name: Builds and deploys Angular page
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
         with:
+          github_access_token: ${{ secrets.ACCESS_TOKEN }}
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/galarzaa
