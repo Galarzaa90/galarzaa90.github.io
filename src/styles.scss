@@ -3,10 +3,10 @@ html,
 body {
     height: 100%;
     background-color: #eeeeee;
-}
-body {
     margin: 0;
-    font-family: 'Encode Sans', sans-serif;
+}
+* {
+    font-family: 'Encode Sans', sans-serif !important;
 }
 
 a {

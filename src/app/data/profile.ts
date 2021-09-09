@@ -581,6 +581,11 @@ export let profile: Profile = {
             icon: icons.mysql
         },
         {
+            name: 'SQLite',
+            type: 'Platforms',
+            icon: icons.sqlite
+        },
+        {
             name: 'Redis',
             type: 'Platforms',
             icon: icons.redis
