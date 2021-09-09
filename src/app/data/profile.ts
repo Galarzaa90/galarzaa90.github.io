@@ -28,6 +28,7 @@ const redis: SimpleIcon = require('simple-icons/icons/redis');
 const ubuntu: SimpleIcon = require('simple-icons/icons/ubuntu');
 const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
 const singlestore: SimpleIcon = require('simple-icons/icons/singlestore');
+const oracle: SimpleIcon = require('simple-icons/icons/oracle');
 const swagger: SimpleIcon = require('simple-icons/icons/swagger');
 const aiohttp: SimpleIcon = require('simple-icons/icons/aiohttp');
 const grafana: SimpleIcon = require('simple-icons/icons/grafana');
@@ -203,6 +204,10 @@ const icons = {
         icon: singlestore,
         text: 'SingleStore (previously MemSQL)'
     },
+    oracle: {
+        icon: oracle,
+        text: 'Oracle DBMS'
+    },
     swagger: {
         icon: swagger,
         text: 'Swagger'
@@ -292,10 +297,11 @@ export let profile: Profile = {
             position: 'Software Engineer',
             description: 'Previously known as Nearsoft. Working as a backend developend, at the moment focusing in Python.',
             items: [
-                'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics.'
+                'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics.',
+                'Design and development of a backend application to create mappings between field equipment and field sensor data.',
             ],
             skills: [
-                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle,
             ]
         },
         {
@@ -443,7 +449,7 @@ export let profile: Profile = {
             url: 'https://nabbot.xyz',
             start: new Date('2016-03-02'),
             logo: 'NabBot.png',
-            description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.',
+            description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
             items: [
                 'In over 10,000 Discord servers.',
                 'Over 10,000 monthly users.',
