@@ -2,40 +2,12 @@ import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SimpleIcon } from 'simple-icons';
-const python: SimpleIcon = require('simple-icons/icons/python');
-const mysql: SimpleIcon = require('simple-icons/icons/mysql');
-const dotnet: SimpleIcon = require('simple-icons/icons/dotnet');
-const csharp: SimpleIcon = require('simple-icons/icons/csharp');
-const azurefunction: SimpleIcon = require('simple-icons/icons/azurefunctions');
-const microsoftsqlserver: SimpleIcon = require('simple-icons/icons/microsoftsqlserver');
-const django: SimpleIcon = require('simple-icons/icons/django');
-const xamarin: SimpleIcon = require('simple-icons/icons/xamarin');
-const nodejs: SimpleIcon = require('simple-icons/icons/nodedotjs');
-const kotlin: SimpleIcon = require('simple-icons/icons/kotlin');
-const android: SimpleIcon = require('simple-icons/icons/android');
-const java: SimpleIcon = require('simple-icons/icons/java');
-const arduino: SimpleIcon = require('simple-icons/icons/arduino');
-const raspberrypi: SimpleIcon = require('simple-icons/icons/raspberrypi');
-const cplusplus: SimpleIcon = require('simple-icons/icons/cplusplus');
-const angularjs: SimpleIcon = require('simple-icons/icons/angularjs');
-const angular: SimpleIcon = require('simple-icons/icons/angular');
-const electron: SimpleIcon = require('simple-icons/icons/electron');
-const javascript: SimpleIcon = require('simple-icons/icons/javascript');
-const typescript: SimpleIcon = require('simple-icons/icons/typescript');
-const postgresql: SimpleIcon = require('simple-icons/icons/postgresql');
-const socketio: SimpleIcon = require('simple-icons/icons/socketdotio');
-const redis: SimpleIcon = require('simple-icons/icons/redis');
-const ubuntu: SimpleIcon = require('simple-icons/icons/ubuntu');
-const sqlite: SimpleIcon = require('simple-icons/icons/sqlite');
-const singlestore: SimpleIcon = require('simple-icons/icons/singlestore');
-const oracle: SimpleIcon = require('simple-icons/icons/oracle');
-const swagger: SimpleIcon = require('simple-icons/icons/swagger');
-const aiohttp: SimpleIcon = require('simple-icons/icons/aiohttp');
-const grafana: SimpleIcon = require('simple-icons/icons/grafana');
-const prometheus: SimpleIcon = require('simple-icons/icons/prometheus');
-const docker: SimpleIcon = require('simple-icons/icons/docker');
-const git: SimpleIcon = require('simple-icons/icons/git');
-const processing: SimpleIcon = require('simple-icons/icons/processingfoundation');
+import {
+    siPython, siMysql, siDotnet, siCsharp, siAzurefunctions, siMicrosoftsqlserver, siDjango, siXamarin, siNodedotjs, siKotlin,
+    siAndroid, siJava, siArduino, siRaspberrypi, siCplusplus, siAngularjs, siJavascript, siElectron, siProcessingfoundation, siGit,
+    siPrometheus, siGrafana, siDocker, siAiohttp, siSwagger, siOracle, siSinglestore, siTypescript, siSqlite, siRedis, siUbuntu,
+    siSocketdotio, siAngular, siPostgresql, siFastapi
+} from 'simple-icons/icons';
 
 interface Profile {
     headline: string;
@@ -105,140 +77,144 @@ export interface SkillIcon {
 
 const icons = {
     python: {
-        icon: python,
+        icon: siPython,
         text: 'Python'
     },
     mysql: {
-        icon: mysql,
+        icon: siMysql,
         text: 'MySQL'
     },
     csharp: {
-        icon: csharp,
+        icon: siCsharp,
         text: 'C#'
     },
     azurefunctions: {
-        icon: azurefunction,
+        icon: siAzurefunctions,
         text: 'Azure Functions'
     },
     mssql: {
-        icon: microsoftsqlserver,
+        icon: siMicrosoftsqlserver,
         text: 'Microsoft SQL Server'
     },
     xamarin: {
-        icon: xamarin,
+        icon: siXamarin,
         text: 'Xamarin'
     },
     django: {
-        icon: django,
+        icon: siDjango,
         text: 'Django'
     },
     kotlin: {
-        icon: kotlin,
+        icon: siKotlin,
         text: 'Kotlin'
     },
     nodejs: {
-        icon: nodejs,
+        icon: siNodedotjs,
         text: 'NodeJS'
     },
     android: {
-        icon: android,
+        icon: siAndroid,
         text: 'Android'
     },
     java: {
-        icon: java,
+        icon: siJava,
         text: 'Java'
     },
     raspberrypi: {
-        icon: raspberrypi,
+        icon: siRaspberrypi,
         text: 'Raspberry Pi'
     },
     cplusplus: {
-        icon: cplusplus,
+        icon: siCplusplus,
         text: 'C++'
     },
     arduino: {
-        icon: arduino,
+        icon: siArduino,
         text: 'Arduino'
     },
     angularjs: {
-        icon: angularjs,
+        icon: siAngularjs,
         text: 'AngularJS'
     },
     javascript: {
-        icon: javascript,
+        icon: siJavascript,
         text: 'JavaScript'
     },
     electron: {
-        icon: electron,
+        icon: siElectron,
         text: 'Electron'
     },
     postgresql: {
-        icon: postgresql,
+        icon: siPostgresql,
         text: 'PostgreSQL'
     },
     angular: {
-        icon: angular,
+        icon: siAngular,
         text: 'Angular'
     },
     socketio: {
-        icon: socketio,
+        icon: siSocketdotio,
         text: 'Socket.IO'
     },
     ubuntu: {
-        icon: ubuntu,
+        icon: siUbuntu,
         text: 'Ubuntu'
     },
     redis: {
-        icon: redis,
+        icon: siRedis,
         text: 'Redis'
     },
     sqlite: {
-        icon: sqlite,
+        icon: siSqlite,
         text: 'SQLite'
     },
     typescript: {
-        icon: typescript,
+        icon: siTypescript,
         text: 'TypeScript'
     },
     singlestore: {
-        icon: singlestore,
+        icon: siSinglestore,
         text: 'SingleStore (previously MemSQL)'
     },
     oracle: {
-        icon: oracle,
+        icon: siOracle,
         text: 'Oracle DBMS'
     },
     swagger: {
-        icon: swagger,
+        icon: siSwagger,
         text: 'Swagger'
     },
     aiohttp: {
-        icon: aiohttp,
+        icon: siAiohttp,
         text: 'aiohttp'
     },
     docker: {
-        icon: docker,
+        icon: siDocker,
         text: 'Docker'
     },
     grafana: {
-        icon: grafana,
+        icon: siGrafana,
         text: 'Grafana'
     },
     prometheus: {
-        icon: prometheus,
+        icon: siPrometheus,
         text: 'Prometheus'
     },
     dotnet: {
-        icon: dotnet,
+        icon: siDotnet,
         text: '.NET'
     },
     git: {
-        icon: git,
+        icon: siGit,
         text: 'git'
     },
     processing: {
-        icon: processing,
+        icon: siProcessingfoundation,
         text: 'Processing'
+    },
+    fastApi: {
+        icon: siFastapi,
+        text: 'FastAPI'
     },
 };
 
@@ -301,7 +277,7 @@ export let profile: Profile = {
                 'Design and development of a backend application to create mappings between field equipment and field sensor data.',
             ],
             skills: [
-                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle,
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastApi
             ]
         },
         {
@@ -318,7 +294,7 @@ export let profile: Profile = {
                 'Design and maintenance of stored procedures and other database logic.',
             ],
             skills: [
-                icons.csharp, icons.azurefunctions, icons.mssql
+                icons.csharp, icons.azurefunctions, icons.mssql,
             ]
         },
         {
@@ -366,7 +342,7 @@ export let profile: Profile = {
                 icons.angularjs,
                 icons.electron,
                 icons.sqlite,
-                icons.mysql
+                icons.mysql,
             ]
         },
         {
@@ -382,7 +358,7 @@ export let profile: Profile = {
                 'Development and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
             ],
             skills: [
-                icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing
+                icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing, icons.python,
             ]
         },
         {
