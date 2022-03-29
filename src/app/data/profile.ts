@@ -271,7 +271,7 @@ export let profile: Profile = {
             logo: 'Encora.png',
             url: 'https://www.encora.com',
             position: 'Software Engineer',
-            description: 'Previously known as Nearsoft. Working as a backend developend, at the moment focusing in Python.',
+            description: 'Previously known as Nearsoft. Working as a backend developer, at the moment focusing in Python.',
             items: [
                 'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics.',
                 'Design and development of a backend application to create mappings between field equipment and field sensor data.',
@@ -427,7 +427,7 @@ export let profile: Profile = {
             logo: 'NabBot.png',
             description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
             items: [
-                'In over 10,000 Discord servers.',
+                'In over 12,000 Discord servers.',
                 'Over 10,000 monthly users.',
                 'Recognized as a <b>Promoted Fansite</b> by the game developers.',
             ],
