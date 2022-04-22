@@ -188,6 +188,10 @@ const icons = {
         icon: siAiohttp,
         text: 'aiohttp'
     },
+    fastapi: {
+        icon: siFastapi,
+        text: 'FastAPI',
+    },
     docker: {
         icon: siDocker,
         text: 'Docker'
@@ -211,10 +215,6 @@ const icons = {
     processing: {
         icon: siProcessingfoundation,
         text: 'Processing'
-    },
-    fastApi: {
-        icon: siFastapi,
-        text: 'FastAPI'
     },
 };
 
@@ -277,7 +277,7 @@ export let profile: Profile = {
                 'Design and development of a backend application to create mappings between field equipment and field sensor data.',
             ],
             skills: [
-                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastApi
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi,
             ]
         },
         {
@@ -465,6 +465,15 @@ export let profile: Profile = {
             skills: [
                 icons.python,
                 icons.aiohttp,
+            ]
+        },
+        {
+            name: 'TibiaKt',
+            url: 'https://galarzaa.com/TibiaKt',
+            start: new Date('2020-08-06'),
+            description: 'JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
+            skills: [
+                icons.kotlin
             ]
         },
         {
