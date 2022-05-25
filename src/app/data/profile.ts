@@ -294,7 +294,7 @@ export let profile: Profile = {
                 'Design and maintenance of stored procedures and other database logic.',
             ],
             skills: [
-                icons.csharp, icons.azurefunctions, icons.mssql,
+                icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql,
             ]
         },
         {
@@ -312,7 +312,7 @@ export let profile: Profile = {
                 'Maintenance of a booking and travel CMS.'
             ],
             skills: [
-                icons.csharp, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
+                icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
             ]
         },
         {
@@ -335,6 +335,7 @@ export let profile: Profile = {
             ],
             skills: [
                 icons.csharp,
+                icons.dotnet,
                 icons.javascript,
                 icons.nodejs,
                 icons.kotlin,

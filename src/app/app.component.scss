@@ -71,13 +71,3 @@ $shadowSize: 2px;
   width: 100%;
   height: auto;
 }
-
-::ng-deep .img-link:hover {
-  border: 2px solid #fff;
-  -moz-box-shadow: $shadowSize $shadowSize 5px #ccc;
-  -webkit-box-shadow: $shadowSize $shadowSize 5px #ccc;
-  box-shadow: $shadowSize $shadowSize 5px #ccc;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-}
