@@ -434,7 +434,7 @@ export let profile: Profile = {
             ],
             skills: [
                 icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
-                icons.docker, icons.prometheus, icons.grafana
+                icons.docker, icons.prometheus, icons.grafana, icons.kotlin
             ]
         },
         {
