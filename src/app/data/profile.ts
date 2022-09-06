@@ -188,6 +188,10 @@ const icons = {
         icon: siAiohttp,
         text: 'aiohttp'
     },
+    fastapi: {
+        icon: siFastapi,
+        text: 'FastAPI',
+    },
     docker: {
         icon: siDocker,
         text: 'Docker'
@@ -211,10 +215,6 @@ const icons = {
     processing: {
         icon: siProcessingfoundation,
         text: 'Processing'
-    },
-    fastApi: {
-        icon: siFastapi,
-        text: 'FastAPI'
     },
 };
 
@@ -277,7 +277,7 @@ export let profile: Profile = {
                 'Design and development of a backend application to create mappings between field equipment and field sensor data.',
             ],
             skills: [
-                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastApi
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi,
             ]
         },
         {
@@ -294,7 +294,7 @@ export let profile: Profile = {
                 'Design and maintenance of stored procedures and other database logic.',
             ],
             skills: [
-                icons.csharp, icons.azurefunctions, icons.mssql,
+                icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql,
             ]
         },
         {
@@ -312,7 +312,7 @@ export let profile: Profile = {
                 'Maintenance of a booking and travel CMS.'
             ],
             skills: [
-                icons.csharp, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
+                icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
             ]
         },
         {
@@ -335,6 +335,7 @@ export let profile: Profile = {
             ],
             skills: [
                 icons.csharp,
+                icons.dotnet,
                 icons.javascript,
                 icons.nodejs,
                 icons.kotlin,
@@ -433,7 +434,7 @@ export let profile: Profile = {
             ],
             skills: [
                 icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
-                icons.docker, icons.prometheus, icons.grafana
+                icons.docker, icons.prometheus, icons.grafana, icons.kotlin
             ]
         },
         {
@@ -465,6 +466,15 @@ export let profile: Profile = {
             skills: [
                 icons.python,
                 icons.aiohttp,
+            ]
+        },
+        {
+            name: 'TibiaKt',
+            url: 'https://galarzaa.com/TibiaKt',
+            start: new Date('2020-08-06'),
+            description: 'JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
+            skills: [
+                icons.kotlin
             ]
         },
         {
