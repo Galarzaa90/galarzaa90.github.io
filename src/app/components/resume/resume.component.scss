@@ -1,0 +1,83 @@
+
+$breakpoint-xs: 599px;
+$breakpoint-sm: 959px;
+
+.container {
+    margin: 0.5% auto;
+    width: 90%;
+    padding-bottom: 10%;
+    @media only screen and (min-width: $breakpoint-xs) {
+        width: 85%;
+    }
+    @media only screen and (min-width: $breakpoint-sm) {
+        width: 70%;
+    }
+}
+
+.profile-picture {
+    background-image: url("/assets/img/profile.jpg");
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    min-width: 60%;
+    padding-top: 60%;
+    float: left;
+    @media only screen and (max-width: $breakpoint-sm) {
+        min-width: 70%;
+        padding-top: 70%;
+    }
+    @media only screen and (max-width: $breakpoint-xs) {
+        min-width: 60%;
+        padding-top: 60%;
+    }
+}
+
+h2 {
+    font-size: 150%;
+}
+
+::ng-deep .entry-dates.mat-expansion-panel-header-description {
+    flex-grow: 0;
+}
+
+::ng-deep .date-subtitle {
+    color: #0000008a;
+}
+
+.sidebar > p {
+    margin: 0.7rem;
+    font-size: 1.1em;
+}
+
+.header-title {
+    font-size: 130%;
+}
+
+.about-me {
+    font-size: 120%;
+    @media only screen and (min-width: $breakpoint-sm) {
+        text-justify: inter-word;
+        text-align: justify;
+    }
+}
+
+.headline {
+    font-size: 150%;
+}
+
+$shadowSize: 2px;
+::ng-deep .company-logo {
+    width: 100%;
+    height: auto;
+}
+
+::ng-deep .img-link:hover {
+    border: 2px solid #fff;
+    -moz-box-shadow: $shadowSize $shadowSize 5px #ccc;
+    -webkit-box-shadow: $shadowSize $shadowSize 5px #ccc;
+    box-shadow: $shadowSize $shadowSize 5px #ccc;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}

@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+    <span class="header-title">Allan Galarza</span>
+  </mat-toolbar>
+  <div class="container">
+    <div fxLayout.gt-xs="row" fxLayout="column" fxLayoutGap="1%">
+      <div fxFlex="25" fxLayout="column" fxLayoutGap="2%">
+        <div>
+          <mat-card>
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="4%">
+              <div class="profile-picture"></div>
+              <div>
+                <p class="about-me">
+                  {{profile.aboutMe}}
+                </p>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <mat-card class="sidebar">
+          <h2>Contact</h2>
+          <p *ngFor="let link of profile.onlineProfiles">
+            <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a
+              [href]="link.url">{{link.title}}</a>
+          </p>
+          <h2>Languages</h2>
+          <p *ngFor="let language of profile.languages">
+            {{language.name}} ({{language.level}})
+          </p>
+          <h2>Interests</h2>
+          <p *ngFor="let interest of profile.interests">
+            {{interest}}
+          </p>
+        </mat-card>
+      </div>
+      <div fxFlex="69" fxLayout="column" fxLayoutGap="2%">
+        <div>
+          <app-work-experience [entries]="profile.workExperience"></app-work-experience>
+        </div>
+        <div>
+          <app-projects [projects]="profile.projects"></app-projects>
+        </div>
+        <div>
+          <h2>Skills & Tools</h2>
+          <mat-card>
+            <mat-chip-list aria-label="Skills">
+              <mat-chip *ngFor="let skill of profile.skills"><app-skill-icon *ngIf="skill.icon" [tooltip]="false" [skill]="skill.icon"></app-skill-icon>{{skill.name}}
+              </mat-chip>
+            </mat-chip-list>
+          </mat-card>
+        </div>
+        <app-education [entries]="profile.education"></app-education>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,29 @@
+@page {
+    size: A4;
+    margin: 1in;
+ }
+
+ h1 {
+    text-align:center
+ }
+
+ h2:after
+{
+    content:' ';
+    display:block;
+    border:2px solid black;
+}
+
+ .content {
+    margin: auto 5%;
+ }
+
+ @media print {
+    .content {
+        margin: 0px;
+    }
+ }
+
+ dd {
+    padding-bottom: 8pt;
+ }

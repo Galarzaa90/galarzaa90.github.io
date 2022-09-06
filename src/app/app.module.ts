@@ -21,6 +21,8 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
 import { SkillIconComponent } from './components/skill-icon/skill-icon.component';
 import { ProjectComponent } from './components/projects/projects.component';
 import { EducationComponent } from './components/education/education.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { PrintableComponent } from './components/printable/printable.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { EducationComponent } from './components/education/education.component';
     WorkExperienceComponent,
     SkillIconComponent,
     ProjectComponent,
-    EducationComponent
+    EducationComponent,
+    ResumeComponent,
+    PrintableComponent
   ],
   imports: [
     FlexLayoutModule,

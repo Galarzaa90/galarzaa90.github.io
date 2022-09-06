@@ -1,0 +1,59 @@
+<div class="content">
+    <h1>Allan Galarza</h1>
+    <p>{{profile.aboutMe}}</p>
+    <p><fa-icon [icon]="faEnvelope"></fa-icon> allan.galarza@gmail.com</p>
+    <h2>Work Experience</h2>
+    <dl>
+        <ng-container *ngFor="let job of profile.workExperience">
+            <dt fxLayout="row" fxLayoutAlign="space-between center">
+                <strong>{{job.company}}</strong>
+                <span *ngIf="job.end === undefined">
+                    {{job.start | date: 'MMMM y'}} — Present
+                </span>
+                <span *ngIf="job.end !== undefined">
+                    {{job.start | date: 'MMMM y'}} —
+                    {{job.end | date: 'MMMM y'}}
+                </span>
+            </dt>
+            <dd>
+                {{job.description}}
+                <ul *ngIf="job.items?.length != 0">
+                    <li *ngFor="let item of job.items" [innerHtml]="item">
+                    </li>
+                </ul>
+                <ng-container *ngIf="job.skills != undefined">
+                    <strong>Tools:</strong>&nbsp;<span
+                        [innerText]="joinSkillIcons(job.skills)"></span>
+                </ng-container>
+            </dd>
+        </ng-container>
+    </dl>
+    <h2>Skills & Tools</h2>
+    <br>
+    {{ joinSkills(profile.skills) }}
+    <h2>Personal Projects</h2>
+    <dl>
+        <ng-container *ngFor="let project of profile.projects">
+            <dt fxLayout="row" fxLayoutAlign="space-between center">
+                <strong>{{project.name}}</strong>
+                <span *ngIf="project.end === undefined">
+                    {{project.start | date: 'MMMM y'}} — Present
+                </span>
+                <span *ngIf="project.end !== undefined">
+                    {{project.start | date: 'MMMM y'}} —
+                    {{project.end | date: 'MMMM y'}}
+                </span>
+            </dt>
+            <dd>
+                {{project.description}}
+                <ul *ngIf="project.items?.length != 0">
+                    <li *ngFor="let item of project.items" [innerHtml]="item"></li>
+                </ul>
+                <ng-container *ngIf="project.skills != undefined">
+                    <strong>Tools:</strong>&nbsp;<span
+                        [innerText]="joinSkillIcons(project.skills)"></span>
+                </ng-container>
+            </dd>
+        </ng-container>
+    </dl>
+</div>

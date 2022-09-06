@@ -9,7 +9,7 @@ import {
     siSocketdotio, siAngular, siPostgresql, siFastapi
 } from 'simple-icons/icons';
 
-interface Profile {
+export interface Profile {
     headline: string;
     aboutMe: string;
     location: string;
@@ -22,7 +22,7 @@ interface Profile {
     skills: Array<Skill>;
 }
 
-interface Language {
+export interface Language {
     name: string;
     level: string;
 }
@@ -65,7 +65,7 @@ export interface Project {
     skills: Array<SkillIcon>;
 }
 
-interface Skill {
+export interface Skill {
     name: string;
     type: string;
     icon?: SkillIcon;
