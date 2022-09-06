@@ -1,4 +1,6 @@
-<mat-toolbar color="primary">
+<app-printable class="print-only"></app-printable>
+<div class="no-print">
+  <mat-toolbar color="primary">
     <span class="header-title">Allan Galarza</span>
   </mat-toolbar>
   <div class="container">
@@ -6,7 +8,8 @@
       <div fxFlex="25" fxLayout="column" fxLayoutGap="2%">
         <div>
           <mat-card>
-            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="4%">
+            <div fxLayout="column" fxLayoutAlign="space-between center"
+              fxLayoutGap="4%">
               <div class="profile-picture"></div>
               <div>
                 <p class="about-me">
@@ -34,7 +37,8 @@
       </div>
       <div fxFlex="69" fxLayout="column" fxLayoutGap="2%">
         <div>
-          <app-work-experience [entries]="profile.workExperience"></app-work-experience>
+          <app-work-experience [entries]="profile.workExperience">
+          </app-work-experience>
         </div>
         <div>
           <app-projects [projects]="profile.projects"></app-projects>
@@ -43,7 +47,9 @@
           <h2>Skills & Tools</h2>
           <mat-card>
             <mat-chip-list aria-label="Skills">
-              <mat-chip *ngFor="let skill of profile.skills"><app-skill-icon *ngIf="skill.icon" [tooltip]="false" [skill]="skill.icon"></app-skill-icon>{{skill.name}}
+              <mat-chip *ngFor="let skill of profile.skills">
+                <app-skill-icon *ngIf="skill.icon" [tooltip]="false"
+                  [skill]="skill.icon"></app-skill-icon>{{skill.name}}
               </mat-chip>
             </mat-chip-list>
           </mat-card>
@@ -52,3 +58,4 @@
       </div>
     </div>
   </div>
+</div>
