@@ -33,7 +33,7 @@
                 </span>
       </dt>
       <dd>
-        {{job.description}}
+        <span [innerHTML]="job.description"></span>
         <ul *ngIf="job.items?.length != 0">
           <li *ngFor="let item of job.items" [innerHtml]="item">
           </li>
@@ -67,7 +67,7 @@
                 </span>
       </dt>
       <dd>
-        {{project.description}}
+        <span [innerHTML]="project.description"></span>
         <ul *ngIf="project.items?.length != 0">
           <li *ngFor="let item of project.items" [innerHtml]="item"></li>
         </ul>
