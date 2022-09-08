@@ -1,29 +1,76 @@
 @page {
-    size: A4;
-    margin: 1in;
- }
-
- h1 {
-    text-align:center
- }
-
- h2:after
-{
-    content:' ';
-    display:block;
-    border:2px solid black;
+  size: letter;
+  margin: 0.5in 1in;
 }
 
- .content {
-    margin: auto 5%;
- }
+@media print {
+  div.no-break {
+    break-inside: avoid;
+  }
+}
 
- @media print {
-    .content {
-        margin: 0px;
+
+* {
+  :host {
+    ::ng-deep {
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 11pt;
     }
- }
+  }
+}
 
- dd {
-    padding-bottom: 8pt;
- }
+.skills {
+  margin: auto 30pt;
+}
+
+.skill-icon {
+  margin: 2pt auto;
+}
+
+.school-header {
+  border: 1px solid black;
+  padding: 3pt 8pt;
+}
+
+.job-skills-container {
+  text-align: center;
+}
+
+.job-skill {
+  white-space:nowrap;
+}
+
+div > .job-skill:not(:first-child) {
+  border-left: 2px solid;
+  margin-left: 3pt;
+  padding-left: 3pt;
+}
+
+h1 {
+  text-align: center
+}
+
+h2:after {
+  content: ' ';
+  display: block;
+  border: 2px solid black;
+}
+
+dt {
+  padding: 3pt 8pt;
+  border: 1px solid black;
+}
+
+.content {
+  margin: auto 5%;
+}
+
+@media print {
+  .content {
+    margin: 0;
+  }
+}
+
+dd {
+  padding-bottom: 8pt;
+}

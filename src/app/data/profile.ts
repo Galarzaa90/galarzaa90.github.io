@@ -1,4 +1,3 @@
-import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SimpleIcon } from 'simple-icons';
@@ -31,6 +30,7 @@ interface OnlineProfile {
     icon: IconDefinition;
     url: string;
     title: string;
+    printable: boolean;
 }
 
 export interface JobEntry {
@@ -174,7 +174,7 @@ const icons = {
     },
     singlestore: {
         icon: siSinglestore,
-        text: 'SingleStore (previously MemSQL)'
+        text: 'SingleStore'
     },
     oracle: {
         icon: siOracle,
@@ -240,22 +240,26 @@ export let profile: Profile = {
         {
             icon: faEnvelope,
             url: 'mailto:allan.galarza@gmail.com',
-            title: 'Email'
+            title: 'allan.galarza@gmail.com',
+            printable: true,
         },
         {
             icon: faLinkedin,
             url: 'https://www.linkedin.com/in/galarzaa/',
-            title: 'LinkedIn'
+            title: 'LinkedIn',
+            printable: false,
         },
         {
             icon: faGithub,
             url: 'https://github.com/Galarzaa90',
-            title: 'GitHub'
+            title: 'Galarzaa90',
+            printable: true,
         },
         {
             icon: faGitlab,
             url: 'https://gitlab.com/Galarzaa90',
-            title: 'GitLab'
+            title: 'Galarzaa90',
+            printable: false,
         }
     ],
     interests: [

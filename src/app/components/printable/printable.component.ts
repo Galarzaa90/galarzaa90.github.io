@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faMapPin, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { profile, Skill, SkillIcon } from '../../data/profile';
 
 @Component({
@@ -9,7 +9,8 @@ import { profile, Skill, SkillIcon } from '../../data/profile';
 })
 export class PrintableComponent implements OnInit {
   profile = profile;
-  faEnvelope = faEnvelope;
+  faMapPin = faMapPin;
+  faGlobe = faGlobe;
   constructor() { }
 
   ngOnInit(): void {
