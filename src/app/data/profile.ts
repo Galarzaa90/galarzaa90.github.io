@@ -1,12 +1,6 @@
 import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { SimpleIcon } from 'simple-icons';
-import {
-    siPython, siMysql, siDotnet, siCsharp, siAzurefunctions, siMicrosoftsqlserver, siDjango, siXamarin, siNodedotjs, siKotlin,
-    siAndroid, siJava, siArduino, siRaspberrypi, siCplusplus, siAngularjs, siJavascript, siElectron, siProcessingfoundation, siGit,
-    siPrometheus, siGrafana, siDocker, siAiohttp, siSwagger, siOracle, siSinglestore, siTypescript, siSqlite, siRedis, siUbuntu,
-    siSocketdotio, siAngular, siPostgresql, siFastapi
-} from 'simple-icons/icons';
+import { siAiohttp, siAndroid, siAngular, siAngularjs, siArduino, siAzurefunctions, siCplusplus, siCsharp, siDjango, siDocker, siDotnet, siElectron, siFastapi, siGit, siGrafana, siJavascript, siKotlin, siMicrosoftsqlserver, SimpleIcon, siMysql, siNodedotjs, siOpenjdk, siOracle, siPostgresql, siProcessingfoundation, siPrometheus, siPython, siRaspberrypi, siRedis, siSinglestore, siSocketdotio, siSqlite, siSwagger, siTypescript, siUbuntu, siXamarin } from 'simple-icons';
 
 export interface Profile {
     headline: string;
@@ -117,7 +111,7 @@ const icons = {
         text: 'Android'
     },
     java: {
-        icon: siJava,
+        icon: siOpenjdk,
         text: 'Java'
     },
     raspberrypi: {
