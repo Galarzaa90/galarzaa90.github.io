@@ -2,17 +2,20 @@
 <mat-accordion class="experience-panels">
     <mat-expansion-panel hideToggle *ngFor="let project of projects"
         [hideToggle]="!(isXSmall$ | async)">
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header class="title-date">
             <mat-panel-title>
                 {{project.name}}
             </mat-panel-title>
-            <mat-panel-description class="entry-dates" fxHide.lt-sm="true">
+            <mat-panel-description fxHide.lt-sm="true">
                 <span *ngIf="project.end === undefined">
-                    {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}} — Present
+                    {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                    y'}} — Present
                 </span>
                 <span *ngIf="project.end !== undefined">
-                    {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}} —
-                    {{project.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
+                    {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                    y'}} —
+                    {{project.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                    y'}}
                 </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
@@ -30,7 +33,8 @@
                 <p *ngIf="project.description != undefined"
                     [innerHTML]="project.description"></p>
                 <ul *ngIf="project.items != undefined">
-                    <li *ngFor="let item of project.items" [innerHTML]="item"></li>
+                    <li *ngFor="let item of project.items" [innerHTML]="item">
+                    </li>
                 </ul>
                 <span class="project-skills"
                     *ngIf="project.skills != undefined">
@@ -45,7 +49,8 @@
                     <img class="company-logo img-link"
                         src="./assets/img/projects/{{project.logo}}">
                 </a>
-                <img class="company-logo" src="./assets/img/projects/{{project.logo}}"
+                <img class="company-logo"
+                    src="./assets/img/projects/{{project.logo}}"
                     *ngIf="project.logo != undefined && project.url == undefined">
                 <a [href]="project.url"
                     *ngIf="project.logo == undefined && project.url != undefined"
