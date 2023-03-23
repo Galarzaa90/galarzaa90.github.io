@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gitlab": "ng build --prod --output-path public",
+    "gitlab": "ng build -c production --output-path public",
     "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points"
   },
   "private": true,
@@ -24,7 +24,7 @@
     "@angular/platform-browser": "^15.2.3",
     "@angular/platform-browser-dynamic": "^15.2.3",
     "@angular/router": "^15.2.3",
-    "@fortawesome/angular-fontawesome": "^0.10.1",
+    "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
     "@fortawesome/free-brands-svg-icons": "^6.0.0",
     "@fortawesome/free-regular-svg-icons": "^6.0.0",
