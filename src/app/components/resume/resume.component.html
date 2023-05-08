@@ -4,42 +4,37 @@
     <span class="header-title">Allan Galarza</span>
   </mat-toolbar>
   <div class="container">
-    <div fxLayout.gt-xs="row" fxLayout="column" fxLayoutGap="1%">
-      <div fxFlex="25" fxLayout="column" fxLayoutGap="2%">
+    <div class="flex flex-col md:flex-row gap-2">
+      <div class="flex flex-col gap-2">
         <div>
           <mat-card appearance="raised">
             <mat-card-content>
-              <div fxLayout="column" fxLayoutAlign="space-between"
-                fxLayoutGap="4%">
-                <h2>About me</h2>
-                <div>
-                  <p class="about-me">
-                    {{profile.aboutMe}}
-                  </p>
-                </div>
-              </div>
-            </mat-card-content> 
+              <h2>About me</h2>
+              <p class="about-me">
+                {{profile.aboutMe}}
+              </p>
+            </mat-card-content>
           </mat-card>
         </div>
         <mat-card appearance="raised" class="sidebar">
           <mat-card-content>
-          <h2>Contact</h2>
-          <p *ngFor="let link of profile.onlineProfiles">
-            <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a
-              [href]="link.url">{{link.title}}</a>
-          </p>
-          <h2>Languages</h2>
-          <p *ngFor="let language of profile.languages">
-            {{language.name}} ({{language.level}})
-          </p>
-          <h2>Interests</h2>
-          <p *ngFor="let interest of profile.interests">
-            {{interest}}
-          </p>
-        </mat-card-content>
+            <h2>Contact</h2>
+            <p *ngFor="let link of profile.onlineProfiles">
+              <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a
+                [href]="link.url">{{link.title}}</a>
+            </p>
+            <h2>Languages</h2>
+            <p *ngFor="let language of profile.languages">
+              {{language.name}} ({{language.level}})
+            </p>
+            <h2>Interests</h2>
+            <p *ngFor="let interest of profile.interests">
+              {{interest}}
+            </p>
+          </mat-card-content>
         </mat-card>
       </div>
-      <div fxFlex="69" fxLayout="column" fxLayoutGap="2%">
+      <div class="flex flex-col gap-2">
         <div>
           <app-work-experience [entries]="profile.workExperience">
           </app-work-experience>

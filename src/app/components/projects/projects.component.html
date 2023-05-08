@@ -22,7 +22,7 @@
             </mat-panel-description>
         </mat-expansion-panel-header>
         <div class="flex flex-row space-y-0 items-start">
-            <div class="grow max-w-[90%] md:max-w-[80%]">
+            <div class="grow">
                 <span class="md:hidden date-subtitle">
                     <span *ngIf="project.end === undefined">
                         {{project.start | date: 'MMMM y'}} — Present
@@ -44,7 +44,7 @@
                         *ngFor="let skill of project.skills"></app-skill-icon>
                 </span>
             </div>
-            <div class="grow max-w-[10%] md:max-w-[20%]">
+            <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
                 <a [href]="project.url"
                     *ngIf="project.logo != undefined && project.url != undefined"
                     target="_blank">
