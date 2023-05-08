@@ -34,7 +34,7 @@
                 </p>
                 <p *ngIf="job.description != undefined"
                     [innerHTML]="job.description"></p>
-                <ul *ngIf="job.items != undefined">
+                <ul *ngIf="job.items != undefined" class="list-disc list-inside">
                     <li *ngFor="let item of job.items">{{item}}</li>
                 </ul>
                 <span class="job-skills" *ngIf="job.skills != undefined">

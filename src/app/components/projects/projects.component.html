@@ -32,7 +32,7 @@
                 </span>
                 <p *ngIf="project.description != undefined"
                     [innerHTML]="project.description"></p>
-                <ul *ngIf="project.items != undefined">
+                <ul *ngIf="project.items != undefined" class="list-disc list-inside">
                     <li *ngFor="let item of project.items" [innerHTML]="item">
                     </li>
                 </ul>

@@ -34,7 +34,7 @@
       </dt>
       <dd>
         <span [innerHTML]="job.description"></span>
-        <ul *ngIf="job.items?.length != 0">
+        <ul *ngIf="job.items?.length != 0" class="list-disc list-inside">
           <li *ngFor="let item of job.items" [innerHtml]="item">
           </li>
         </ul>
@@ -68,7 +68,7 @@
       </dt>
       <dd>
         <span [innerHTML]="project.description"></span>
-        <ul *ngIf="project.items?.length != 0">
+        <ul *ngIf="project.items?.length != 0" class="list-disc list-inside">
           <li *ngFor="let item of project.items" [innerHtml]="item"></li>
         </ul>
         <div *ngIf="project.skills != undefined" class="job-skills-container">

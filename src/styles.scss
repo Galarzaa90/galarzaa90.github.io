@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
@@ -5,6 +8,7 @@ body {
     background-color: #eeeeee;
     margin: 0;
 }
+
 * {
     font-family: 'Encode Sans', sans-serif !important;
 }
