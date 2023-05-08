@@ -1,29 +1,31 @@
 <h2>Education</h2>
-<mat-accordion class="experience-panels">
+<mat-accordion>
     <mat-expansion-panel hideToggle *ngFor="let school of entries"
         [hideToggle]="!(isXSmall$ | async)">
         <mat-expansion-panel-header class="title-date">
             <mat-panel-title>
                 {{school.name}}
             </mat-panel-title>
-            <mat-panel-description fxHide.lt-sm="true">
-                <span *ngIf="school.end === undefined">
-                    {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}} — Present
-                </span>
-                <span *ngIf="school.end !== undefined">
-                    {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}} —
-                    {{school.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}}
+            <mat-panel-description>
+                <span class="hidden md:inline">
+                    <span *ngIf="school.end === undefined">
+                        {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}} — Present
+                    </span>
+                    <span *ngIf="school.end !== undefined">
+                        {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}} —
+                        {{school.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}}
+                    </span>
                 </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <div fxLayout="row" fxLayoutAlign="space-between start">
-            <div fxFlex="90">
+        <div class="flex flex-row space-y-0 items-start">
+            <div class="grow max-w-[90%] md:max-w-[80%]">
                 <p>{{school.title}}<br>
                     {{school.level}}<br>
-                    <span fxShow.lt-sm="true" fxHide class="date-subtitle">
+                    <span class="md:hidden date-subtitle">
                         <span *ngIf="school.end === undefined">
                             {{school.start | date: 'MMMM y'}} — Present
                         </span>
@@ -33,7 +35,7 @@
                         </span>
                     </span>
             </div>
-            <div fxFlex="10" fxFlex.lt-lg="20">
+            <div class="grow max-w-[10%] md:max-w-[20%]">
                 <img class="company-logo" *ngIf="school.logo != undefined"
                     src="./assets/img/{{school.logo}}">
             </div>
