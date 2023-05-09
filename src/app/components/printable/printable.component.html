@@ -2,7 +2,7 @@
   <h1>Allan Galarza</h1>
   <p>{{profile.aboutMe}}</p>
   <div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly">
+    <div class="flex flex-row place-content-evenly">
       <div>
         <fa-icon [icon]="faMapPin"></fa-icon>
         {{profile.location}}
@@ -22,7 +22,7 @@
   <h2>Work Experience</h2>
   <dl>
     <div class="no-break" *ngFor="let job of profile.workExperience">
-      <dt fxLayout="row" fxLayoutAlign="space-between center">
+      <dt class="flex flex-row place-content-between items-center">
         <strong>{{job.company}}</strong>
         <span *ngIf="job.end === undefined">
                     {{job.start | date: 'MMMM y'}} — Present
@@ -32,9 +32,9 @@
           {{job.end | date: 'MMMM y'}}
                 </span>
       </dt>
-      <dd>
+      <dd class="ms-5">
         <span [innerHTML]="job.description"></span>
-        <ul *ngIf="job.items?.length != 0" class="list-disc list-inside">
+        <ul *ngIf="job.items?.length != 0" class="list-disc list-inside ps-5 pt-2">
           <li *ngFor="let item of job.items" [innerHtml]="item">
           </li>
         </ul>
@@ -47,16 +47,16 @@
     </div>
   </dl>
   <h2>Skills & Tools</h2>
-  <div fxLayout="row wrap" class="skills">
-    <div *ngFor="let skill of profile.skills" fxFlex="20" class="skill-icon">
+  <div class="skills grid grid-cols-5">
+    <div *ngFor="let skill of profile.skills" class="skill-icon">
         <app-skill-icon *ngIf="skill.icon != null" [skill]="skill.icon"></app-skill-icon>
         <span>{{skill.name}}</span>
     </div>
   </div>
   <h2>Personal Projects</h2>
   <dl>
-    <div  class="no-break" *ngFor="let project of profile.projects">
-      <dt fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="no-break" *ngFor="let project of profile.projects">
+      <dt class="flex flex-row place-content-between items-center">
         <strong>{{project.name}}</strong>
         <span *ngIf="project.end === undefined">
                     {{project.start | date: 'MMMM y'}} — Present
@@ -66,9 +66,9 @@
           {{project.end | date: 'MMMM y'}}
                 </span>
       </dt>
-      <dd>
+      <dd class="ms-5">
         <span [innerHTML]="project.description"></span>
-        <ul *ngIf="project.items?.length != 0" class="list-disc list-inside">
+        <ul *ngIf="project.items?.length != 0" class="list-disc list-inside ps-5">
           <li *ngFor="let item of project.items" [innerHtml]="item"></li>
         </ul>
         <div *ngIf="project.skills != undefined" class="job-skills-container">
@@ -80,9 +80,9 @@
     </div>
   </dl>
   <h2>Education</h2>
-  <div fxLayout="row">
-    <div  class="no-break" *ngFor="let school of profile.education" fxFlex="50" fxLayoutGap="8pt">
-      <div class="school-header" fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="flex flex-row">
+    <div *ngFor="let school of profile.education" class="no-break grow">
+      <div class="school-header flex flex-row place-content-between items-center mr-2">
         <strong>{{school.name}}</strong>
         <span *ngIf="school.end !== undefined">
                     {{school.start | date: 'MMMM y'}} —
