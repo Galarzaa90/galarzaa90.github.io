@@ -1,5 +1,5 @@
 <h2>Work Experience</h2>
-<mat-accordion class="experience-panels">
+<mat-accordion>
     <mat-expansion-panel [expanded]="i === 0"
         [hideToggle]="!(isXSmall$ | async)"
         *ngFor="let job of entries; let i = index">
@@ -7,22 +7,24 @@
             <mat-panel-title>
                 {{job.company}}
             </mat-panel-title>
-            <mat-panel-description fxHide.lt-sm="true">
-                <span *ngIf="job.end === undefined">
-                    {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}} — Present
-                </span>
-                <span *ngIf="job.end !== undefined">
-                    {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}} —
-                    {{job.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
+            <mat-panel-description>
+                <span class="hidden md:inline">
+                    <span *ngIf="job.end === undefined">
+                        {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}} — Present
+                    </span>
+                    <span *ngIf="job.end !== undefined">
+                        {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}} —
+                        {{job.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
+                    </span>
                 </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <div fxLayout="row" fxLayoutAlign="space-between start">
-            <div fxFlex="90">
+        <div class="flex flex-row space-y-0 items-start">
+            <div class="grow">
                 <p><b>{{job.position}}</b><br>
-                    <span fxShow.lt-sm="true" fxHide class="date-subtitle">
+                    <span class="md:hidden date-subtitle">
                         <span *ngIf="job.end === undefined">
                             {{job.start | date: 'MMMM y'}} — Present
                         </span>
@@ -34,7 +36,7 @@
                 </p>
                 <p *ngIf="job.description != undefined"
                     [innerHTML]="job.description"></p>
-                <ul *ngIf="job.items != undefined">
+                <ul *ngIf="job.items != undefined" class="list-disc list-inside">
                     <li *ngFor="let item of job.items">{{item}}</li>
                 </ul>
                 <span class="job-skills" *ngIf="job.skills != undefined">
@@ -42,7 +44,7 @@
                         *ngFor="let skill of job.skills"></app-skill-icon>
                 </span>
             </div>
-            <div fxFlex="10" fxFlex.lt-lg="20">
+            <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
                 <a [href]="job.url"
                     *ngIf="job.logo != undefined && job.url != undefined"
                     target="_blank">

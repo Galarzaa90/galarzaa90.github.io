@@ -1,27 +1,29 @@
 <h2>Projects</h2>
-<mat-accordion class="experience-panels">
+<mat-accordion>
     <mat-expansion-panel hideToggle *ngFor="let project of projects"
         [hideToggle]="!(isXSmall$ | async)">
         <mat-expansion-panel-header class="title-date">
             <mat-panel-title>
                 {{project.name}}
             </mat-panel-title>
-            <mat-panel-description fxHide.lt-sm="true">
-                <span *ngIf="project.end === undefined">
-                    {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}} — Present
-                </span>
-                <span *ngIf="project.end !== undefined">
-                    {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}} —
-                    {{project.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                    y'}}
+            <mat-panel-description>
+                <span class="hidden md:inline">
+                    <span *ngIf="project.end === undefined">
+                        {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}} — Present
+                    </span>
+                    <span *ngIf="project.end !== undefined">
+                        {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}} —
+                        {{project.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+                        y'}}
+                    </span>
                 </span>
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <div fxLayout="row" fxLayoutAlign="space-between start">
-            <div fxFlex="90">
-                <span fxShow.lt-sm="true" fxHide class="date-subtitle">
+        <div class="flex flex-row space-y-0 items-start">
+            <div class="grow">
+                <span class="md:hidden date-subtitle">
                     <span *ngIf="project.end === undefined">
                         {{project.start | date: 'MMMM y'}} — Present
                     </span>
@@ -32,7 +34,7 @@
                 </span>
                 <p *ngIf="project.description != undefined"
                     [innerHTML]="project.description"></p>
-                <ul *ngIf="project.items != undefined">
+                <ul *ngIf="project.items != undefined" class="list-disc list-inside">
                     <li *ngFor="let item of project.items" [innerHTML]="item">
                     </li>
                 </ul>
@@ -42,7 +44,7 @@
                         *ngFor="let skill of project.skills"></app-skill-icon>
                 </span>
             </div>
-            <div fxFlex="10" fxFlex.lt-lg="20">
+            <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
                 <a [href]="project.url"
                     *ngIf="project.logo != undefined && project.url != undefined"
                     target="_blank">
