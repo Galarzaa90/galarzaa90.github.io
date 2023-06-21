@@ -3,6 +3,6 @@
     [matTooltip]="tooltip ? skill!.text : ''" role="img" viewBox="0 0 24 24"
     (mouseover)="hover = true"
     (mouseleave)="hover = false"
-    [style.fill]="hover ? toColor(skill!.icon.hex) : null">
+    [style.fill]="hover ? toColor(skill?.color ?? skill!.icon.hex) : null">
     <path [attr.d]="skill!.icon.path" />
 </svg>

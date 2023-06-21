@@ -47,10 +47,10 @@
           <mat-card appearance="raised">
             <mat-card-content>
               <mat-chip-listbox aria-label="Skills">
-                <mat-chip-option *ngFor="let skill of profile.skills">
+                <mat-chip *ngFor="let skill of profile.skills">
                   <app-skill-icon *ngIf="skill.icon" [tooltip]="false"
                     [skill]="skill.icon"></app-skill-icon>{{skill.name}}
-                </mat-chip-option>
+                </mat-chip>
               </mat-chip-listbox>
             </mat-card-content>
           </mat-card>

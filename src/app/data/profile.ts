@@ -1,6 +1,6 @@
 import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { siAiohttp, siAndroid, siAngular, siAngularjs, siArduino, siAzurefunctions, siCplusplus, siCsharp, siDjango, siDocker, siDotnet, siElectron, siFastapi, siGit, siGrafana, siJavascript, siKotlin, siMicrosoftsqlserver, SimpleIcon, siMysql, siNodedotjs, siOpenjdk, siOracle, siPostgresql, siProcessingfoundation, siPrometheus, siPython, siRaspberrypi, siRedis, siSinglestore, siSocketdotio, siSqlite, siSwagger, siTypescript, siUbuntu, siXamarin } from 'simple-icons';
+import { siAiohttp, siAndroid, siAngular, siAngularjs, siArduino, siAzurefunctions, siCplusplus, siCsharp, siDjango, siDocker, siDotnet, siElectron, siFastapi, siGit, siGrafana, siJavascript, siKotlin, siMicrosoftsqlserver, SimpleIcon, siMysql, siNodedotjs, siOpenjdk, siOracle, siPostgresql, siProcessingfoundation, siPrometheus, siPython, siRabbitmq, siRaspberrypi, siRedis, siSinglestore, siSocketdotio, siSqlite, siSwagger, siTypescript, siUbuntu, siXamarin } from 'simple-icons';
 
 export interface Profile {
     headline: string;
@@ -67,6 +67,7 @@ export interface Skill {
 export interface SkillIcon {
     icon: SimpleIcon;
     text: string;
+    color?: string;
 }
 
 const icons = {
@@ -112,7 +113,8 @@ const icons = {
     },
     java: {
         icon: siOpenjdk,
-        text: 'Java'
+        text: 'Java',
+        color: '007396',
     },
     raspberrypi: {
         icon: siRaspberrypi,
@@ -185,6 +187,10 @@ const icons = {
     fastapi: {
         icon: siFastapi,
         text: 'FastAPI',
+    },
+    rabbitMq: {
+        icon: siRabbitmq,
+        text: 'RabbitMQ',
     },
     docker: {
         icon: siDocker,
@@ -271,11 +277,12 @@ export let profile: Profile = {
             position: 'Software Engineer',
             description: 'Previously known as Nearsoft. Working as a backend developer, at the moment focusing in Python.',
             items: [
-                'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics.',
+                'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics in the oild industry.',
                 'Design and development of a backend application to create mappings between field equipment and field sensor data.',
+                'Development of service tasks to synchronize data and create events based on parameter configurations.',
             ],
             skills: [
-                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi,
+                icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi, icons.rabbitMq
             ]
         },
         {
@@ -436,17 +443,6 @@ export let profile: Profile = {
             ]
         },
         {
-            name: 'android-things-rc522',
-            url: 'https://github.com/Galarzaa90/android-things-rc522',
-            start: new Date('2017-03-28'),
-            end: new Date('2017-11-03'),
-            description: 'Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
-            skills: [
-                icons.java,
-                icons.android
-            ]
-        },
-        {
             name: 'tibiawiki-sql',
             url: 'https://tibiawiki-sql.rtfd.io/',
             start: new Date('2017-10-27'),
@@ -487,7 +483,18 @@ export let profile: Profile = {
                 icons.android,
                 icons.mysql,
             ]
-        }
+        },
+        {
+            name: 'android-things-rc522',
+            url: 'https://github.com/Galarzaa90/android-things-rc522',
+            start: new Date('2017-03-28'),
+            end: new Date('2017-11-03'),
+            description: 'Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
+            skills: [
+                icons.java,
+                icons.android
+            ]
+        },
     ],
     skills: [
         {
