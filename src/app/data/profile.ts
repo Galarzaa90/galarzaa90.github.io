@@ -403,7 +403,7 @@ export let profile: Profile = {
     {
       company: 'i3',
       start: new Date('2015-06-12'),
-      end: new Date('2017-12-31'),
+      end: new Date('2017-12-29'),
       position: 'Innovation Development Engineer',
       description: 'Development of innovation oriented projects in different areas. My work was focused on electronics, microcontrollers and software.',
       items: [
@@ -418,8 +418,8 @@ export let profile: Profile = {
     },
     {
       company: 'Universidad de Sonora',
-      start: new Date('2015-03-01'),
-      end: new Date('2015-05-01'),
+      start: new Date('2015-04-06'),
+      end: new Date('2015-05-29'),
       position: 'Technical Manager Assistant',
       logo: 'UNISON.png',
       url: 'https://www.unison.mx/',
@@ -435,7 +435,7 @@ export let profile: Profile = {
     },
     {
       company: 'Grupo TEPEI',
-      start: new Date('2014-06-01'),
+      start: new Date('2014-07-14'),
       end: new Date('2014-11-01'),
       position: 'Developer',
       description: 'Developing of an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server.',
@@ -445,8 +445,8 @@ export let profile: Profile = {
     },
     {
       company: 'Plataforma Solar de Hermosillo',
-      start: new Date('2014-01-01'),
-      end: new Date('2014-06-01'),
+      start: new Date('2014-01-06'),
+      end: new Date('2014-07-11'),
       logo: 'PSH.png',
       url: 'http://psh.isi.uson.mx/',
       position: 'Intern Developer',
