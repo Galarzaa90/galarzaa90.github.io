@@ -1,5 +1,5 @@
-import {faGithub, faGitlab, faLinkedin, IconDefinition} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faGitlab, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   siAiohttp,
   siAndroid,
@@ -10,6 +10,7 @@ import {
   siCplusplus,
   siCsharp,
   siDjango,
+  siDiscord,
   siDocker,
   siDotnet,
   siElectron,
@@ -265,6 +266,10 @@ const icons = {
     icon: siBootstrap,
     text: 'Bootstrap'
   },
+  discord: {
+    icon: siDiscord,
+    text: 'Discord',
+  }
 };
 
 export let profile: Profile = {
@@ -339,7 +344,7 @@ export let profile: Profile = {
       start: new Date('2020-06-15'),
       end: new Date('2020-10-31'),
       url: 'https://www.joybyte.com/',
-      position: 'Freelancer Developer',
+      position: 'Freelance Developer',
       logo: 'joybyte.png',
       description: 'Supported the backend team off-hours with the development of a new release for a mobile pregnancy tracking app.',
       items: [
@@ -430,7 +435,7 @@ export let profile: Profile = {
         'Design of solar tracking mechanical structures for photovoltaic cells.'
       ],
       skills: [
-        icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing
+        icons.cplusplus, icons.arduino, icons.processing
       ]
     },
     {
@@ -487,7 +492,7 @@ export let profile: Profile = {
         'Recognized as a <b>Promoted Fansite</b> by the game developers.',
       ],
       skills: [
-        icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
+        icons.discord, icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
         icons.docker, icons.prometheus, icons.grafana, icons.kotlin
       ]
     },
