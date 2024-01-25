@@ -1,4 +1,6 @@
 @use '@angular/material' as mat;
+
+@include mat.core();
 @import 'globals.scss';
 // Plus imports for other components in your app.
 
@@ -23,7 +25,7 @@ $app-theme: mat.define-light-theme((
   color: (
     primary: $app-primary,
     accent: $app-accent,
-    warn: $app-warn,  
+    warn: $app-warn,
   )
 ));
 

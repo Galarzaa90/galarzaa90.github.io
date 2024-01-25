@@ -15,8 +15,10 @@ import {
   siDotnet,
   siElectron,
   siFastapi,
+  siFirebase,
   siGit,
   siGrafana,
+  siGooglemaps,
   siJavascript,
   siKotlin,
   siMicrosoftsqlserver,
@@ -34,7 +36,9 @@ import {
   siRedis,
   siSinglestore,
   siSocketdotio,
+  siSqlalchemy,
   siSqlite,
+  siStripe,
   siSwagger,
   siTypescript,
   siUbuntu,
@@ -140,6 +144,22 @@ const icons = {
   django: {
     icon: siDjango,
     text: 'Django'
+  },
+  sqlAlchemy: {
+    icon: siSqlalchemy,
+    text: 'SQLAlchemy'
+  },
+  stripe: {
+    icon: siStripe,
+    text: 'Stripe'
+  },
+  firebase: {
+    icon: siFirebase,
+    text: 'Firebase'
+  },
+  googleMaps: {
+    icon: siGooglemaps,
+    text: 'Google Maps',
   },
   kotlin: {
     icon: siKotlin,
@@ -497,6 +517,21 @@ export let profile: Profile = {
       ]
     },
     {
+      name: 'On-Demand Medical Service App',
+      start: new Date('2023-09-11'),
+      description: '',
+      items: [
+        'Design and development of a HTTP API to serve as the backend for on-demand medical services mobile applications (iOS & Android).',
+        'SQL database design for application data storage.',
+        'Integration of Stripe Connect workflow for in-app payments.',
+        'Integration of Google Maps API for travel time calculations and geocoding.',
+        'Implementation of messaging from server to devices through Firebase Cloud Messaging.',
+      ],
+      skills: [
+        icons.python, icons.fastapi, icons.postgresql, icons.sqlAlchemy, icons.stripe, icons.googleMaps, icons.firebase, icons.docker
+      ]
+    },
+    {
       name: 'Car Insurance Web app',
       start: new Date('2021-04-29'),
       end: new Date('2021-12-14'),
@@ -620,6 +655,11 @@ export let profile: Profile = {
       name: 'Django',
       type: 'Platforms',
       icon: icons.django
+    },
+    {
+      name: 'SQLAlchemy',
+      type: 'Platforms',
+      icon: icons.sqlAlchemy,
     },
     {
       name: 'Raspberry Pi',
