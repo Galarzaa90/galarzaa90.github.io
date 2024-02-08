@@ -9,6 +9,7 @@ import {
   siAzurefunctions,
   siCplusplus,
   siCsharp,
+  siDassaultsystemes,
   siDjango,
   siDiscord,
   siDocker,
@@ -45,6 +46,7 @@ import {
   siXamarin,
   siBootstrap,
   siJquery,
+  siPydantic,
 } from 'simple-icons';
 
 export interface Profile {
@@ -250,6 +252,10 @@ const icons = {
     icon: siFastapi,
     text: 'FastAPI',
   },
+  pydantic: {
+    icon: siPydantic,
+    text: 'Pydantic',
+  },
   rabbitMq: {
     icon: siRabbitmq,
     text: 'RabbitMQ',
@@ -274,6 +280,10 @@ const icons = {
     icon: siGit,
     text: 'git'
   },
+  solidWorks: {
+    icon: siDassaultsystemes,
+    text: 'SolidWorks'
+  },
   processing: {
     icon: siProcessingfoundation,
     text: 'Processing'
@@ -294,7 +304,7 @@ const icons = {
 
 export let profile: Profile = {
   headline: 'Hello, my name is Allan!',
-  aboutMe: 'I\'m a mechatronics engineer and software developer. I\'m mainly a backend developer, my favorite is Python. I love electronics, gaming and learning new things.',
+  aboutMe: 'Software developer and Mechatronics engineer. Mostly focused in the backend, using Python or Kotlin. Interested in electronics, gaming and learning new things.',
   location: 'Mexico',
   languages: [
     {
@@ -349,14 +359,14 @@ export let profile: Profile = {
       logo: 'Encora.png',
       url: 'https://www.encora.com',
       position: 'Software Engineer',
-      description: 'Previously known as Nearsoft. Working as a backend developer, at the moment focusing in Python.',
+      description: 'Previously known as Nearsoft. Working as a backend developer and database administrator.',
       items: [
-        'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics in the oild industry.',
+        'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics in the oil industry.',
         'Design and development of a backend application to create mappings between field equipment and field sensor data.',
         'Development of service tasks to synchronize data and create events based on parameter configurations.',
       ],
       skills: [
-        icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi, icons.rabbitMq
+        icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi, icons.docker, icons.rabbitMq, icons.sqlAlchemy,
       ]
     },
     {
@@ -366,11 +376,11 @@ export let profile: Profile = {
       url: 'https://www.joybyte.com/',
       position: 'Freelance Developer',
       logo: 'joybyte.png',
-      description: 'Supported the backend team off-hours with the development of a new release for a mobile pregnancy tracking app.',
+      description: 'Assisted the backend team during off-hours in developing a new release for a mobile pregnancy tracking app.',
       items: [
-        'Design of APIs for mobile consumers.',
-        'Database First design and management.',
-        'Design and maintenance of stored procedures and other database logic.',
+        'Designed APIs for mobile consumers.',
+        'Implemented Database First design and management.',
+        'Developed and maintained stored procedures and other database logic.',
       ],
       skills: [
         icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql,
@@ -385,9 +395,9 @@ export let profile: Profile = {
       logo: 'GilaSW.png',
       description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology.',
       items: [
-        'Development of the backend for a web application to manage dynamically generated inspections and inventory. From the design of the database, to development of the microservice and orchestrator layer.',
+        'Developed the backend for a web application to manage dynamically generated inspections and inventory. From the design of the database, to the microservice architecture.',
         'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic.',
-        'Development of a mobile social media platform for entrepeneurs and startups.',
+        'Contributed to the development of a mobile social media platform tailored for entrepreneurs and startups.',
         'Maintenance of a booking and travel CMS.'
       ],
       skills: [
@@ -403,13 +413,13 @@ export let profile: Profile = {
       url: 'https://lopez-fernandez.com/',
       description: 'Development of applications and libraries for money management devices.',
       items: [
-        'Creation of applications for end-users, deployed in kiosks with multiple money devices.',
-        'Design and development of software interfaces for acceptors, dispensers and other money devices.',
-        'Integration to third-party monitoring web services.',
-        'Integration to third party banking and payment services.',
-        'Development and management of web services.',
-        'Management of local and remote databases.',
-        'Implementation of quality coding practices.',
+        'Created of applications for end-users, deployed in kiosks with multiple money devices.',
+        'Designed and developed software interfaces for acceptors, dispensers and other money devices.',
+        'Integrated third-party monitoring web services.',
+        'Integrated third party banking and payment services.',
+        'Developed and managed web services.',
+        'Managed local and remote databases.',
+        'Implemented quality coding practices.',
         'Temporary outsourced at Qualisys to aid in development of SAP Business One addons.'
       ],
       skills: [
@@ -432,10 +442,10 @@ export let profile: Profile = {
       position: 'Innovation Development Engineer',
       description: 'Development of innovation oriented projects in different areas. My work was focused on electronics, microcontrollers and software.',
       items: [
-        'Creation of an Android app that uses Bluetooth LE technology to communicate with an embedded device controlling headlights on ATV vehicles.',
-        'Design and manufacturing of protective cases for electronic control devices.',
-        'Development of an Android app to remotely monitor ambient conditions of Aquaponic greenhouses.',
-        'Development and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
+        'Created an Android app that uses Bluetooth LE technology to communicate with an embedded device controlling headlights on all-terrain vehicles (ATV).',
+        'Designed and manufactured protective cases for electronic control devices.',
+        'Developed an Android app to remotely monitor ambient conditions of Aquaponic greenhouses.',
+        'Developed and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
       ],
       skills: [
         icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing, icons.python,
@@ -448,11 +458,11 @@ export let profile: Profile = {
       position: 'Technical Manager Assistant',
       logo: 'UNISON.png',
       url: 'https://www.unison.mx/',
-      description: 'Assisting the technical manager and planning of the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
+      description: 'Assited the technical manager and planned the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
       items: [
-        'Implementation of solar tracking algorithms in microcontroller based systems.',
-        'Design of printed circuit boards.',
-        'Design of solar tracking mechanical structures for photovoltaic cells.'
+        'Implemented of solar tracking algorithms in microcontroller based systems.',
+        'Designed printed circuit boards.',
+        'Designed solar tracking mechanical structures for photovoltaic cells.'
       ],
       skills: [
         icons.cplusplus, icons.arduino, icons.processing
@@ -463,7 +473,7 @@ export let profile: Profile = {
       start: new Date('2014-07-14'),
       end: new Date('2014-11-01'),
       position: 'Developer',
-      description: 'Developing of an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server.',
+      description: 'Developed an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server.',
       skills: [
         icons.cplusplus, icons.arduino, icons.java, icons.android
       ]
@@ -475,7 +485,7 @@ export let profile: Profile = {
       logo: 'PSH.png',
       url: 'http://psh.isi.uson.mx/',
       position: 'Intern Developer',
-      description: 'Developing an alternative control system for heliostats solar tracking. A economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
+      description: 'Developed an alternative control system for heliostats solar tracking. An economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
       skills: [
         icons.cplusplus, icons.arduino
       ]
@@ -486,7 +496,7 @@ export let profile: Profile = {
       name: 'Universidad de Sonora',
       start: new Date('2009-08-01'),
       end: new Date('2014-04-01'),
-      level: 'Bachelor\s Degree',
+      level: 'Bachelor\'s Degree',
       title: 'Mechatronics Engineering (Ingeniería Mecatrónica)',
       logo: 'UNISON.png',
     },
@@ -564,6 +574,7 @@ export let profile: Profile = {
       skills: [
         icons.python,
         icons.aiohttp,
+        icons.pydantic,
       ]
     },
     {
@@ -652,6 +663,16 @@ export let profile: Profile = {
       icon: icons.angular
     },
     {
+      name: 'Pydantic',
+      type: 'Platforms',
+      icon: icons.pydantic,
+    },
+    {
+      name: 'FastAPI',
+      type: 'Platforms',
+      icon: icons.fastapi,
+    },
+    {
       name: 'Django',
       type: 'Platforms',
       icon: icons.django
@@ -708,7 +729,8 @@ export let profile: Profile = {
     },
     {
       name: 'SolidWorks',
-      type: 'Other'
+      type: 'Other',
+      icon: icons.solidWorks,
     },
     {
       name: 'PCB Design',
