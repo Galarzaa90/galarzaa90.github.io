@@ -79,18 +79,20 @@
       </dd>
     </div>
   </dl>
-  <h2>Education</h2>
-  <div class="flex flex-row">
-    <div *ngFor="let school of profile.education" class="no-break grow">
-      <div class="school-header flex flex-row place-content-between items-center mr-2">
-        <strong>{{school.name}}</strong>
-        <span *ngIf="school.end !== undefined">
-                    {{school.start | date: 'MMMM y'}} —
-          {{school.end | date: 'MMMM y'}}
-                </span>
+  <div class="no-break">
+    <h2>Education</h2>
+    <div class="flex flex-row">
+      <div *ngFor="let school of profile.education" class="no-break grow">
+        <div class="school-header flex flex-row place-content-between items-center mr-2">
+          <strong>{{school.name}}</strong>
+          <span *ngIf="school.end !== undefined">
+                      {{school.start | date: 'MMMM y'}} —
+            {{school.end | date: 'MMMM y'}}
+                  </span>
+        </div>
+        <p>{{school.title}}</p>
+        <p>{{school.level}}</p>
       </div>
-      <p>{{school.title}}</p>
-      <p>{{school.level}}</p>
     </div>
   </div>
 </div>
