@@ -318,7 +318,7 @@ const icons = {
 
 export let profile: Profile = {
   headline: 'Hello, my name is Allan!',
-  aboutMe: 'Software developer and Mechatronics engineer. Mostly focused in the backend, using Python or Kotlin. Interested in electronics, gaming and learning new things.',
+  aboutMe: 'Software engineer with a passion for building high-quality, maintainable code. With experience across diverse industries like oil and gas, healthcare, electornics and finance.',
   location: 'Mexico',
   languages: [
     {
