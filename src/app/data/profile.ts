@@ -4,24 +4,26 @@ import {
   siAiohttp,
   siAndroid,
   siAngular,
-  siAngularjs,
   siArduino,
   siAzurefunctions,
+  siBootstrap,
   siCplusplus,
   siCsharp,
   siDassaultsystemes,
-  siDjango,
   siDiscord,
+  siDjango,
   siDocker,
   siDotnet,
   siElectron,
   siFastapi,
   siFirebase,
   siGit,
-  siGrafana,
   siGooglemaps,
+  siGrafana,
   siJavascript,
+  siJquery,
   siKotlin,
+  siKtor,
   siMicrosoftsqlserver,
   SimpleIcon,
   siMysql,
@@ -31,22 +33,22 @@ import {
   siPostgresql,
   siProcessingfoundation,
   siPrometheus,
+  siPydantic,
   siPython,
   siRabbitmq,
   siRaspberrypi,
   siRedis,
+  siProteus,
   siSinglestore,
   siSocketdotio,
   siSqlalchemy,
   siSqlite,
+  siSonarqube,
   siStripe,
   siSwagger,
   siTypescript,
   siUbuntu,
   siXamarin,
-  siBootstrap,
-  siJquery,
-  siPydantic,
 } from 'simple-icons';
 
 export interface Profile {
@@ -193,7 +195,7 @@ const icons = {
     text: 'Arduino'
   },
   angularjs: {
-    icon: siAngularjs,
+    icon: siAngular,
     text: 'AngularJS'
   },
   javascript: {
@@ -256,6 +258,10 @@ const icons = {
     icon: siPydantic,
     text: 'Pydantic',
   },
+  ktor: {
+    icon: siKtor,
+    text: 'Ktor',
+  },
   rabbitMq: {
     icon: siRabbitmq,
     text: 'RabbitMQ',
@@ -267,6 +273,10 @@ const icons = {
   grafana: {
     icon: siGrafana,
     text: 'Grafana'
+  },
+  sonarqube: {
+    icon: siSonarqube,
+    text: 'SonarQube'
   },
   prometheus: {
     icon: siPrometheus,
@@ -283,6 +293,10 @@ const icons = {
   solidWorks: {
     icon: siDassaultsystemes,
     text: 'SolidWorks'
+  },
+  proteus: {
+    icon: siProteus,
+    text: 'Proteus'
   },
   processing: {
     icon: siProcessingfoundation,
@@ -448,7 +462,7 @@ export let profile: Profile = {
         'Developed and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
       ],
       skills: [
-        icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing, icons.python,
+        icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing, icons.python, icons.proteus, icons.solidWorks
       ]
     },
     {
@@ -458,14 +472,14 @@ export let profile: Profile = {
       position: 'Technical Manager Assistant',
       logo: 'UNISON.png',
       url: 'https://www.unison.mx/',
-      description: 'Assited the technical manager and planned the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
+      description: 'Assisted the technical manager and planned the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
       items: [
-        'Implemented of solar tracking algorithms in microcontroller based systems.',
+        'Implemented solar tracking algorithms in microcontroller based systems.',
         'Designed printed circuit boards.',
         'Designed solar tracking mechanical structures for photovoltaic cells.'
       ],
       skills: [
-        icons.cplusplus, icons.arduino, icons.processing
+        icons.cplusplus, icons.arduino, icons.processing, icons.proteus, icons.solidWorks
       ]
     },
     {
@@ -475,7 +489,7 @@ export let profile: Profile = {
       position: 'Developer',
       description: 'Developed an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server.',
       skills: [
-        icons.cplusplus, icons.arduino, icons.java, icons.android
+        icons.cplusplus, icons.arduino, icons.java, icons.android, icons.proteus
       ]
     },
     {
@@ -487,7 +501,7 @@ export let profile: Profile = {
       position: 'Intern Developer',
       description: 'Developed an alternative control system for heliostats solar tracking. An economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
       skills: [
-        icons.cplusplus, icons.arduino
+        icons.cplusplus, icons.arduino, icons.proteus
       ]
     }
   ],
@@ -517,18 +531,19 @@ export let profile: Profile = {
       logo: 'NabBot.png',
       description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
       items: [
-        'In over 12,000 Discord servers.',
+        'In over 15,000 Discord servers.',
         'Over 10,000 monthly users.',
         'Recognized as a <b>Promoted Fansite</b> by the game developers.',
       ],
       skills: [
         icons.discord, icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
-        icons.docker, icons.prometheus, icons.grafana, icons.kotlin
+        icons.docker, icons.prometheus, icons.grafana, icons.kotlin, icons.ktor,
       ]
     },
     {
       name: 'On-Demand Medical Service App',
       start: new Date('2023-09-11'),
+      end: new Date('2024-03-11'),
       description: '',
       items: [
         'Design and development of a HTTP API to serve as the backend for on-demand medical services mobile applications (iOS & Android).',
@@ -723,6 +738,21 @@ export let profile: Profile = {
       icon: icons.docker
     },
     {
+      name: 'Grafana',
+      type: 'Platforms',
+      icon: icons.grafana
+    },
+    {
+      name: 'Prometheus',
+      type: 'Platforms',
+      icon: icons.prometheus
+    },
+    {
+      name: 'SonarQube',
+      type: 'Platforms',
+      icon: icons.sonarqube
+    },
+    {
       name: 'git',
       type: 'Other',
       icon: icons.git
@@ -731,6 +761,11 @@ export let profile: Profile = {
       name: 'SolidWorks',
       type: 'Other',
       icon: icons.solidWorks,
+    },
+    {
+      name: 'Proteus',
+      type: 'Other',
+      icon: icons.proteus,
     },
     {
       name: 'PCB Design',
