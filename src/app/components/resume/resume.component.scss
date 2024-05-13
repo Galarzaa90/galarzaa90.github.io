@@ -2,90 +2,90 @@ $breakpoint-xs: 599px;
 $breakpoint-sm: 959px;
 
 .container {
-    margin: 0.5% auto;
-    width: 90%;
-    padding-bottom: 10%;
-    @media only screen and (min-width: $breakpoint-xs) {
-        width: 85%;
-    }
-    @media only screen and (min-width: $breakpoint-sm) {
-        width: 70%;
-    }
+  margin: 0.5% auto;
+  width: 90%;
+  padding-bottom: 10%;
+  @media only screen and (min-width: $breakpoint-xs) {
+    width: 85%;
+  }
+  @media only screen and (min-width: $breakpoint-sm) {
+    width: 70%;
+  }
 }
 
 .print-only {
-    display: none;
+  display: none;
 }
 
 @media print {
-    .no-print {
-        display: none;
-    }
+  .no-print {
+    display: none;
+  }
 
-    .print-only {
-        display: block;
-    }
+  .print-only {
+    display: block;
+  }
 }
 
 .profile-picture {
-    background-image: url("/assets/img/profile.jpg");
-    background-position: 50% 35%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
+  background-image: url("/assets/img/profile.jpg");
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  min-width: 60%;
+  padding-top: 60%;
+  float: left;
+  @media only screen and (max-width: $breakpoint-sm) {
+    min-width: 70%;
+    padding-top: 70%;
+  }
+  @media only screen and (max-width: $breakpoint-xs) {
     min-width: 60%;
     padding-top: 60%;
-    float: left;
-    @media only screen and (max-width: $breakpoint-sm) {
-        min-width: 70%;
-        padding-top: 70%;
-    }
-    @media only screen and (max-width: $breakpoint-xs) {
-        min-width: 60%;
-        padding-top: 60%;
-    }
+  }
 }
 
 h2 {
-    font-size: 150%;
+  font-size: 150%;
 }
 
 ::ng-deep .title-date {
-    .mat-expansion-panel-header-title {
-        flex-basis: auto;
-    }
-    .mat-expansion-panel-header-description {
-        flex-grow: 0;
-        flex-basis: auto;
-    }
+  .mat-expansion-panel-header-title {
+    flex-basis: auto;
+  }
+  .mat-expansion-panel-header-description {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
 }
 
 ::ng-deep .date-subtitle {
-    color: #0000008a;
+  color: var(--mat-expansion-header-description-color);
 }
 
 .sidebar p {
-    margin-left: 0.7rem;
-    font-size: 1.1em;
+  margin-left: 0.7rem;
+  font-size: 1.1em;
 }
 
 .header-title {
-    font-size: 130%;
+  font-size: 130%;
 }
 
 .about-me {
-    font-size: 120%;
-    @media only screen and (min-width: $breakpoint-sm) {
-        text-justify: inter-word;
-        text-align: justify;
-    }
+  font-size: 120%;
+  @media only screen and (min-width: $breakpoint-sm) {
+    text-justify: inter-word;
+    text-align: justify;
+  }
 }
 
 .headline {
-    font-size: 150%;
+  font-size: 150%;
 }
 
 ::ng-deep .company-logo {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
