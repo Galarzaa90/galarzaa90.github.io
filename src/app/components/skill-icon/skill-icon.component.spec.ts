@@ -8,8 +8,8 @@ describe('SkillIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkillIconComponent ]
-    })
+    imports: [SkillIconComponent]
+})
     .compileComponents();
   });
 
