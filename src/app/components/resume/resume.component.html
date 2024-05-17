@@ -5,17 +5,7 @@
   </mat-toolbar>
   <div class="container">
     <div class="flex flex-col md:flex-row gap-2">
-      <div class="flex flex-col gap-2">
-        <div>
-          <mat-card appearance="raised">
-            <mat-card-content>
-              <h2>About me</h2>
-              <p class="about-me">
-                {{profile.aboutMe}}
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </div>
+      <div class="flex flex-col gap-2 md:basis-1/4">
         <mat-card appearance="raised" class="sidebar">
           <mat-card-content>
             <h2>Contact</h2>
@@ -34,7 +24,15 @@
           </mat-card-content>
         </mat-card>
       </div>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 md:basis-3/4">
+        <div>
+          <h2>About Me</h2>
+          <mat-card appearance="raised">
+            <mat-card-content [innerHTML]="profile.aboutMe">
+
+            </mat-card-content>
+          </mat-card>
+        </div>
         <div>
           <app-work-experience [entries]="profile.workExperience">
           </app-work-experience>

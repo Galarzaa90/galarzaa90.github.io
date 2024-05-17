@@ -49,6 +49,10 @@ import {
   siTypescript,
   siUbuntu,
   siXamarin,
+  siIntellijidea,
+  siPycharm,
+  siVisualstudiocode,
+  siVisualstudio,
 } from 'simple-icons';
 
 export interface Profile {
@@ -294,6 +298,22 @@ const icons = {
     icon: siDassaultsystemes,
     text: 'SolidWorks'
   },
+  intelliJ: {
+    icon: siIntellijidea,
+    text: 'IntelliJ IDEA'
+  },
+  pycharm: {
+    icon: siPycharm,
+    text: 'PyCharm'
+  },
+  visualStudio: {
+    icon: siVisualstudio,
+    text: 'Visual Studio'
+  },
+  vsCode: {
+    icon: siVisualstudiocode,
+    text: 'Visual Studio Code'
+  },
   proteus: {
     icon: siProteus,
     text: 'Proteus'
@@ -318,7 +338,9 @@ const icons = {
 
 export let profile: Profile = {
   headline: 'Hello, my name is Allan!',
-  aboutMe: 'Software engineer with a passion for building high-quality, maintainable code. With experience across diverse industries like oil and gas, healthcare, electornics and finance.',
+  aboutMe: `<p>Software engineer with a passion for building high-quality, maintainable code. With experience across diverse industries like oil and gas, healthcare, electronics and finance.</p>
+  <p>Proficient in various programming languages and technologies such as Python, Kotlin, C# and SQL, and I prioritize following best practices for clean and well-documented c.odebases.</p>
+  <p>I have extensive experience designing and implement robust databases to support different sorts of applications as well as designing and developing well-documented and APIs.</p>`,
   location: 'Mexico',
   languages: [
     {
@@ -425,15 +447,15 @@ export let profile: Profile = {
       position: 'Software Engineer',
       logo: 'LYF.png',
       url: 'https://lopez-fernandez.com/',
-      description: 'Development of applications and libraries for money management devices.',
+      description: 'Developed applications and libraries for money management devices, enhanching funcionality and integration with third party services.',
       items: [
-        'Created of applications for end-users, deployed in kiosks with multiple money devices.',
-        'Designed and developed software interfaces for acceptors, dispensers and other money devices.',
-        'Integrated third-party monitoring web services.',
-        'Integrated third party banking and payment services.',
-        'Developed and managed web services.',
-        'Managed local and remote databases.',
-        'Implemented quality coding practices.',
+        'Created applications for end-users, deployed in kiosks with multiple money devices, allowing users to pay services, utilities or make bank transactions, focusing on accesibility and ease of use.',
+        'Designed and developed software interfaces for acceptors, dispensers, and other money devices to be used internally for application development or to be offered to customers for their own integration, focusing on usage and features documentation.',
+        'Integrated in-house monitoring services on end-user applications, keeping track of money transactions for quality and auditing purposes.',
+        'Integrated third-party banking and payment services, expanding payment options and enhancing transaction processing.',
+        'Developed and managed web services to support the core functionality of monitoring services.',
+        'Managed local and remote databases, ensuring data integrity and availability.',
+        'Implemented quality coding practices in the software department, contributing to the overall reliability of the software.',
         'Temporary outsourced at Qualisys to aid in development of SAP Business One addons.'
       ],
       skills: [
@@ -456,13 +478,22 @@ export let profile: Profile = {
       position: 'Innovation Development Engineer',
       description: 'Development of innovation oriented projects in different areas. My work was focused on electronics, microcontrollers and software.',
       items: [
-        'Created an Android app that uses Bluetooth LE technology to communicate with an embedded device controlling headlights on all-terrain vehicles (ATV).',
-        'Designed and manufactured protective cases for electronic control devices.',
-        'Developed an Android app to remotely monitor ambient conditions of Aquaponic greenhouses.',
-        'Developed and implementation of a small Linux based server providing greenhouse sensors data to client devices.'
+        'Created an Android app using Bluetooth LE technology to communicate with an embedded device, controlling ATV headlights to adjust for vehicle movement and ensure optimal illumination and visibility.',
+        'Designed and manufactured protective cases for electronic control devices, ensuring durability against environmental factors and strong movements.',
+        'Developed an Android app for remote monitoring of ambient conditions in aquaponic greenhouses, improving the life quality of fish and plants while reducing energy consumption.',
+        'Developed and implemented a backend system to monitor and collect sensor data from devices, providing historical data to assess the performance of aquaponic greenhouses.',
+        'Developed an embedded Android app serving as a user interface for dispensing machines, featuring a QR login system integrated with a companion mobile app to manage user credit and purchase history.',
+        'Researched and authored technical reports documenting project details, feasibility, and market studies.',
       ],
       skills: [
-        icons.android, icons.java, icons.cplusplus, icons.arduino, icons.processing, icons.python, icons.proteus, icons.solidWorks
+        icons.android,
+        icons.java,
+        icons.cplusplus,
+        icons.arduino,
+        icons.processing,
+        icons.python,
+        icons.proteus,
+        icons.solidWorks,
       ]
     },
     {
@@ -472,14 +503,19 @@ export let profile: Profile = {
       position: 'Technical Manager Assistant',
       logo: 'UNISON.png',
       url: 'https://www.unison.mx/',
-      description: 'Assisted the technical manager and planned the project: <i>Feasibility study of photovoltaic cells for airport gas stations electricity supply</i>.',
+      description: 'Assisted the technical manager and planned the project: <em>Feasibility study of photovoltaic cells for airport gas stations electricity supply</em>.',
       items: [
         'Implemented solar tracking algorithms in microcontroller based systems.',
-        'Designed printed circuit boards.',
-        'Designed solar tracking mechanical structures for photovoltaic cells.'
+        'Designed and assembled an embedded motor control system for protyping solar trackers.',
+        'Designed solar tracking mechanical structures for photovoltaic cells, featuring mechanisms to perform automatic facet canting to increase the energy efficiency of the cells.',
+        'Published patent as co-inventor: <em>System and method for the automatic facet canting of heliostats.</em> (Patent Number: MX2015008322A, Dember 2016).'
       ],
       skills: [
-        icons.cplusplus, icons.arduino, icons.processing, icons.proteus, icons.solidWorks
+        icons.cplusplus,
+        icons.arduino,
+        icons.processing,
+        icons.proteus,
+        icons.solidWorks
       ]
     },
     {
@@ -487,9 +523,17 @@ export let profile: Profile = {
       start: new Date('2014-07-14'),
       end: new Date('2014-11-01'),
       position: 'Developer',
-      description: 'Developed an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server.',
+      description: 'Developed an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server, reducing manual efforts and providing energy savings to schools.',
+      items: [
+        'Designed and developed embedded systems to install in classrooms, using infrarred LED to emit sequences to control devices, with an internal memory storing code sequences.',
+        'Developed an Android application to create, view and modify classroom schedules to manage air conditioning units automatically.'
+      ],
       skills: [
-        icons.cplusplus, icons.arduino, icons.java, icons.android, icons.proteus
+        icons.cplusplus,
+        icons.arduino,
+        icons.java,
+        icons.android,
+        icons.proteus
       ]
     },
     {
@@ -500,8 +544,15 @@ export let profile: Profile = {
       url: 'http://psh.isi.uson.mx/',
       position: 'Intern Developer',
       description: 'Developed an alternative control system for heliostats solar tracking. An economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
+      items: [
+        'Adapted a solar position algorith to run efficiently on an embedded system with lower hardware specifications.',
+        'Developed graphical interfaces to control, monitor, and test solar tracking mechanisms, fine-tuning PID control values for optimal performance.'
+      ],
       skills: [
-        icons.cplusplus, icons.arduino, icons.proteus
+        icons.cplusplus,
+        icons.arduino,
+        icons.proteus,
+        icons.processing
       ]
     }
   ],
@@ -590,6 +641,7 @@ export let profile: Profile = {
         icons.python,
         icons.aiohttp,
         icons.pydantic,
+        icons.fastapi,
       ]
     },
     {
@@ -598,7 +650,8 @@ export let profile: Profile = {
       start: new Date('2020-08-06'),
       description: 'JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
       skills: [
-        icons.kotlin
+        icons.kotlin,
+        icons.ktor,
       ]
     },
     {
@@ -673,6 +726,11 @@ export let profile: Profile = {
       icon: icons.dotnet
     },
     {
+      name: 'Node.js',
+      type: 'Platforms',
+      icon: icons.nodejs
+    },
+    {
       name: 'Angular',
       type: 'Platforms',
       icon: icons.angular
@@ -691,6 +749,11 @@ export let profile: Profile = {
       name: 'Django',
       type: 'Platforms',
       icon: icons.django
+    },
+    {
+      name: 'Ktor',
+      type: 'Platforms',
+      icon: icons.ktor,
     },
     {
       name: 'SQLAlchemy',
@@ -763,9 +826,24 @@ export let profile: Profile = {
       icon: icons.solidWorks,
     },
     {
-      name: 'Proteus',
+      name: 'IntelliJ IDEA',
+      type: 'Tools',
+      icon: icons.intelliJ,
+    },
+    {
+      name: 'Pycharm',
+      type: 'Tools',
+      icon: icons.pycharm,
+    },
+    {
+      name: 'Visual Studio',
       type: 'Other',
-      icon: icons.proteus,
+      icon: icons.visualStudio,
+    },
+    {
+      name: 'Visual Studio Code',
+      type: 'Other',
+      icon: icons.vsCode,
     },
     {
       name: 'PCB Design',
