@@ -402,7 +402,16 @@ export let profile: Profile = {
         'Development of service tasks to synchronize data and create events based on parameter configurations.',
       ],
       skills: [
-        icons.python, icons.swagger, icons.aiohttp, icons.singlestore, icons.redis, icons.oracle, icons.fastapi, icons.docker, icons.rabbitMq, icons.sqlAlchemy,
+        icons.python,
+        icons.swagger,
+        icons.aiohttp,
+        icons.singlestore,
+        icons.redis,
+        icons.oracle,
+        icons.fastapi,
+        icons.docker,
+        icons.rabbitMq,
+        icons.sqlAlchemy,
       ]
     },
     {
@@ -414,12 +423,15 @@ export let profile: Profile = {
       logo: 'joybyte.png',
       description: 'Assisted the backend team during off-hours in developing a new release for a mobile pregnancy tracking app.',
       items: [
-        'Designed APIs for mobile consumers.',
-        'Implemented Database First design and management.',
-        'Developed and maintained stored procedures and other database logic.',
+        'Designed APIs for the mobile app, providing information based on the user\'s registered due date and tracked health information, while providing tips and information based on their current pregnancy stage, as well as referring to health clinics.',
+        'Implemented Database First design and management, aiming for scalability and flexibility.',
+        'Developed and maintained stored procedures and other database logic, creating tailored information for users based on their pregnancy stage, symptom tracking and other information.',
       ],
       skills: [
-        icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql,
+        icons.csharp,
+        icons.dotnet,
+        icons.azurefunctions,
+        icons.mssql,
       ]
     },
     {
@@ -429,15 +441,23 @@ export let profile: Profile = {
       url: 'https://gilasw.com/',
       position: 'Software Engineer',
       logo: 'GilaSW.png',
-      description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology.',
+      description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology, taking strong initiative on standardizing good coding practices across the company and the use of code quality tools.',
       items: [
-        'Developed the backend for a web application to manage dynamically generated inspections and inventory. From the design of the database, to the microservice architecture.',
-        'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic.',
-        'Contributed to the development of a mobile social media platform tailored for entrepreneurs and startups.',
-        'Maintenance of a booking and travel CMS.'
+        'Developed the backend for a web application to create and manage dynamically generated inspections and inventory. From the design of the database, to the microservice achitecture using Azure functions, letting administrators create dynamic inspection surveys based on attributes and previous answers.',
+        'Contributed to the development and maintenance of a reporting tool that created formatted reports based on inspection answers and data, allowing to quickly obtained compliant fire and security results reports.',
+        'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic, letting users fill out surveys on mobile devices from dynamically selected questions, while also working without a network connection to ensure an interruption free inspection.',
+        'Contributed to the development of a mobile social media platform tailored for entrepeneurs and startups to show case their projects, share progress and look for private investors or be selected by government programs.',
+        'Maintenance of a booking and travel content management system.',
+        'Researched and implemented a company wide code analysis tool to integrate into projects CI/CD pipelines to generate reports on bad coding practices, potential bugs and security problems.'
       ],
       skills: [
-        icons.csharp, icons.dotnet, icons.azurefunctions, icons.mssql, icons.xamarin, icons.python, icons.django
+        icons.csharp,
+        icons.dotnet,
+        icons.azurefunctions,
+        icons.mssql,
+        icons.xamarin,
+        icons.python,
+        icons.django
       ]
     },
     {
@@ -582,7 +602,7 @@ export let profile: Profile = {
       logo: 'NabBot.png',
       description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
       items: [
-        'In over 15,000 Discord servers.',
+        'Used inIn over 15,000 Discord servers.',
         'Over 10,000 monthly users.',
         'Recognized as a <b>Promoted Fansite</b> by the game developers.',
       ],
