@@ -600,15 +600,28 @@ export let profile: Profile = {
       url: 'https://nabbot.xyz',
       start: new Date('2016-03-02'),
       logo: 'NabBot.png',
-      description: 'Discord bot focused on the MMO Tibia. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
+      description: 'Discord bot focused on the MMO Tibia used in over 15,000 Discord servers. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
       items: [
-        'Used inIn over 15,000 Discord servers.',
-        'Over 10,000 monthly users.',
-        'Recognized as a <b>Promoted Fansite</b> by the game developers.',
+        'Developed a service that periodically crawls the game\'s website in order to detect changes between scans, generating historical data for the players.',
+        'Developed a chat bot that offers users synthetized information from the game\'s website, and allows linking their game data to their Discord accounts.',
+        'Developed a notification system through Discord that notifies users of game events based on their specific settings.',
+        'Recognized as a <b>Promoted Fansite</b> by the game developers, being featured on their official website and being granted additional benefits for being part of their programme.',
       ],
       skills: [
-        icons.discord, icons.python, icons.aiohttp, icons.postgresql, icons.angular, icons.ubuntu, icons.typescript, icons.socketio, icons.redis,
-        icons.docker, icons.prometheus, icons.grafana, icons.kotlin, icons.ktor,
+        icons.discord,
+        icons.python,
+        icons.aiohttp,
+        icons.postgresql,
+        icons.angular,
+        icons.ubuntu,
+        icons.typescript,
+        icons.socketio,
+        icons.redis,
+        icons.docker,
+        icons.prometheus,
+        icons.grafana,
+        icons.kotlin,
+        icons.ktor,
       ]
     },
     {
@@ -617,11 +630,11 @@ export let profile: Profile = {
       end: new Date('2024-03-11'),
       description: '',
       items: [
-        'Design and development of a HTTP API to serve as the backend for on-demand medical services mobile applications (iOS & Android).',
-        'SQL database design for application data storage.',
-        'Integration of Stripe Connect workflow for in-app payments.',
-        'Integration of Google Maps API for travel time calculations and geocoding.',
-        'Implementation of messaging from server to devices through Firebase Cloud Messaging.',
+        'Designed and developed an HTTP API serving as the backend for an on-demand medical services mobile application (iOS & Android)',
+        'Designed SQL database for application storage, containing users, service history, ratings and more as well as using PostGIS to work with coordinates.',
+        'Integrated Stripe services using Stripe Connect workflow for in-app payments.',
+        'Integrated of Google Maps API for travel time calculations and geocoding, showing users estimated wait times.',
+        'Implemented Firebase Cloud Messaging service to allow communication of events and notifications between the server and mobile applications.',
       ],
       skills: [
         icons.python, icons.fastapi, icons.postgresql, icons.sqlAlchemy, icons.stripe, icons.googleMaps, icons.firebase, icons.docker
@@ -633,7 +646,7 @@ export let profile: Profile = {
       end: new Date('2021-12-14'),
       description: 'Worked on the integration of a third party REST API containing geocoding information and car insurance quote generation.',
       items: [
-        'Integration of geocoding and quoting API, along with designing models for serialization and database.',
+        'Integrated geocoding and insurance quoting API, and designed models for serialization and database.',
         'Added admin panel sections to manage users, quotation and insurance policies.',
         'Added front-facing sections to web app containing forms to generate quotes.',
         'Cleaned up and made quality improvements in most of the app.'
