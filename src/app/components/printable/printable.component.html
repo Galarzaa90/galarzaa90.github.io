@@ -18,62 +18,66 @@
       </div>
     </div>
   </div>
-
+  <h2>Skills & Tools</h2>
+  <div class="skills grid grid-cols-5">
+    <div *ngFor="let skill of profile.skills" class="skill-icon">
+      <app-skill-icon *ngIf="skill.icon != null"
+        [skill]="skill.icon"></app-skill-icon>
+      <span>{{skill.name}}</span>
+    </div>
+  </div>
   <h2>Work Experience</h2>
   <dl>
     <div class="no-break" *ngFor="let job of profile.workExperience">
       <dt class="flex flex-row place-content-between items-center">
         <strong>{{job.company}}</strong>
         <span *ngIf="job.end === undefined">
-                    {{job.start | date: 'MMMM y'}} — Present
-                </span>
+          {{job.start | date: 'MMMM y'}} — Present
+        </span>
         <span *ngIf="job.end !== undefined">
-                    {{job.start | date: 'MMMM y'}} —
+          {{job.start | date: 'MMMM y'}} —
           {{job.end | date: 'MMMM y'}}
-                </span>
+        </span>
       </dt>
       <dd class="ms-5">
         <span [innerHTML]="job.description"></span>
-        <ul *ngIf="job.items?.length != 0" class="list-disc list-inside ps-5 pt-2">
+        <ul *ngIf="job.items?.length != 0"
+          class="list-disc list-inside ps-5 pt-2">
           <li *ngFor="let item of job.items" [innerHtml]="item">
           </li>
         </ul>
         <div *ngIf="job.skills != undefined" class="job-skills-container">
           <span class="job-skill" *ngFor="let skill of job.skills">
-            <app-skill-icon *ngIf="skill != null" [skill]="skill"></app-skill-icon>&nbsp;{{skill.text}}
+            <app-skill-icon *ngIf="skill != null"
+              [skill]="skill"></app-skill-icon>&nbsp;{{skill.text}}
           </span>
         </div>
       </dd>
     </div>
   </dl>
-  <h2>Skills & Tools</h2>
-  <div class="skills grid grid-cols-5">
-    <div *ngFor="let skill of profile.skills" class="skill-icon">
-        <app-skill-icon *ngIf="skill.icon != null" [skill]="skill.icon"></app-skill-icon>
-        <span>{{skill.name}}</span>
-    </div>
-  </div>
-  <h2>Personal Projects</h2>
+  <h2>Projects</h2>
   <dl>
     <div class="no-break" *ngFor="let project of profile.projects">
       <dt class="flex flex-row place-content-between items-center">
         <strong>{{project.name}}</strong>
         <span *ngIf="project.end === undefined">
-                    {{project.start | date: 'MMMM y'}} — Present
-                </span>
+          {{project.start | date: 'MMMM y'}} — Present
+        </span>
         <span *ngIf="project.end !== undefined">
-                    {{project.start | date: 'MMMM y'}} —
+          {{project.start | date: 'MMMM y'}} —
           {{project.end | date: 'MMMM y'}}
-                </span>
+        </span>
       </dt>
       <dd class="ms-5">
         <span [innerHTML]="project.description"></span>
-        <ul *ngIf="project.items?.length != 0" class="list-disc list-inside ps-5">
+        <ul *ngIf="project.items?.length != 0"
+          class="list-disc list-inside ps-5">
           <li *ngFor="let item of project.items" [innerHtml]="item"></li>
         </ul>
         <div *ngIf="project.skills != undefined" class="job-skills-container">
           <span class="job-skill" *ngFor="let skill of project.skills">
-            <app-skill-icon *ngIf="skill != null" [skill]="skill"></app-skill-icon>&nbsp;{{skill.text}}
+            <app-skill-icon *ngIf="skill != null"
+              [skill]="skill"></app-skill-icon>&nbsp;{{skill.text}}
           </span>
         </div>
       </dd>
@@ -83,12 +87,13 @@
     <h2>Education</h2>
     <div class="flex flex-row">
       <div *ngFor="let school of profile.education" class="no-break grow">
-        <div class="school-header flex flex-row place-content-between items-center mr-2">
+        <div
+          class="school-header flex flex-row place-content-between items-center mr-2">
           <strong>{{school.name}}</strong>
           <span *ngIf="school.end !== undefined">
-                      {{school.start | date: 'MMMM y'}} —
+            {{school.start | date: 'MMMM y'}} —
             {{school.end | date: 'MMMM y'}}
-                  </span>
+          </span>
         </div>
         <p>{{school.title}}</p>
         <p>{{school.level}}</p>

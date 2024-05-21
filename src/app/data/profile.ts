@@ -55,6 +55,8 @@ import {
   siVisualstudio,
   siGithubactions,
   siGitlab,
+  siWindows,
+  siMacos,
 } from 'simple-icons';
 
 export interface Profile {
@@ -227,6 +229,14 @@ const icons = {
   ubuntu: {
     icon: siUbuntu,
     text: 'Ubuntu'
+  },
+  windows: {
+    icon: siWindows,
+    text: 'Windows'
+  },
+  macOs: {
+    icon: siMacos,
+    text: 'macOS'
   },
   redis: {
     icon: siRedis,
@@ -931,6 +941,21 @@ export let profile: Profile = {
       name: 'Visual Studio Code',
       type: 'Other',
       icon: icons.vsCode,
+    },
+    {
+      name: 'Ubuntu',
+      type: 'Other',
+      icon: icons.ubuntu,
+    },
+    {
+      name: 'Windows',
+      type: 'Other',
+      icon: icons.windows,
+    },
+    {
+      name: 'macOS',
+      type: 'Other',
+      icon: icons.macOs,
     },
     {
       name: 'PCB Design',
