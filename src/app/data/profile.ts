@@ -53,6 +53,8 @@ import {
   siPycharm,
   siVisualstudiocode,
   siVisualstudio,
+  siGithubactions,
+  siGitlab,
 } from 'simple-icons';
 
 export interface Profile {
@@ -286,6 +288,14 @@ const icons = {
     icon: siPrometheus,
     text: 'Prometheus'
   },
+  githubActions: {
+    icon: siGithubactions,
+    text: 'GitHub Actions',
+  },
+  gitlabCiCd: {
+    icon: siGitlab,
+    text: 'GitLab CI/CD',
+  },
   dotnet: {
     icon: siDotnet,
     text: '.NET'
@@ -400,6 +410,7 @@ export let profile: Profile = {
         'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics in the oil industry.',
         'Design and development of a backend application to create mappings between field equipment and field sensor data.',
         'Development of service tasks to synchronize data and create events based on parameter configurations.',
+        'Management of GitHub actions workflows to build and deploy Docker images to on-premises Kubernetes infrastructure.'
       ],
       skills: [
         icons.python,
@@ -412,6 +423,7 @@ export let profile: Profile = {
         icons.docker,
         icons.rabbitMq,
         icons.sqlAlchemy,
+        icons.githubActions,
       ]
     },
     {
@@ -602,10 +614,13 @@ export let profile: Profile = {
       logo: 'NabBot.png',
       description: 'Discord bot focused on the MMO Tibia used in over 15,000 Discord servers. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
       items: [
-        'Developed a service that periodically crawls the game\'s website in order to detect changes between scans, generating historical data for the players.',
+        'Developed a service that periodically scrapes the game\'s website in order to detect changes between scans, generating historical data for the players.',
         'Developed a chat bot that offers users synthetized information from the game\'s website, and allows linking their game data to their Discord accounts.',
         'Developed a notification system through Discord that notifies users of game events based on their specific settings.',
         'Recognized as a <b>Promoted Fansite</b> by the game developers, being featured on their official website and being granted additional benefits for being part of their programme.',
+        'Implemented automated build, testing and deployment pipelines using GitLab CI/CD, generating Docker images on private registries for deployment.',
+        'Migrated of codebase from Python to Kotlin, redesigning the service architecture from scratch for better performance and scalability.',
+        'Set up and managed self-managed virtual server on Ubuntu, creating and installing tools for deployment and monitoring of application services.'
       ],
       skills: [
         icons.discord,
@@ -617,6 +632,7 @@ export let profile: Profile = {
         icons.typescript,
         icons.socketio,
         icons.redis,
+        icons.gitlabCiCd,
         icons.docker,
         icons.prometheus,
         icons.grafana,
@@ -637,7 +653,14 @@ export let profile: Profile = {
         'Implemented Firebase Cloud Messaging service to allow communication of events and notifications between the server and mobile applications.',
       ],
       skills: [
-        icons.python, icons.fastapi, icons.postgresql, icons.sqlAlchemy, icons.stripe, icons.googleMaps, icons.firebase, icons.docker
+        icons.python,
+        icons.fastapi,
+        icons.postgresql,
+        icons.sqlAlchemy,
+        icons.stripe,
+        icons.googleMaps,
+        icons.firebase,
+        icons.docker,
       ]
     },
     {
@@ -652,36 +675,50 @@ export let profile: Profile = {
         'Cleaned up and made quality improvements in most of the app.'
       ],
       skills: [
-        icons.python, icons.django, icons.javascript, icons.jquery, icons.boostrap, icons.postgresql
-      ]
-    },
-    {
-      name: 'tibiawiki-sql',
-      url: 'https://tibiawiki-sql.rtfd.io/',
-      start: new Date('2017-10-27'),
-      description: 'Python script that fetches TibiaWiki via its MediaWiki API. Article information is parsed and stored in a SQLite database.',
-      skills: [
         icons.python,
-        icons.sqlite,
+        icons.django,
+        icons.javascript,
+        icons.jquery,
+        icons.boostrap,
+        icons.postgresql
       ]
     },
     {
       name: 'tibia.py',
       url: 'http://tibiapy.rtfd.io/',
       start: new Date('2018-06-31'),
-      description: 'API to parse tibia.com content into python objects.',
+      description: 'Open source web scrapping library that extracts information from the website Tibia.com and deserializes it into Python data.',
+      items: [
+        'Designed strongly typed data models to represent the scrapped data into standardized objects.',
+        'Developed an asynchronous HTTP client to fetch content HTML content and convert it into Python objects.',
+        'Developed a test-driven Python library for the community to use in their own projects without having to worry about data extraction.',
+        'Developed GitHub Actions workflows to run unit tests, static code analysis, documentation sites deployment, Docker image building and deployment.'
+      ],
       skills: [
         icons.python,
         icons.aiohttp,
         icons.pydantic,
         icons.fastapi,
+        icons.githubActions,
+        icons.docker,
       ]
     },
+    {
+      name: 'tibiawiki-sql',
+      url: 'https://tibiawiki-sql.rtfd.io/',
+      start: new Date('2017-10-27'),
+      description: 'Open source Python script that fetches TibiaWiki via its MediaWiki API. Article information is parsed and stored in a SQLite database.',
+      skills: [
+        icons.python,
+        icons.sqlite,
+      ]
+    },
+
     {
       name: 'TibiaKt',
       url: 'https://galarzaa.com/TibiaKt',
       start: new Date('2020-08-06'),
-      description: 'JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
+      description: 'Open source Kotlin JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
       skills: [
         icons.kotlin,
         icons.ktor,
@@ -693,11 +730,18 @@ export let profile: Profile = {
       start: new Date('2016-08-16'),
       end: new Date('2019-04-06'),
       description: 'Android application and web service featuring a two-sided network for odd jobs.',
+      items: [
+        'Developed native Android application with geolocation services to find users needing services in a close area.',
+        'Integrated Firebase Messaging Service to notify users of job offers and for them to trackt their progress.',
+        'Implemented authentication service using Firebase to allow users to sign-in through Google.',
+        'Designed SQL database to store user and job data.',
+      ],
       skills: [
         icons.java,
         icons.kotlin,
         icons.android,
         icons.mysql,
+        icons.firebase,
       ]
     },
     {
@@ -705,7 +749,7 @@ export let profile: Profile = {
       url: 'https://github.com/Galarzaa90/android-things-rc522',
       start: new Date('2017-03-28'),
       end: new Date('2017-11-03'),
-      description: 'Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
+      description: 'Open source Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
       skills: [
         icons.java,
         icons.android
@@ -827,6 +871,16 @@ export let profile: Profile = {
       name: 'Redis',
       type: 'Platforms',
       icon: icons.redis
+    },
+    {
+      name: 'GitHub Actions',
+      type: 'Platforms',
+      icon: icons.githubActions
+    },
+    {
+      name: 'GitLab CI/CD',
+      type: 'Platforms',
+      icon: icons.gitlabCiCd
     },
     {
       name: 'Docker',
