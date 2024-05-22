@@ -1,16 +1,16 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { faMapPin, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { profile, Skill, SkillIcon } from '../../data/profile';
-import { SkillIconComponent } from '../skill-icon/skill-icon.component';
-import { NgFor, NgIf, DatePipe } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { faGlobe, faMapPin } from '@fortawesome/free-solid-svg-icons';
+import { Skill, SkillIcon, profile } from '../../data/profile';
+import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 
 @Component({
-    selector: 'app-printable',
-    templateUrl: './printable.component.html',
-    styleUrls: ['./printable.component.scss'],
-    standalone: true,
-    imports: [FaIconComponent, NgFor, NgIf, SkillIconComponent, DatePipe]
+  selector: 'app-printable',
+  templateUrl: './printable.component.html',
+  styleUrls: ['./printable.component.scss'],
+  standalone: true,
+  imports: [FaIconComponent, SkillIconComponent, DatePipe]
 })
 export class PrintableComponent implements OnInit {
   profile = profile;

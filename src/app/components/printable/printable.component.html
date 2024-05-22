@@ -7,11 +7,13 @@
         <fa-icon [icon]="faMapPin"></fa-icon>
         {{profile.location}}
       </div>
-      <div *ngFor="let link of profile.onlineProfiles">
-        <ng-container *ngIf="link.printable">
-          <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a>{{link.title}}</a>
-        </ng-container>
+      @for (link of profile.onlineProfiles; track link) {
+      <div>
+        @if (link.printable) {
+        <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a>{{link.title}}</a>
+        }
       </div>
+      }
       <div>
         <fa-icon [icon]="faGlobe"></fa-icon>
         galarzaa.com
@@ -20,84 +22,119 @@
   </div>
   <h2>Skills & Tools</h2>
   <div class="skills grid grid-cols-5">
-    <div *ngFor="let skill of profile.skills" class="skill-icon">
-      <app-skill-icon *ngIf="skill.icon != null"
-        [skill]="skill.icon"></app-skill-icon>
+    @for (skill of profile.skills; track skill) {
+    <div class="skill-icon">
+      @if (skill.icon != null) {
+      <app-skill-icon [skill]="skill.icon"></app-skill-icon>
+      }
       <span>{{skill.name}}</span>
     </div>
+    }
   </div>
   <h2>Work Experience</h2>
   <dl>
-    <div class="no-break" *ngFor="let job of profile.workExperience">
+    @for (job of profile.workExperience; track job) {
+    <div class="no-break">
       <dt class="flex flex-row place-content-between items-center">
         <strong>{{job.company}}</strong>
-        <span *ngIf="job.end === undefined">
+        @if (job.end === undefined) {
+        <span>
           {{job.start | date: 'MMMM y'}} — Present
         </span>
-        <span *ngIf="job.end !== undefined">
+        }
+        @if (job.end !== undefined) {
+        <span>
           {{job.start | date: 'MMMM y'}} —
           {{job.end | date: 'MMMM y'}}
         </span>
+        }
       </dt>
       <dd class="ms-5">
         <span [innerHTML]="job.description"></span>
-        <ul *ngIf="job.items?.length != 0"
-          class="list-disc list-inside ps-5 pt-2">
-          <li *ngFor="let item of job.items" [innerHtml]="item">
+        @if (job.items?.length != 0) {
+        <ul class="list-disc list-inside ps-5 pt-2">
+          @for (item of job.items; track item) {
+          <li [innerHtml]="item">
           </li>
+          }
         </ul>
-        <div *ngIf="job.skills != undefined" class="job-skills-container">
-          <span class="job-skill" *ngFor="let skill of job.skills">
-            <app-skill-icon *ngIf="skill != null"
-              [skill]="skill"></app-skill-icon>&nbsp;{{skill.text}}
+        }
+        @if (job.skills != undefined) {
+        <div class="job-skills-container">
+          @for (skill of job.skills; track skill) {
+          <span class="job-skill">
+            @if (skill != null) {
+            <app-skill-icon [skill]="skill"></app-skill-icon>
+            }&nbsp;{{skill.text}}
           </span>
+          }
         </div>
+        }
       </dd>
     </div>
+    }
   </dl>
   <h2>Projects</h2>
   <dl>
-    <div class="no-break" *ngFor="let project of profile.projects">
+    @for (project of profile.projects; track project) {
+    <div class="no-break">
       <dt class="flex flex-row place-content-between items-center">
         <strong>{{project.name}}</strong>
-        <span *ngIf="project.end === undefined">
+        @if (project.end === undefined) {
+        <span>
           {{project.start | date: 'MMMM y'}} — Present
         </span>
-        <span *ngIf="project.end !== undefined">
+        }
+        @if (project.end !== undefined) {
+        <span>
           {{project.start | date: 'MMMM y'}} —
           {{project.end | date: 'MMMM y'}}
         </span>
+        }
       </dt>
       <dd class="ms-5">
         <span [innerHTML]="project.description"></span>
-        <ul *ngIf="project.items?.length != 0"
-          class="list-disc list-inside ps-5">
-          <li *ngFor="let item of project.items" [innerHtml]="item"></li>
+        @if (project.items?.length != 0) {
+        <ul class="list-disc list-inside ps-5">
+          @for (item of project.items; track item) {
+          <li [innerHtml]="item"></li>
+          }
         </ul>
-        <div *ngIf="project.skills != undefined" class="job-skills-container">
-          <span class="job-skill" *ngFor="let skill of project.skills">
-            <app-skill-icon *ngIf="skill != null"
-              [skill]="skill"></app-skill-icon>&nbsp;{{skill.text}}
+        }
+        @if (project.skills != undefined) {
+        <div class="job-skills-container">
+          @for (skill of project.skills; track skill) {
+          <span class="job-skill">
+            @if (skill != null) {
+            <app-skill-icon [skill]="skill"></app-skill-icon>
+            }&nbsp;{{skill.text}}
           </span>
+          }
         </div>
+        }
       </dd>
     </div>
+    }
   </dl>
   <div class="no-break">
     <h2>Education</h2>
     <div class="flex flex-row">
-      <div *ngFor="let school of profile.education" class="no-break grow">
+      @for (school of profile.education; track school) {
+      <div class="no-break grow">
         <div
           class="school-header flex flex-row place-content-between items-center mr-2">
           <strong>{{school.name}}</strong>
-          <span *ngIf="school.end !== undefined">
+          @if (school.end !== undefined) {
+          <span>
             {{school.start | date: 'MMMM y'}} —
             {{school.end | date: 'MMMM y'}}
           </span>
+          }
         </div>
         <p>{{school.title}}</p>
         <p>{{school.level}}</p>
       </div>
+      }
     </div>
   </div>
 </div>

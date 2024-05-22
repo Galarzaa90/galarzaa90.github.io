@@ -1,44 +1,54 @@
 <h2>Education</h2>
 <mat-accordion>
-    <mat-expansion-panel hideToggle *ngFor="let school of entries"
-        [hideToggle]="!(isXSmall$ | async)">
-        <mat-expansion-panel-header class="title-date">
-            <mat-panel-title>
-                {{school.name}}
-            </mat-panel-title>
-            <mat-panel-description>
-                <span class="hidden md:inline">
-                    <span *ngIf="school.end === undefined">
-                        {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}} — Present
-                    </span>
-                    <span *ngIf="school.end !== undefined">
-                        {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}} —
-                        {{school.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}}
-                    </span>
-                </span>
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <div class="flex flex-row space-y-0 items-start">
-            <div class="grow">
-                <p>{{school.title}}<br>
-                    {{school.level}}<br>
-                    <span class="md:hidden date-subtitle">
-                        <span *ngIf="school.end === undefined">
-                            {{school.start | date: 'MMMM y'}} — Present
-                        </span>
-                        <span *ngIf="school.end !== undefined">
-                            {{school.start | date: 'MMMM y'}} —
-                            {{school.end | date: 'MMMM y'}}
-                        </span>
-                    </span>
-            </div>
-            <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
-                <img class="company-logo" *ngIf="school.logo != undefined"
-                    src="./assets/img/{{school.logo}}">
-            </div>
-        </div>
-    </mat-expansion-panel>
+  @for (school of entries; track school) {
+  <mat-expansion-panel hideToggle [hideToggle]="!(isXSmall$ | async)">
+    <mat-expansion-panel-header class="title-date">
+      <mat-panel-title>
+        {{school.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        <span class="hidden md:inline">
+          @if (school.end === undefined) {
+          <span>
+            {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}} — Present
+          </span>
+          }
+          @if (school.end !== undefined) {
+          <span>
+            {{school.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}} —
+            {{school.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}}
+          </span>
+          }
+        </span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="flex flex-row space-y-0 items-start">
+      <div class="grow">
+        <p>{{school.title}}<br>
+          {{school.level}}<br>
+          <span class="md:hidden date-subtitle">
+            @if (school.end === undefined) {
+            <span>
+              {{school.start | date: 'MMMM y'}} — Present
+            </span>
+            }
+            @if (school.end !== undefined) {
+            <span>
+              {{school.start | date: 'MMMM y'}} —
+              {{school.end | date: 'MMMM y'}}
+            </span>
+            }
+          </span>
+      </div>
+      <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
+        @if (school.logo != undefined) {
+        <img class="company-logo" src="./assets/img/{{school.logo}}">
+        }
+      </div>
+    </div>
+  </mat-expansion-panel>
+  }
 </mat-accordion>

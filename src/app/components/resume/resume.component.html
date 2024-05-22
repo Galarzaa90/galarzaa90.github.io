@@ -9,18 +9,24 @@
         <mat-card appearance="raised" class="sidebar">
           <mat-card-content>
             <h2>Contact</h2>
-            <p *ngFor="let link of profile.onlineProfiles">
+            @for (link of profile.onlineProfiles; track link) {
+            <p>
               <fa-icon [icon]="link.icon"></fa-icon>&nbsp;<a
                 [href]="link.url">{{link.title}}</a>
             </p>
+            }
             <h2>Languages</h2>
-            <p *ngFor="let language of profile.languages">
+            @for (language of profile.languages; track language) {
+            <p>
               {{language.name}} ({{language.level}})
             </p>
+            }
             <h2>Interests</h2>
-            <p *ngFor="let interest of profile.interests">
+            @for (interest of profile.interests; track interest) {
+            <p>
               {{interest}}
             </p>
+            }
           </mat-card-content>
         </mat-card>
       </div>
@@ -37,14 +43,16 @@
           <mat-card appearance="raised">
             <mat-card-content>
               <mat-chip-listbox aria-label="Skills">
-                <mat-chip *ngFor="let skill of profile.skills">
-                  <app-skill-icon *ngIf="skill.icon" [tooltip]="false"
-                    class="skill-icon"
-                    [skill]="skill.icon"></app-skill-icon>&nbsp;{{skill.name}}
+                @for (skill of profile.skills; track skill) {
+                <mat-chip>
+                  @if (skill.icon) {
+                  <app-skill-icon [tooltip]="false" class="skill-icon"
+                    [skill]="skill.icon"></app-skill-icon>
+                  }&nbsp;{{skill.name}}
                 </mat-chip>
+                }
               </mat-chip-listbox>
-              <
-            </mat-card-content>
+              < </mat-card-content>
           </mat-card>
         </div>
         <div>

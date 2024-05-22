@@ -1,65 +1,81 @@
 <h2>Projects</h2>
 <mat-accordion>
-    <mat-expansion-panel hideToggle *ngFor="let project of projects"
-        [hideToggle]="!(isXSmall$ | async)">
-        <mat-expansion-panel-header class="title-date">
-            <mat-panel-title>
-                {{project.name}}
-            </mat-panel-title>
-            <mat-panel-description>
-                <span class="hidden md:inline">
-                    <span *ngIf="project.end === undefined">
-                        {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}} — Present
-                    </span>
-                    <span *ngIf="project.end !== undefined">
-                        {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}} —
-                        {{project.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}}
-                    </span>
-                </span>
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <div class="flex flex-row space-y-0 items-start">
-            <div class="grow">
-                <span class="md:hidden date-subtitle">
-                    <span *ngIf="project.end === undefined">
-                        {{project.start | date: 'MMMM y'}} — Present
-                    </span>
-                    <span *ngIf="project.end !== undefined">
-                        {{project.start | date: 'MMMM y'}} —
-                        {{project.end | date: 'MMMM y'}}
-                    </span>
-                </span>
-                <p *ngIf="project.description != undefined"
-                    [innerHTML]="project.description"></p>
-                <ul *ngIf="project.items != undefined" class="list-disc list-inside">
-                    <li *ngFor="let item of project.items" [innerHTML]="item">
-                    </li>
-                </ul>
-                <span class="project-skills"
-                    *ngIf="project.skills != undefined">
-                    <app-skill-icon [skill]="skill"
-                        *ngFor="let skill of project.skills"></app-skill-icon>
-                </span>
-            </div>
-            <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
-                <a [href]="project.url"
-                    *ngIf="project.logo != undefined && project.url != undefined"
-                    target="_blank">
-                    <img class="company-logo img-link"
-                        src="./assets/img/projects/{{project.logo}}">
-                </a>
-                <img class="company-logo"
-                    src="./assets/img/projects/{{project.logo}}"
-                    *ngIf="project.logo != undefined && project.url == undefined">
-                <a [href]="project.url"
-                    *ngIf="project.logo == undefined && project.url != undefined"
-                    target="_blank">
-                    Website
-                </a>
-            </div>
-        </div>
-    </mat-expansion-panel>
+  @for (project of projects; track project) {
+  <mat-expansion-panel hideToggle [hideToggle]="!(isXSmall$ | async)">
+    <mat-expansion-panel-header class="title-date">
+      <mat-panel-title>
+        {{project.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        <span class="hidden md:inline">
+          @if (project.end === undefined) {
+          <span>
+            {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}} — Present
+          </span>
+          }
+          @if (project.end !== undefined) {
+          <span>
+            {{project.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}} —
+            {{project.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}}
+          </span>
+          }
+        </span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="flex flex-row space-y-0 items-start">
+      <div class="grow">
+        <span class="md:hidden date-subtitle">
+          @if (project.end === undefined) {
+          <span>
+            {{project.start | date: 'MMMM y'}} — Present
+          </span>
+          }
+          @if (project.end !== undefined) {
+          <span>
+            {{project.start | date: 'MMMM y'}} —
+            {{project.end | date: 'MMMM y'}}
+          </span>
+          }
+        </span>
+        @if (project.description != undefined) {
+        <p [innerHTML]="project.description"></p>
+        }
+        @if (project.items != undefined) {
+        <ul class="list-disc list-inside">
+          @for (item of project.items; track item) {
+          <li [innerHTML]="item">
+          </li>
+          }
+        </ul>
+        }
+        @if (project.skills != undefined) {
+        <span class="project-skills">
+          @for (skill of project.skills; track skill) {
+          <app-skill-icon [skill]="skill"></app-skill-icon>
+          }
+        </span>
+        }
+      </div>
+      <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
+        @if (project.logo != undefined && project.url != undefined) {
+        <a [href]="project.url" target="_blank">
+          <img class="company-logo img-link"
+            src="./assets/img/projects/{{project.logo}}">
+        </a>
+        }
+        @if (project.logo != undefined && project.url == undefined) {
+        <img class="company-logo" src="./assets/img/projects/{{project.logo}}">
+        }
+        @if (project.logo == undefined && project.url != undefined) {
+        <a [href]="project.url" target="_blank">
+          Website
+        </a>
+        }
+      </div>
+    </div>
+  </mat-expansion-panel>
+  }
 </mat-accordion>

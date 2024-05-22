@@ -1,59 +1,75 @@
 <h2>Work Experience</h2>
 <mat-accordion>
-    <mat-expansion-panel [expanded]="i === 0"
-        [hideToggle]="!(isXSmall$ | async)"
-        *ngFor="let job of entries; let i = index">
-        <mat-expansion-panel-header class="title-date">
-            <mat-panel-title>
-                {{job.company}}
-            </mat-panel-title>
-            <mat-panel-description>
-                <span class="hidden md:inline">
-                    <span *ngIf="job.end === undefined">
-                        {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}} — Present
-                    </span>
-                    <span *ngIf="job.end !== undefined">
-                        {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
-                        y'}} —
-                        {{job.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
-                    </span>
-                </span>
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <div class="flex flex-row space-y-0 items-start">
-            <div class="grow">
-                <p><b>{{job.position}}</b><br>
-                    <span class="md:hidden date-subtitle">
-                        <span *ngIf="job.end === undefined">
-                            {{job.start | date: 'MMMM y'}} — Present
-                        </span>
-                        <span *ngIf="job.end !== undefined">
-                            {{job.start | date: 'MMMM y'}} —
-                            {{job.end | date: 'MMMM y'}}
-                        </span>
-                    </span>
-                </p>
-                <p *ngIf="job.description != undefined"
-                    [innerHTML]="job.description"></p>
-                <ul *ngIf="job.items != undefined" class="list-disc list-inside">
-                    <li *ngFor="let item of job.items" [innerHtml]="item"></li>
-                </ul>
-                <span class="job-skills" *ngIf="job.skills != undefined">
-                    <app-skill-icon [skill]="skill"
-                        *ngFor="let skill of job.skills"></app-skill-icon>
-                </span>
-            </div>
-            <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
-                <a [href]="job.url"
-                    *ngIf="job.logo != undefined && job.url != undefined"
-                    target="_blank">
-                    <img class="company-logo img-link"
-                        src="./assets/img/{{job.logo}}">
-                </a>
-                <img class="company-logo" src="./assets/img/{{job.logo}}"
-                    *ngIf="job.logo != undefined && job.url == undefined">
-            </div>
-        </div>
-    </mat-expansion-panel>
+  @for (job of entries; track job; let i = $index) {
+  <mat-expansion-panel [expanded]="i === 0" [hideToggle]="!(isXSmall$ | async)">
+    <mat-expansion-panel-header class="title-date">
+      <mat-panel-title>
+        {{job.company}}
+      </mat-panel-title>
+      <mat-panel-description>
+        <span class="hidden md:inline">
+          @if (job.end === undefined) {
+          <span>
+            {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}} — Present
+          </span>
+          }
+          @if (job.end !== undefined) {
+          <span>
+            {{job.start | date: (isLarge$ | async) ? 'MMMM y' : 'MMM
+            y'}} —
+            {{job.end | date: (isLarge$ | async) ? 'MMMM y' : 'MMM y'}}
+          </span>
+          }
+        </span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="flex flex-row space-y-0 items-start">
+      <div class="grow">
+        <p><b>{{job.position}}</b><br>
+          <span class="md:hidden date-subtitle">
+            @if (job.end === undefined) {
+            <span>
+              {{job.start | date: 'MMMM y'}} — Present
+            </span>
+            }
+            @if (job.end !== undefined) {
+            <span>
+              {{job.start | date: 'MMMM y'}} —
+              {{job.end | date: 'MMMM y'}}
+            </span>
+            }
+          </span>
+        </p>
+        @if (job.description != undefined) {
+        <p [innerHTML]="job.description"></p>
+        }
+        @if (job.items != undefined) {
+        <ul class="list-disc list-inside">
+          @for (item of job.items; track item) {
+          <li [innerHtml]="item"></li>
+          }
+        </ul>
+        }
+        @if (job.skills != undefined) {
+        <span class="job-skills">
+          @for (skill of job.skills; track skill) {
+          <app-skill-icon [skill]="skill"></app-skill-icon>
+          }
+        </span>
+        }
+      </div>
+      <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
+        @if (job.logo != undefined && job.url != undefined) {
+        <a [href]="job.url" target="_blank">
+          <img class="company-logo img-link" src="./assets/img/{{job.logo}}">
+        </a>
+        }
+        @if (job.logo != undefined && job.url == undefined) {
+        <img class="company-logo" src="./assets/img/{{job.logo}}">
+        }
+      </div>
+    </div>
+  </mat-expansion-panel>
+  }
 </mat-accordion>
