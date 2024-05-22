@@ -52,11 +52,11 @@
         </ul>
         }
         @if (job.skills != undefined) {
-        <span class="job-skills">
+        <p class="job-skills pt-2">
           @for (skill of job.skills; track skill) {
           <app-skill-icon [skill]="skill"></app-skill-icon>
           }
-        </span>
+        </p>
         }
       </div>
       <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">

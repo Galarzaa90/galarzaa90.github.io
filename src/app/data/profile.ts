@@ -819,32 +819,32 @@ export let profile: Profile = {
     },
     {
       name: 'Angular',
-      type: 'Platforms',
+      type: 'Framework/Library',
       icon: icons.angular
     },
     {
       name: 'Pydantic',
-      type: 'Platforms',
+      type: 'Framework/Library',
       icon: icons.pydantic,
     },
     {
       name: 'FastAPI',
-      type: 'Platforms',
+      type: 'Framework/Library',
       icon: icons.fastapi,
     },
     {
       name: 'Django',
-      type: 'Platforms',
+      type: 'Framework/Library',
       icon: icons.django
     },
     {
       name: 'Ktor',
-      type: 'Platforms',
+      type: 'Framework/Library',
       icon: icons.ktor,
     },
     {
       name: 'SQLAlchemy',
-      type: 'Platforms',
+      type: 'Framework/Library',
       icon: icons.sqlAlchemy,
     },
     {
@@ -863,64 +863,69 @@ export let profile: Profile = {
       icon: icons.processing
     },
     {
-      name: 'PostgreSQL',
+      name: 'Discord',
       type: 'Platforms',
+      icon: icons.discord
+    },
+    {
+      name: 'PostgreSQL',
+      type: 'Databases',
       icon: icons.postgresql
     },
     {
       name: 'MySQL',
-      type: 'Platforms',
+      type: 'Databases',
       icon: icons.mysql
     },
     {
       name: 'SQLite',
-      type: 'Platforms',
+      type: 'Databases',
       icon: icons.sqlite
     },
     {
+      name: 'Microsoft SQL Server',
+      type: 'Databases',
+      icon: icons.mssql
+    },
+    {
+      name: 'SingleStore',
+      type: 'Databases',
+      icon: icons.singlestore
+    },
+    {
       name: 'Redis',
-      type: 'Platforms',
+      type: 'Databases',
       icon: icons.redis
     },
     {
       name: 'GitHub Actions',
-      type: 'Platforms',
+      type: 'DevOps',
       icon: icons.githubActions
     },
     {
       name: 'GitLab CI/CD',
-      type: 'Platforms',
+      type: 'DevOps',
       icon: icons.gitlabCiCd
     },
     {
       name: 'Docker',
-      type: 'Platforms',
+      type: 'DevOps',
       icon: icons.docker
     },
     {
       name: 'Grafana',
-      type: 'Platforms',
+      type: 'DevOps',
       icon: icons.grafana
     },
     {
       name: 'Prometheus',
-      type: 'Platforms',
+      type: 'DevOps',
       icon: icons.prometheus
     },
     {
       name: 'SonarQube',
-      type: 'Platforms',
+      type: 'DevOps',
       icon: icons.sonarqube
-    },
-    {
-      name: 'git',
-      type: 'Other',
-      icon: icons.git
-    },
-    {
-      name: 'SolidWorks',
-      type: 'Other',
-      icon: icons.solidWorks,
     },
     {
       name: 'IntelliJ IDEA',
@@ -934,27 +939,37 @@ export let profile: Profile = {
     },
     {
       name: 'Visual Studio',
-      type: 'Other',
+      type: 'Tools',
       icon: icons.visualStudio,
     },
     {
       name: 'Visual Studio Code',
-      type: 'Other',
+      type: 'Tools',
       icon: icons.vsCode,
     },
     {
-      name: 'Ubuntu',
+      name: 'git',
+      type: 'Tools',
+      icon: icons.git
+    },
+    {
+      name: 'SolidWorks',
       type: 'Other',
+      icon: icons.solidWorks,
+    },
+    {
+      name: 'Ubuntu',
+      type: 'Platforms',
       icon: icons.ubuntu,
     },
     {
       name: 'Windows',
-      type: 'Other',
+      type: 'Platforms',
       icon: icons.windows,
     },
     {
       name: 'macOS',
-      type: 'Other',
+      type: 'Platforms',
       icon: icons.macOs,
     },
     {

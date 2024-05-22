@@ -40,20 +40,32 @@
         </div>
         <div>
           <h2>Skills & Tools</h2>
+          <mat-chip-listbox multiple="true">
+            @for(skillType of skillTypes; track skillType){
+            <mat-chip-option [selected]="isSelected(skillType)"
+              (click)="toggleSelection(skillType)" class="skill-filter-chip">
+              {{skillType}}
+            </mat-chip-option>
+            }
+          </mat-chip-listbox>
           <mat-card appearance="raised">
             <mat-card-content>
-              <mat-chip-listbox aria-label="Skills">
-                @for (skill of profile.skills; track skill) {
-                <mat-chip>
+              <mat-chip-set aria-label="Skills" role="list">
+                @for (skill of selectedSkills; track skill) {
+                <mat-chip role="listitem">
                   @if (skill.icon) {
                   <app-skill-icon [tooltip]="false" class="skill-icon"
                     [skill]="skill.icon"></app-skill-icon>
                   }&nbsp;{{skill.name}}
                 </mat-chip>
                 }
-              </mat-chip-listbox>
-              < </mat-card-content>
+                @empty {
+                <em>Click on the filters to display relevant skills.</em>
+                }
+              </mat-chip-set>
+            </mat-card-content>
           </mat-card>
+
         </div>
         <div>
           <app-work-experience [entries]="profile.workExperience">
