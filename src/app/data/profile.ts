@@ -28,6 +28,7 @@ import {
   siKotlin,
   siKtor,
   siMacos,
+  siMaterialformkdocs,
   siMicrosoftsqlserver,
   SimpleIcon,
   siMysql,
@@ -35,6 +36,7 @@ import {
   siOpenjdk,
   siOracle,
   siPostgresql,
+  siPostman,
   siProcessingfoundation,
   siPrometheus,
   siProteus,
@@ -43,10 +45,12 @@ import {
   siPython,
   siRabbitmq,
   siRaspberrypi,
+  siReadthedocs,
   siRedis,
   siSinglestore,
   siSocketdotio,
   siSonarqube,
+  siSphinx,
   siSqlalchemy,
   siSqlite,
   siStripe,
@@ -156,6 +160,18 @@ const icons = {
   django: {
     icon: siDjango,
     text: 'Django'
+  },
+  sphinx: {
+    icon: siSphinx,
+    text: 'Sphinx'
+  },
+  mkdocsMaterial: {
+    icon: siMaterialformkdocs,
+    text: 'Material for MkDocs'
+  },
+  rtd: {
+    icon: siReadthedocs,
+    text: 'Read The Docs'
   },
   sqlAlchemy: {
     icon: siSqlalchemy,
@@ -333,6 +349,10 @@ const icons = {
   vsCode: {
     icon: siVisualstudiocode,
     text: 'Visual Studio Code'
+  },
+  postman: {
+    icon: siPostman,
+    text: 'Postman'
   },
   proteus: {
     icon: siProteus,
@@ -838,6 +858,21 @@ export let profile: Profile = {
       icon: icons.django
     },
     {
+      name: 'Material for MkDocs',
+      type: 'Framework/Library',
+      icon: icons.mkdocsMaterial
+    },
+    {
+      name: 'Sphinx',
+      type: 'Framework/Library',
+      icon: icons.sphinx
+    },
+    {
+      name: 'Read The Docs',
+      type: 'Framework/Library',
+      icon: icons.rtd
+    },
+    {
       name: 'Ktor',
       type: 'Framework/Library',
       icon: icons.ktor,
@@ -951,6 +986,11 @@ export let profile: Profile = {
       name: 'git',
       type: 'Tools',
       icon: icons.git
+    },
+    {
+      name: 'Postman',
+      type: 'Tools',
+      icon: icons.postman
     },
     {
       name: 'SolidWorks',
