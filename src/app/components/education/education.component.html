@@ -42,6 +42,13 @@
             </span>
             }
           </span>
+          @if (school.skills != undefined) {
+        <p class="school-skills pt-2">
+          @for (skill of school.skills; track skill) {
+          <app-skill-icon [skill]="skill"></app-skill-icon>
+          }
+        </p>
+        }
       </div>
       <div class="grow max-w-[20%] sm:max-w-[15%] 2xl:max-w-[10%]">
         @if (school.logo != undefined) {

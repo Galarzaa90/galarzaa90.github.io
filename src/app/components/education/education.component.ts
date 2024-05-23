@@ -5,13 +5,23 @@ import { MatAccordion, MatExpansionPanel, MatExpansionPanelDescription, MatExpan
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { School } from 'src/app/data/profile';
+import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss'],
   standalone: true,
-  imports: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, AsyncPipe, DatePipe]
+  imports: [
+    MatAccordion,
+    MatExpansionPanel,
+    MatExpansionPanelHeader,
+    MatExpansionPanelTitle,
+    MatExpansionPanelDescription,
+    AsyncPipe,
+    DatePipe,
+    SkillIconComponent,
+  ]
 })
 export class EducationComponent implements OnInit {
   @Input() entries: Array<School> = [];

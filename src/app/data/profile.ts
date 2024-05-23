@@ -27,14 +27,18 @@ import {
   siJquery,
   siKotlin,
   siKtor,
+  siLabview,
   siMacos,
   siMaterialformkdocs,
   siMicrosoftsqlserver,
   SimpleIcon,
+  siMultisim,
   siMysql,
+  siNginx,
   siNodedotjs,
   siOpenjdk,
   siOracle,
+  siPortainer,
   siPostgresql,
   siPostman,
   siProcessingfoundation,
@@ -47,6 +51,7 @@ import {
   siRaspberrypi,
   siReadthedocs,
   siRedis,
+  siSentry,
   siSinglestore,
   siSocketdotio,
   siSonarqube,
@@ -107,6 +112,7 @@ export interface School {
   level: string;
   title: string;
   logo: string;
+  skills?: Array<SkillIcon>;
 }
 
 export interface Project {
@@ -280,7 +286,7 @@ const icons = {
   },
   aiohttp: {
     icon: siAiohttp,
-    text: 'aiohttp'
+    text: 'AIOHTTP'
   },
   fastapi: {
     icon: siFastapi,
@@ -298,6 +304,14 @@ const icons = {
     icon: siRabbitmq,
     text: 'RabbitMQ',
   },
+  nginx: {
+    icon: siNginx,
+    text: 'nginx'
+  },
+  portainer: {
+    icon: siPortainer,
+    text: 'Portainer',
+  },
   docker: {
     icon: siDocker,
     text: 'Docker'
@@ -309,6 +323,10 @@ const icons = {
   sonarqube: {
     icon: siSonarqube,
     text: 'SonarQube'
+  },
+  sentry: {
+    icon: siSentry,
+    text: 'Sentry'
   },
   prometheus: {
     icon: siPrometheus,
@@ -358,6 +376,14 @@ const icons = {
     icon: siProteus,
     text: 'Proteus'
   },
+  multisim: {
+    icon: siMultisim,
+    text: 'Multisim'
+  },
+  labView: {
+    icon: siLabview,
+    text: 'LabView'
+  },
   processing: {
     icon: siProcessingfoundation,
     text: 'Processing'
@@ -378,9 +404,12 @@ const icons = {
 
 export let profile: Profile = {
   headline: 'Hello, my name is Allan!',
-  aboutMe: `<p>Software engineer with a passion for building high-quality, maintainable code. With experience across diverse industries like oil and gas, healthcare, electronics and finance.</p>
-  <p>Proficient in various programming languages and technologies such as Python, Kotlin, C# and SQL, and I prioritize following best practices for clean and well-documented c.odebases.</p>
-  <p>I have extensive experience designing and implement robust databases to support different sorts of applications as well as designing and developing well-documented and APIs.</p>`,
+  aboutMe:  /*html*/`
+  <p>Senior Software engineer with 8 years of experience focused for building high-quality, maintainable code. With experience across diverse industries like oil and gas, healthcare, electronics and finance.</p>
+  <p>Proficient in various programming languages and technologies such as Python, Kotlin, C# and SQL, prioritizing following best practices for clean and well-documented codebases.</p>
+  <p>Extensive experience designing and implement robust databases to support different sorts of applications as well as designing and developing well-documented and APIs.</p>
+  <p>With experience in system administration on virtual servers, container deployments and monitoring systems, as well as designing and maintaining CI/CD workflows.</p>
+  `,
   location: 'Mexico',
   languages: [
     {
@@ -440,7 +469,7 @@ export let profile: Profile = {
         'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics in the oil industry.',
         'Design and development of a backend application to create mappings between field equipment and field sensor data.',
         'Development of service tasks to synchronize data and create events based on parameter configurations.',
-        'Management of GitHub actions workflows to build and deploy Docker images to on-premises Kubernetes infrastructure.'
+        'Management of GitHub actions workflows to build and deploy Docker images to on-premises Kubernetes infrastructure.',
       ],
       skills: [
         icons.python,
@@ -626,6 +655,16 @@ export let profile: Profile = {
       level: 'Bachelor\'s Degree',
       title: 'Mechatronics Engineering (Ingeniería Mecatrónica)',
       logo: 'UNISON.png',
+      skills: [
+        icons.java,
+        icons.cplusplus,
+        icons.multisim,
+        icons.proteus,
+        icons.arduino,
+        icons.labView,
+        icons.solidWorks,
+        icons.processing,
+      ]
     },
     {
       name: 'CBTis 11',
@@ -633,7 +672,12 @@ export let profile: Profile = {
       end: new Date('2009-06-01'),
       level: 'High School Diploma',
       title: 'Specialization in Mechatronics',
-      logo: 'cbtis11.png'
+      logo: 'cbtis11.png',
+      skills: [
+        icons.cplusplus,
+        icons.multisim,
+        icons.proteus,
+      ]
     }
   ],
   projects: [
@@ -787,238 +831,56 @@ export let profile: Profile = {
     },
   ],
   skills: [
-    {
-      name: 'Python',
-      type: 'Programming Language',
-      icon: icons.python
-    },
-    {
-      name: 'Kotlin',
-      type: 'Programming Language',
-      icon: icons.kotlin,
-    },
-    {
-      name: 'C#',
-      type: 'Programming Language',
-      icon: icons.csharp
-    },
-    {
-      name: 'Java',
-      type: 'Programming Language',
-      icon: icons.java
-    },
-    {
-      name: 'JavaScript',
-      type: 'Programming Language',
-      icon: icons.javascript
-    },
-    {
-      name: 'TypeScript',
-      type: 'Programming Language',
-      icon: icons.typescript
-    },
-    {
-      name: 'C++',
-      type: 'Programming Language',
-      icon: icons.cplusplus
-    },
-    {
-      name: 'Android',
-      type: 'Platforms',
-      icon: icons.android
-    },
-    {
-      name: '.NET',
-      type: 'Platforms',
-      icon: icons.dotnet
-    },
-    {
-      name: 'Node.js',
-      type: 'Platforms',
-      icon: icons.nodejs
-    },
-    {
-      name: 'Angular',
-      type: 'Framework/Library',
-      icon: icons.angular
-    },
-    {
-      name: 'Pydantic',
-      type: 'Framework/Library',
-      icon: icons.pydantic,
-    },
-    {
-      name: 'FastAPI',
-      type: 'Framework/Library',
-      icon: icons.fastapi,
-    },
-    {
-      name: 'Django',
-      type: 'Framework/Library',
-      icon: icons.django
-    },
-    {
-      name: 'Material for MkDocs',
-      type: 'Framework/Library',
-      icon: icons.mkdocsMaterial
-    },
-    {
-      name: 'Sphinx',
-      type: 'Framework/Library',
-      icon: icons.sphinx
-    },
-    {
-      name: 'Read The Docs',
-      type: 'Framework/Library',
-      icon: icons.rtd
-    },
-    {
-      name: 'Ktor',
-      type: 'Framework/Library',
-      icon: icons.ktor,
-    },
-    {
-      name: 'SQLAlchemy',
-      type: 'Framework/Library',
-      icon: icons.sqlAlchemy,
-    },
-    {
-      name: 'Raspberry Pi',
-      type: 'Platforms',
-      icon: icons.raspberrypi
-    },
-    {
-      name: 'Arduino',
-      type: 'Platforms',
-      icon: icons.arduino
-    },
-    {
-      name: 'Processing',
-      type: 'Platforms',
-      icon: icons.processing
-    },
-    {
-      name: 'Discord',
-      type: 'Platforms',
-      icon: icons.discord
-    },
-    {
-      name: 'PostgreSQL',
-      type: 'Databases',
-      icon: icons.postgresql
-    },
-    {
-      name: 'MySQL',
-      type: 'Databases',
-      icon: icons.mysql
-    },
-    {
-      name: 'SQLite',
-      type: 'Databases',
-      icon: icons.sqlite
-    },
-    {
-      name: 'Microsoft SQL Server',
-      type: 'Databases',
-      icon: icons.mssql
-    },
-    {
-      name: 'SingleStore',
-      type: 'Databases',
-      icon: icons.singlestore
-    },
-    {
-      name: 'Redis',
-      type: 'Databases',
-      icon: icons.redis
-    },
-    {
-      name: 'GitHub Actions',
-      type: 'DevOps',
-      icon: icons.githubActions
-    },
-    {
-      name: 'GitLab CI/CD',
-      type: 'DevOps',
-      icon: icons.gitlabCiCd
-    },
-    {
-      name: 'Docker',
-      type: 'DevOps',
-      icon: icons.docker
-    },
-    {
-      name: 'Grafana',
-      type: 'DevOps',
-      icon: icons.grafana
-    },
-    {
-      name: 'Prometheus',
-      type: 'DevOps',
-      icon: icons.prometheus
-    },
-    {
-      name: 'SonarQube',
-      type: 'DevOps',
-      icon: icons.sonarqube
-    },
-    {
-      name: 'IntelliJ IDEA',
-      type: 'Tools',
-      icon: icons.intelliJ,
-    },
-    {
-      name: 'Pycharm',
-      type: 'Tools',
-      icon: icons.pycharm,
-    },
-    {
-      name: 'Visual Studio',
-      type: 'Tools',
-      icon: icons.visualStudio,
-    },
-    {
-      name: 'Visual Studio Code',
-      type: 'Tools',
-      icon: icons.vsCode,
-    },
-    {
-      name: 'git',
-      type: 'Tools',
-      icon: icons.git
-    },
-    {
-      name: 'Postman',
-      type: 'Tools',
-      icon: icons.postman
-    },
-    {
-      name: 'SolidWorks',
-      type: 'Other',
-      icon: icons.solidWorks,
-    },
-    {
-      name: 'Ubuntu',
-      type: 'Platforms',
-      icon: icons.ubuntu,
-    },
-    {
-      name: 'Windows',
-      type: 'Platforms',
-      icon: icons.windows,
-    },
-    {
-      name: 'macOS',
-      type: 'Platforms',
-      icon: icons.macOs,
-    },
-    {
-      name: 'PCB Design',
-      type: 'Other'
-    },
-    {
-      name: 'Digital Electronics',
-      type: 'Other'
-    },
+    { name: 'Python', type: 'Programming Language', icon: icons.python },
+    { name: 'Kotlin', type: 'Programming Language', icon: icons.kotlin },
+    { name: 'C#', type: 'Programming Language', icon: icons.csharp },
+    { name: 'Java', type: 'Programming Language', icon: icons.java },
+    { name: 'JavaScript', type: 'Programming Language', icon: icons.javascript },
+    { name: 'TypeScript', type: 'Programming Language', icon: icons.typescript },
+    { name: 'C++', type: 'Programming Language', icon: icons.cplusplus },
+    { name: 'Android', type: 'Platforms', icon: icons.android },
+    { name: '.NET', type: 'Platforms', icon: icons.dotnet },
+    { name: 'Node.js', type: 'Platforms', icon: icons.nodejs },
+    { name: 'Angular', type: 'Framework/Library', icon: icons.angular },
+    { name: 'Pydantic', type: 'Framework/Library', icon: icons.pydantic },
+    { name: 'FastAPI', type: 'Framework/Library', icon: icons.fastapi },
+    { name: 'AIOHTTP', type: 'Framework/Library', icon: icons.aiohttp },
+    { name: 'Django', type: 'Framework/Library', icon: icons.django },
+    { name: 'Material for MkDocs', type: 'Framework/Library', icon: icons.mkdocsMaterial },
+    { name: 'Sphinx', type: 'Framework/Library', icon: icons.sphinx },
+    { name: 'Read The Docs', type: 'Framework/Library', icon: icons.rtd },
+    { name: 'Ktor', type: 'Framework/Library', icon: icons.ktor },
+    { name: 'SQLAlchemy', type: 'Framework/Library', icon: icons.sqlAlchemy },
+    { name: 'Raspberry Pi', type: 'Platforms', icon: icons.raspberrypi },
+    { name: 'Arduino', type: 'Platforms', icon: icons.arduino },
+    { name: 'Processing', type: 'Platforms', icon: icons.processing },
+    { name: 'Discord', type: 'Platforms', icon: icons.discord },
+    { name: 'PostgreSQL', type: 'Databases', icon: icons.postgresql },
+    { name: 'MySQL', type: 'Databases', icon: icons.mysql },
+    { name: 'SQLite', type: 'Databases', icon: icons.sqlite },
+    { name: 'Microsoft SQL Server', type: 'Databases', icon: icons.mssql },
+    { name: 'SingleStore', type: 'Databases', icon: icons.singlestore },
+    { name: 'Redis', type: 'Databases', icon: icons.redis },
+    { name: 'GitHub Actions', type: 'DevOps', icon: icons.githubActions },
+    { name: 'GitLab CI/CD', type: 'DevOps', icon: icons.gitlabCiCd },
+    { name: 'Docker', type: 'DevOps', icon: icons.docker },
+    { name: 'Portainer', type: 'DevOps', icon: icons.portainer },
+    { name: 'nginx', type: 'DevOps', icon: icons.nginx },
+    { name: 'Grafana', type: 'DevOps', icon: icons.grafana },
+    { name: 'Prometheus', type: 'DevOps', icon: icons.prometheus },
+    { name: 'SonarQube', type: 'DevOps', icon: icons.sonarqube },
+    { name: 'Sentry', type: 'DevOps', icon: icons.sentry },
+    { name: 'IntelliJ IDEA', type: 'Tools', icon: icons.intelliJ },
+    { name: 'Pycharm', type: 'Tools', icon: icons.pycharm },
+    { name: 'Visual Studio', type: 'Tools', icon: icons.visualStudio },
+    { name: 'Visual Studio Code', type: 'Tools', icon: icons.vsCode },
+    { name: 'git', type: 'Tools', icon: icons.git },
+    { name: 'Postman', type: 'Tools', icon: icons.postman },
+    { name: 'SolidWorks', type: 'Other', icon: icons.solidWorks },
+    { name: 'Ubuntu', type: 'Platforms', icon: icons.ubuntu },
+    { name: 'Windows', type: 'Platforms', icon: icons.windows },
+    { name: 'macOS', type: 'Platforms', icon: icons.macOs },
+    { name: 'PCB Design', type: 'Other' },
+    { name: 'Digital Electronics', type: 'Other' }
   ]
 };
