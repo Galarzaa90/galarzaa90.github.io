@@ -880,6 +880,7 @@ export let profile: Profile = {
     { name: 'Ubuntu', type: 'Platforms', icon: icons.ubuntu },
     { name: 'Windows', type: 'Platforms', icon: icons.windows },
     { name: 'macOS', type: 'Platforms', icon: icons.macOs },
+    { name: 'API Design', type: 'Other' },
     { name: 'PCB Design', type: 'Other' },
     { name: 'Digital Electronics', type: 'Other' }
   ]

@@ -28,7 +28,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "rxjs": "~6.6.0",
-    "simple-icons": "^11.14.0",
+    "simple-icons": "^12.4.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
