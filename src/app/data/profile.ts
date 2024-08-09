@@ -3,6 +3,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   siAiohttp,
   siAndroid,
+  siAndroidstudio,
   siAngular,
   siArduino,
   siAzurefunctions,
@@ -21,6 +22,7 @@ import {
   siGithubactions,
   siGitlab,
   siGooglemaps,
+  siGradle,
   siGrafana,
   siIntellijidea,
   siJavascript,
@@ -30,6 +32,7 @@ import {
   siLabview,
   siMacos,
   siMaterialformkdocs,
+  siMetabase,
   siMicrosoftsqlserver,
   SimpleIcon,
   siMultisim,
@@ -124,6 +127,7 @@ export interface Project {
   description: string;
   items?: Array<string>;
   skills: Array<SkillIcon>;
+  hiddenBrand?: boolean;
 }
 
 export interface Skill {
@@ -320,6 +324,10 @@ const icons = {
     icon: siGrafana,
     text: 'Grafana'
   },
+  metabase: {
+    icon: siMetabase,
+    text: 'Metabase'
+  },
   sonarqube: {
     icon: siSonarqube,
     text: 'SonarQube'
@@ -351,6 +359,10 @@ const icons = {
   solidWorks: {
     icon: siDassaultsystemes,
     text: 'SolidWorks'
+  },
+  androidStudio: {
+    icon: siAndroidstudio,
+    text: 'Android Studio'
   },
   intelliJ: {
     icon: siIntellijidea,
@@ -399,7 +411,11 @@ const icons = {
   discord: {
     icon: siDiscord,
     text: 'Discord',
-  }
+  },
+  gradle: {
+    icon: siGradle,
+    text: 'Gradle',
+  },
 };
 
 export let profile: Profile = {
@@ -554,6 +570,7 @@ export let profile: Profile = {
         icons.dotnet,
         icons.javascript,
         icons.nodejs,
+        icons.gradle,
         icons.kotlin,
         icons.raspberrypi,
         icons.angularjs,
@@ -710,12 +727,15 @@ export let profile: Profile = {
         icons.docker,
         icons.prometheus,
         icons.grafana,
+        icons.metabase,
+        icons.gradle,
         icons.kotlin,
         icons.ktor,
       ]
     },
     {
       name: 'On-Demand Medical Service App',
+      hiddenBrand: true,
       start: new Date('2023-09-11'),
       end: new Date('2024-03-11'),
       description: '',
@@ -735,10 +755,12 @@ export let profile: Profile = {
         icons.googleMaps,
         icons.firebase,
         icons.docker,
+        icons.sentry,
       ]
     },
     {
       name: 'Car Insurance Web app',
+      hiddenBrand: true,
       start: new Date('2021-04-29'),
       end: new Date('2021-12-14'),
       description: 'Worked on the integration of a third party REST API containing geocoding information and car insurance quote generation.',
@@ -785,6 +807,8 @@ export let profile: Profile = {
       skills: [
         icons.python,
         icons.sqlite,
+        icons.githubActions,
+        icons.docker,
       ]
     },
 
@@ -794,8 +818,11 @@ export let profile: Profile = {
       start: new Date('2020-08-06'),
       description: 'Open source Kotlin JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
       skills: [
+        icons.gradle,
         icons.kotlin,
         icons.ktor,
+        icons.githubActions,
+        icons.docker,
       ]
     },
     {
@@ -811,11 +838,13 @@ export let profile: Profile = {
         'Designed SQL database to store user and job data.',
       ],
       skills: [
+        icons.gradle,
         icons.java,
         icons.kotlin,
         icons.android,
         icons.mysql,
         icons.firebase,
+        icons.gitlabCiCd,
       ]
     },
     {
@@ -825,18 +854,19 @@ export let profile: Profile = {
       end: new Date('2017-11-03'),
       description: 'Open source Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
       skills: [
+        icons.gradle,
         icons.java,
         icons.android
       ]
     },
   ],
   skills: [
-    { name: 'Python', type: 'Programming Language', icon: icons.python },
-    { name: 'Kotlin', type: 'Programming Language', icon: icons.kotlin },
-    { name: 'C#', type: 'Programming Language', icon: icons.csharp },
-    { name: 'Java', type: 'Programming Language', icon: icons.java },
-    { name: 'JavaScript', type: 'Programming Language', icon: icons.javascript },
-    { name: 'TypeScript', type: 'Programming Language', icon: icons.typescript },
+    { name: 'Python', type: 'Programming Languages', icon: icons.python },
+    { name: 'Kotlin', type: 'Programming Languages', icon: icons.kotlin },
+    { name: 'C#', type: 'Programming Languages', icon: icons.csharp },
+    { name: 'Java', type: 'Programming Languages', icon: icons.java },
+    { name: 'JavaScript', type: 'Programming Languages', icon: icons.javascript },
+    { name: 'TypeScript', type: 'Programming Languages', icon: icons.typescript },
     { name: 'C++', type: 'Programming Language', icon: icons.cplusplus },
     { name: 'Android', type: 'Platforms', icon: icons.android },
     { name: '.NET', type: 'Platforms', icon: icons.dotnet },
@@ -864,12 +894,15 @@ export let profile: Profile = {
     { name: 'GitHub Actions', type: 'DevOps', icon: icons.githubActions },
     { name: 'GitLab CI/CD', type: 'DevOps', icon: icons.gitlabCiCd },
     { name: 'Docker', type: 'DevOps', icon: icons.docker },
+    { name: 'Gradle', type: 'DevOps', icon: icons.portainer },
     { name: 'Portainer', type: 'DevOps', icon: icons.portainer },
     { name: 'nginx', type: 'DevOps', icon: icons.nginx },
     { name: 'Grafana', type: 'DevOps', icon: icons.grafana },
+    { name: 'Metabase', type: 'DevOps', icon: icons.metabase },
     { name: 'Prometheus', type: 'DevOps', icon: icons.prometheus },
     { name: 'SonarQube', type: 'DevOps', icon: icons.sonarqube },
     { name: 'Sentry', type: 'DevOps', icon: icons.sentry },
+    { name: 'Android Studio', type: 'Tools', icon: icons.androidStudio },
     { name: 'IntelliJ IDEA', type: 'Tools', icon: icons.intelliJ },
     { name: 'Pycharm', type: 'Tools', icon: icons.pycharm },
     { name: 'Visual Studio', type: 'Tools', icon: icons.visualStudio },
