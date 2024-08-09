@@ -9,7 +9,6 @@
   }
 }
 
-
 * {
   :host {
     ::ng-deep {
@@ -36,22 +35,22 @@
   text-align: center;
 }
 
-.job-skill {
-  white-space:nowrap;
-}
-
 div > .job-skill:not(:first-child) {
   border-left: 2px solid;
   margin-left: 3pt;
   padding-left: 3pt;
 }
 
+.job-skill {
+  white-space: nowrap;
+}
+
 h1 {
-  text-align: center
+  text-align: center;
 }
 
 h2:after {
-  content: ' ';
+  content: " ";
   display: block;
   border: 2px solid black;
 }

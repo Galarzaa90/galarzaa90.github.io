@@ -4,4 +4,9 @@
     "source.organizeImports": "always",
   },
   "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#230E90",
+    "titleBar.activeBackground": "#3013CA",
+    "titleBar.activeForeground": "#FCFBFF"
+  },
 }

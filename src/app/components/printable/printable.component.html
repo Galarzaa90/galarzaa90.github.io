@@ -21,7 +21,7 @@
     </div>
   </div>
   <h2>Skills & Tools</h2>
-  <div class="skills grid grid-cols-5">
+  <div class="skills grid grid-cols-3" style="page-break-after: always;">
     @for (skill of profile.skills; track skill) {
     <div class="skill-icon">
       @if (skill.icon != null) {
@@ -60,9 +60,10 @@
         </ul>
         }
         @if (job.skills != undefined) {
-        <div class="job-skills-container">
+        <div
+          class="job-skills-container flex flex-row items-center flex-wrap justify-center">
           @for (skill of job.skills; track skill) {
-          <span class="job-skill">
+          <span class="job-skill flex items-center">
             @if (skill != null) {
             <app-skill-icon [skill]="skill"></app-skill-icon>
             }&nbsp;{{skill.text}}
@@ -102,9 +103,10 @@
         </ul>
         }
         @if (project.skills != undefined) {
-        <div class="job-skills-container">
+        <div
+          class="job-skills-container flex flex-row items-center flex-wrap justify-center">
           @for (skill of project.skills; track skill) {
-          <span class="job-skill">
+          <span class="job-skill flex items-center">
             @if (skill != null) {
             <app-skill-icon [skill]="skill"></app-skill-icon>
             }&nbsp;{{skill.text}}

@@ -616,7 +616,7 @@ export let profile: Profile = {
         'Implemented solar tracking algorithms in microcontroller based systems.',
         'Designed and assembled an embedded motor control system for protyping solar trackers.',
         'Designed solar tracking mechanical structures for photovoltaic cells, featuring mechanisms to perform automatic facet canting to increase the energy efficiency of the cells.',
-        'Published patent as co-inventor: <em>System and method for the automatic facet canting of heliostats.</em> (Patent Number: MX2015008322A, Dember 2016).'
+        'Published patent as co-inventor: <em>System and method for the automatic facet canting of heliostats.</em> (Patent Number: MX2015008322A, December 2016).'
       ],
       skills: [
         icons.cplusplus,
