@@ -3,61 +3,23 @@
   margin: 0.5in 1in;
 }
 
-@media print {
-  div.no-break {
-    break-inside: avoid;
-  }
+div.no-break {
+  break-inside: avoid;
 }
 
 * {
   :host {
     ::ng-deep {
       font-family: Arial, Helvetica, sans-serif !important;
-      font-size: 11pt;
+      font-size: 10pt;
     }
   }
-}
-
-.skills {
-  margin: auto 30pt;
-}
-
-.skill-icon {
-  margin: 2pt auto;
-}
-
-.school-header {
-  border: 1px solid black;
-  padding: 3pt 8pt;
-}
-
-.job-skills-container {
-  text-align: center;
 }
 
 div > .job-skill:not(:first-child) {
   border-left: 2px solid;
   margin-left: 3pt;
   padding-left: 3pt;
-}
-
-.job-skill {
-  white-space: nowrap;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2:after {
-  content: " ";
-  display: block;
-  border: 2px solid black;
-}
-
-dt {
-  padding: 3pt 8pt;
-  border: 1px solid black;
 }
 
 .content {
@@ -68,8 +30,4 @@ dt {
   .content {
     margin: 0;
   }
-}
-
-dd {
-  padding-bottom: 8pt;
 }

@@ -106,6 +106,7 @@ export interface JobEntry {
   description?: string;
   items?: Array<string>;
   skills?: Array<SkillIcon>;
+  printable?: boolean;
 }
 
 export interface School {
@@ -128,6 +129,7 @@ export interface Project {
   items?: Array<string>;
   skills: Array<SkillIcon>;
   hiddenBrand?: boolean;
+  printable?: boolean,
 }
 
 export interface Skill {
@@ -282,7 +284,7 @@ const icons = {
   },
   oracle: {
     icon: siOracle,
-    text: 'Oracle DBMS'
+    text: 'Oracle'
   },
   swagger: {
     icon: siSwagger,
@@ -290,7 +292,7 @@ const icons = {
   },
   aiohttp: {
     icon: siAiohttp,
-    text: 'AIOHTTP'
+    text: 'aiohttp'
   },
   fastapi: {
     icon: siFastapi,
@@ -533,7 +535,7 @@ export let profile: Profile = {
         'Developed the backend for a web application to create and manage dynamically generated inspections and inventory. From the design of the database, to the microservice achitecture using Azure functions, letting administrators create dynamic inspection surveys based on attributes and previous answers.',
         'Contributed to the development and maintenance of a reporting tool that created formatted reports based on inspection answers and data, allowing to quickly obtained compliant fire and security results reports.',
         'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic, letting users fill out surveys on mobile devices from dynamically selected questions, while also working without a network connection to ensure an interruption free inspection.',
-        'Contributed to the development of a mobile social media platform tailored for entrepeneurs and startups to show case their projects, share progress and look for private investors or be selected by government programs.',
+        'Contributed to the development of a mobile social media platform tailored for entrepreneurs and startups to show case their projects, share progress and look for private investors or be selected by government programs.',
         'Maintenance of a booking and travel content management system.',
         'Researched and implemented a company wide code analysis tool to integrate into projects CI/CD pipelines to generate reports on bad coding practices, potential bugs and security problems.'
       ],
@@ -624,7 +626,8 @@ export let profile: Profile = {
         icons.processing,
         icons.proteus,
         icons.solidWorks
-      ]
+      ],
+      printable: false,
     },
     {
       company: 'Grupo TEPEI',
@@ -642,7 +645,8 @@ export let profile: Profile = {
         icons.java,
         icons.android,
         icons.proteus
-      ]
+      ],
+      printable: false,
     },
     {
       company: 'Plataforma Solar de Hermosillo',
@@ -661,7 +665,8 @@ export let profile: Profile = {
         icons.arduino,
         icons.proteus,
         icons.processing
-      ]
+      ],
+      printable: false
     }
   ],
   education: [
@@ -809,7 +814,8 @@ export let profile: Profile = {
         icons.sqlite,
         icons.githubActions,
         icons.docker,
-      ]
+      ],
+      printable: false,
     },
 
     {
@@ -823,7 +829,8 @@ export let profile: Profile = {
         icons.ktor,
         icons.githubActions,
         icons.docker,
-      ]
+      ],
+      printable: false,
     },
     {
       name: 'Dodo',
@@ -857,7 +864,8 @@ export let profile: Profile = {
         icons.gradle,
         icons.java,
         icons.android
-      ]
+      ],
+      printable: false,
     },
   ],
   skills: [
@@ -874,7 +882,7 @@ export let profile: Profile = {
     { name: 'Angular', type: 'Framework/Library', icon: icons.angular },
     { name: 'Pydantic', type: 'Framework/Library', icon: icons.pydantic },
     { name: 'FastAPI', type: 'Framework/Library', icon: icons.fastapi },
-    { name: 'AIOHTTP', type: 'Framework/Library', icon: icons.aiohttp },
+    { name: 'aiohttp', type: 'Framework/Library', icon: icons.aiohttp },
     { name: 'Django', type: 'Framework/Library', icon: icons.django },
     { name: 'Material for MkDocs', type: 'Framework/Library', icon: icons.mkdocsMaterial },
     { name: 'Sphinx', type: 'Framework/Library', icon: icons.sphinx },
@@ -890,6 +898,7 @@ export let profile: Profile = {
     { name: 'SQLite', type: 'Databases', icon: icons.sqlite },
     { name: 'Microsoft SQL Server', type: 'Databases', icon: icons.mssql },
     { name: 'SingleStore', type: 'Databases', icon: icons.singlestore },
+    { name: 'Oracle', type: 'Databases', icon: icons.oracle },
     { name: 'Redis', type: 'Databases', icon: icons.redis },
     { name: 'GitHub Actions', type: 'DevOps', icon: icons.githubActions },
     { name: 'GitLab CI/CD', type: 'DevOps', icon: icons.gitlabCiCd },
@@ -904,7 +913,7 @@ export let profile: Profile = {
     { name: 'Sentry', type: 'DevOps', icon: icons.sentry },
     { name: 'Android Studio', type: 'Tools', icon: icons.androidStudio },
     { name: 'IntelliJ IDEA', type: 'Tools', icon: icons.intelliJ },
-    { name: 'Pycharm', type: 'Tools', icon: icons.pycharm },
+    { name: 'PyCharm', type: 'Tools', icon: icons.pycharm },
     { name: 'Visual Studio', type: 'Tools', icon: icons.visualStudio },
     { name: 'Visual Studio Code', type: 'Tools', icon: icons.vsCode },
     { name: 'git', type: 'Tools', icon: icons.git },
