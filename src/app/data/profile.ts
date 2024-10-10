@@ -875,7 +875,7 @@ export let profile: Profile = {
     { name: 'Java', type: 'Programming Languages', icon: icons.java },
     { name: 'JavaScript', type: 'Programming Languages', icon: icons.javascript },
     { name: 'TypeScript', type: 'Programming Languages', icon: icons.typescript },
-    { name: 'C++', type: 'Programming Language', icon: icons.cplusplus },
+    { name: 'C++', type: 'Programming Languages', icon: icons.cplusplus },
     { name: 'Android', type: 'Platforms', icon: icons.android },
     { name: '.NET', type: 'Platforms', icon: icons.dotnet },
     { name: 'Node.js', type: 'Platforms', icon: icons.nodejs },
