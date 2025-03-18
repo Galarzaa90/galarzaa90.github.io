@@ -34,11 +34,13 @@ import {
   siMaterialformkdocs,
   siMetabase,
   siMicrosoftsqlserver,
+  siMongodb,
   SimpleIcon,
   siMultisim,
   siMysql,
   siNginx,
   siNodedotjs,
+  siOpenai,
   siOpenjdk,
   siOracle,
   siPortainer,
@@ -52,8 +54,10 @@ import {
   siPython,
   siRabbitmq,
   siRaspberrypi,
+  siReact,
   siReadthedocs,
   siRedis,
+  siRemix,
   siSentry,
   siSinglestore,
   siSocketdotio,
@@ -246,9 +250,25 @@ const icons = {
     icon: siPostgresql,
     text: 'PostgreSQL'
   },
+  mongodb: {
+    icon: siMongodb,
+    text: 'MongoDB'
+  },
   angular: {
     icon: siAngular,
     text: 'Angular'
+  },
+  react: {
+    icon: siReact,
+    text: 'React'
+  },
+  remix: {
+    icon: siRemix,
+    text: 'Remix'
+  },
+  openai: {
+    icon: siOpenai,
+    text: 'OpenAI',
   },
   socketio: {
     icon: siSocketdotio,
@@ -501,6 +521,26 @@ export let profile: Profile = {
         icons.rabbitMq,
         icons.sqlAlchemy,
         icons.githubActions,
+      ]
+    },
+    {
+      company: 'Fully Parsed',
+      start: new Date('2024-08-20'),
+      position: 'Software Engineer',
+      description: 'Development of data processing workflows leveraging modern technologies for structured information extraction and analysis, with applications in financial and investment-related domains.',
+      items: [
+        'Optimized application structure to improve rendering efficiency and reduce unnecessary data loads.',
+        'Designed and implemented an API for task orchestration and data analysis.',
+        'Led migration efforts toward a modular, scalable architecture utilizing workflow automation tools.'
+      ],
+      skills: [
+        icons.typescript,
+        icons.react,
+        icons.remix,
+        icons.mongodb,
+        icons.python,
+        icons.fastapi,
+        icons.openai
       ]
     },
     {
