@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/printable/printable.component.scss"],
+  "sourcesContent": ["@page {\n  size: letter;\n  margin: 0.5in 1in;\n}\n\ndiv.no-break {\n  break-inside: avoid;\n}\n\n* {\n  :host {\n    ::ng-deep {\n      font-family: Arial, Helvetica, sans-serif !important;\n      font-size: 10pt;\n    }\n  }\n}\n\ndiv > .job-skill:not(:first-child) {\n  border-left: 2px solid;\n  margin-left: 3pt;\n  padding-left: 3pt;\n}\n\n.content {\n  margin: auto 5%;\n}\n\n@media print {\n  .content {\n    margin: 0;\n  }\n}\n"],
+  "mappings": "AAAA,MACE,KAAA,OADF,OAEE,KAAA,IAGF,GAAA,CAAA,SACE,aAAA,MAKE,EAAA,MAAA,UACE,YAAA,KAAA,CAAA,SAAA,CAAA,qBACA,UAAA,KAKN,GAAA,CAAA,CAAA,SAAA,KAAA,cACE,YAAA,IAAA,MACA,YAAA,IACA,aAAA,IAGF,CAAA,QAxBA,OAyBE,KAAA,GAGF,OAAA,MACE,CALF,QAxBA,OA8BI",
+  "names": []
+}

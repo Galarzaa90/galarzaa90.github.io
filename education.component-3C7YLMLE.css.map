@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/education/education.component.scss"],
+  "sourcesContent": [".school-skills {\n  font-size: 2.5em;\n}\n"],
+  "mappings": "AAAA,CAAA,cACE,UAAA",
+  "names": []
+}

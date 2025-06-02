@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/skill-icon/skill-icon.component.scss"],
+  "sourcesContent": ["svg {\n  height: 1em;\n  width: 1em;\n  margin: 0 2px 0 2px;\n  display: inline;\n  fill: white;\n}\n\n@media (prefers-color-scheme: light) {\n  svg {\n    fill: black;\n  }\n}\n"],
+  "mappings": "AAAA,IACE,OAAA,IACA,MAAA,IAFF,OAGE,EAAA,IACA,QAAA,OACA,KAAA,KAGF,OAAA,CAAA,oBAAA,EAAA,OACE,IACE,KAAA",
+  "names": []
+}
