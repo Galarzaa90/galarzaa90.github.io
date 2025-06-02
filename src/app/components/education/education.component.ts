@@ -8,20 +8,19 @@ import { School } from 'src/app/data/profile';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 
 @Component({
-  selector: 'app-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
-  standalone: true,
-  imports: [
-    MatAccordion,
-    MatExpansionPanel,
-    MatExpansionPanelHeader,
-    MatExpansionPanelTitle,
-    MatExpansionPanelDescription,
-    AsyncPipe,
-    DatePipe,
-    SkillIconComponent,
-  ]
+    selector: 'app-education',
+    templateUrl: './education.component.html',
+    styleUrls: ['./education.component.scss'],
+    imports: [
+        MatAccordion,
+        MatExpansionPanel,
+        MatExpansionPanelHeader,
+        MatExpansionPanelTitle,
+        MatExpansionPanelDescription,
+        AsyncPipe,
+        DatePipe,
+        SkillIconComponent,
+    ]
 })
 export class EducationComponent implements OnInit {
   @Input() entries: Array<School> = [];

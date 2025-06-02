@@ -6,11 +6,10 @@ import { Skill, SkillIcon, profile } from '../../data/profile';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 
 @Component({
-  selector: 'app-printable',
-  templateUrl: './printable.component.html',
-  styleUrls: ['./printable.component.scss'],
-  standalone: true,
-  imports: [FaIconComponent, SkillIconComponent, DatePipe]
+    selector: 'app-printable',
+    templateUrl: './printable.component.html',
+    styleUrls: ['./printable.component.scss'],
+    imports: [FaIconComponent, SkillIconComponent, DatePipe]
 })
 export class PrintableComponent implements OnInit {
   profile = profile;

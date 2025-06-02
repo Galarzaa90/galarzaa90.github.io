@@ -9,22 +9,21 @@ import { Project } from 'src/app/data/profile';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatAccordion,
-    MatExpansionPanel,
-    MatExpansionPanelHeader,
-    MatExpansionPanelTitle,
-    MatExpansionPanelDescription,
-    SkillIconComponent,
-    AsyncPipe,
-    DatePipe,
-    MatTooltipModule,
-  ]
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.scss'],
+    imports: [
+        CommonModule,
+        MatAccordion,
+        MatExpansionPanel,
+        MatExpansionPanelHeader,
+        MatExpansionPanelTitle,
+        MatExpansionPanelDescription,
+        SkillIconComponent,
+        AsyncPipe,
+        DatePipe,
+        MatTooltipModule,
+    ]
 })
 export class ProjectComponent implements OnInit {
   @Input() projects: Array<Project> = [];

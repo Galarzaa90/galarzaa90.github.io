@@ -13,25 +13,24 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { PrintableComponent } from '../printable/printable.component';
 
 @Component({
-  selector: 'app-resume',
-  templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss'],
-  standalone: true,
-  imports: [
-    EducationComponent,
-    FaIconComponent,
-    MatCard,
-    MatCardContent,
-    MatChip,
-    MatChipListbox,
-    MatChipOption,
-    MatChipSet,
-    MatToolbar,
-    PrintableComponent,
-    ProjectComponent,
-    SkillIconComponent,
-    WorkExperienceComponent,
-  ]
+    selector: 'app-resume',
+    templateUrl: './resume.component.html',
+    styleUrls: ['./resume.component.scss'],
+    imports: [
+        EducationComponent,
+        FaIconComponent,
+        MatCard,
+        MatCardContent,
+        MatChip,
+        MatChipListbox,
+        MatChipOption,
+        MatChipSet,
+        MatToolbar,
+        PrintableComponent,
+        ProjectComponent,
+        SkillIconComponent,
+        WorkExperienceComponent,
+    ]
 })
 export class ResumeComponent implements OnInit {
 

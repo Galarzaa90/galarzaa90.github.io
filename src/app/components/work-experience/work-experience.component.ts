@@ -8,11 +8,10 @@ import { JobEntry } from 'src/app/data/profile';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 
 @Component({
-  selector: 'app-work-experience',
-  templateUrl: './work-experience.component.html',
-  styleUrls: ['./work-experience.component.scss'],
-  standalone: true,
-  imports: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, SkillIconComponent, AsyncPipe, DatePipe]
+    selector: 'app-work-experience',
+    templateUrl: './work-experience.component.html',
+    styleUrls: ['./work-experience.component.scss'],
+    imports: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, SkillIconComponent, AsyncPipe, DatePipe]
 })
 export class WorkExperienceComponent implements OnInit {
   @Input() entries: Array<JobEntry> = [];
