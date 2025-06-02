@@ -497,8 +497,29 @@ export let profile: Profile = {
   ],
   workExperience: [
     {
+      company: 'Fully Parsed',
+      start: new Date('2024-08-20'),
+      position: 'Software Engineer',
+      description: 'Development of data processing workflows leveraging modern technologies for structured information extraction and analysis, with applications in financial and investment-related domains.',
+      items: [
+        'Optimized application structure to improve rendering efficiency and reduce unnecessary data loads.',
+        'Designed and implemented an API for task orchestration and data analysis.',
+        'Led migration efforts toward a modular, scalable architecture utilizing workflow automation tools.'
+      ],
+      skills: [
+        icons.typescript,
+        icons.react,
+        icons.remix,
+        icons.mongodb,
+        icons.python,
+        icons.fastapi,
+        icons.openai
+      ]
+    },
+    {
       company: 'Encora',
       start: new Date('2020-11-09'),
+      end: new Date('2024-06-02'),
       logo: 'Encora.png',
       url: 'https://www.encora.com',
       position: 'Software Engineer',
@@ -523,26 +544,7 @@ export let profile: Profile = {
         icons.githubActions,
       ]
     },
-    {
-      company: 'Fully Parsed',
-      start: new Date('2024-08-20'),
-      position: 'Software Engineer',
-      description: 'Development of data processing workflows leveraging modern technologies for structured information extraction and analysis, with applications in financial and investment-related domains.',
-      items: [
-        'Optimized application structure to improve rendering efficiency and reduce unnecessary data loads.',
-        'Designed and implemented an API for task orchestration and data analysis.',
-        'Led migration efforts toward a modular, scalable architecture utilizing workflow automation tools.'
-      ],
-      skills: [
-        icons.typescript,
-        icons.react,
-        icons.remix,
-        icons.mongodb,
-        icons.python,
-        icons.fastapi,
-        icons.openai
-      ]
-    },
+
     {
       company: 'Joybyte',
       start: new Date('2020-06-15'),
