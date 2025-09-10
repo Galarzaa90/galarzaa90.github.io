@@ -8,6 +8,7 @@ import {
   siArduino,
   siAzurefunctions,
   siBootstrap,
+  siCaddy,
   siCplusplus,
   siCsharp,
   siDassaultsystemes,
@@ -330,6 +331,10 @@ const icons = {
     icon: siRabbitmq,
     text: 'RabbitMQ',
   },
+  caddy: {
+    icon: siCaddy,
+    text: 'Caddy'
+  },
   nginx: {
     icon: siNginx,
     text: 'nginx'
@@ -441,12 +446,13 @@ const icons = {
 };
 
 export let profile: Profile = {
-  headline: 'Hello, my name is Allan!',
+  headline: 'Senior Software Engineer | Backend, Data, DevOps',
   aboutMe:  /*html*/`
-  <p>Senior Software engineer with 8 years of experience focused for building high-quality, maintainable code. With experience across diverse industries like oil and gas, healthcare, electronics and finance.</p>
-  <p>Proficient in various programming languages and technologies such as Python, Kotlin, C# and SQL, prioritizing following best practices for clean and well-documented codebases.</p>
-  <p>Extensive experience designing and implement robust databases to support different sorts of applications as well as designing and developing well-documented and APIs.</p>
-  <p>With experience in system administration on virtual servers, container deployments and monitoring systems, as well as designing and maintaining CI/CD workflows.</p>
+  <p>Senior Software Engineer with 8 years of experience building reliable, maintainable software across finance and large-scale community platforms. Creator of <em>NabBot</em>, a Discord bot ecosystem recognized as an official Promoted Fansite by Tibia’s developers.</p>
+<p>Specialized in backend development with Python (FastAPI) and Kotlin (Ktor), with extensive experience designing and operating databases at scale — handling hundreds of millions of rows while ensuring performance and reliability.</p>
+<p>Skilled in API design and implementation, from data-heavy financial services to real-time gaming platforms, with a strong focus on clean, documented code and sustainable architectures.</p>
+<p>Hands-on with DevOps practices for small to medium-scale environments: containerized deployments, CI/CD workflows, and observability tooling to keep services stable and maintainable.</p>
+
   `,
   location: 'Mexico',
   languages: [
@@ -456,12 +462,8 @@ export let profile: Profile = {
     },
     {
       name: 'English',
-      level: 'Professional'
+      level: 'C1'
     },
-    {
-      name: 'Portuguese',
-      level: 'Basic'
-    }
   ],
   onlineProfiles: [
     {
@@ -473,7 +475,7 @@ export let profile: Profile = {
     {
       icon: faLinkedin,
       url: 'https://www.linkedin.com/in/galarzaa/',
-      title: 'LinkedIn',
+      title: 'galarzaa',
       printable: false,
     },
     {
@@ -490,21 +492,24 @@ export let profile: Profile = {
     }
   ],
   interests: [
+    'Open Source',
+    'Homelab',
     'Electronics',
-    'Internet of Things',
+    'IoT',
+    'PC Building',
     'Gaming',
-    'PC Building'
   ],
   workExperience: [
     {
       company: 'Fully Parsed',
       start: new Date('2024-08-20'),
       position: 'Software Engineer',
-      description: 'Development of data processing workflows leveraging modern technologies for structured information extraction and analysis, with applications in financial and investment-related domains.',
+      description: 'Startup developing data processing and reporting workflows for financial and investment-related domains.',
       items: [
-        'Optimized application structure to improve rendering efficiency and reduce unnecessary data loads.',
-        'Designed and implemented an API for task orchestration and data analysis.',
-        'Led migration efforts toward a modular, scalable architecture utilizing workflow automation tools.'
+        'Reduced report generation time by 60% through backend optimizations and data aggregation improvements.',
+        'Designed and implemented APIs for workflow orchestration and data analysis, leveraging containerized services on GCP with Windmill for scalable task execution.',
+        'Improved developer onboarding and deployment speed by building a modular architecture that supports scripts in multiple languages with automatic dependency management.',
+        'Integrated AI-driven data processing using prompt engineering and agent-based tools (e.g., Claude, Cursor), applying LLMs to transform, validate, and enrich structured datasets.',
       ],
       skills: [
         icons.typescript,
@@ -523,12 +528,13 @@ export let profile: Profile = {
       logo: 'Encora.png',
       url: 'https://www.encora.com',
       position: 'Software Engineer',
-      description: 'Previously known as Nearsoft. Working as a backend developer and database administrator.',
+      description: 'Backend developer and database administrator for oil & gas industry applications.',
       items: [
-        'Design, development and maintenance of APIs for mobile and web apps to monitor and analyze pipeline flows and metrics in the oil industry.',
-        'Design and development of a backend application to create mappings between field equipment and field sensor data.',
-        'Development of service tasks to synchronize data and create events based on parameter configurations.',
-        'Management of GitHub actions workflows to build and deploy Docker images to on-premises Kubernetes infrastructure.',
+        'Built and maintained APIs for monitoring thousands of pipelines and processing millions of sensor records daily, focusing on data analysis and presentation for operational insights.',
+        'Led a major backend refactor introducing FastAPI + Pydantic, improving maintainability, boosting documentation quality, and accelerating collaboration with frontend teams.',
+        'Developed backend services to map equipment and sensor data, consolidating previously fragmented internal apps into a unified system.',
+        'Built event-driven services consuming sensor data streams to trigger automated warnings, alarms, and operational controls based on real-time conditions.',
+        'Maintained CI/CD pipelines using GitHub Actions with Docker with on-prem Kubernetes, managing deployments and ensuring system reliability.'
       ],
       skills: [
         icons.python,
@@ -552,11 +558,11 @@ export let profile: Profile = {
       url: 'https://www.joybyte.com/',
       position: 'Freelance Developer',
       logo: 'joybyte.png',
-      description: 'Assisted the backend team during off-hours in developing a new release for a mobile pregnancy tracking app.',
+      description: 'Collaborated with a team of freelance engineers under an in-house technical lead to support backend development for a pregnancy tracking mobile app.',
       items: [
-        'Designed APIs for the mobile app, providing information based on the user\'s registered due date and tracked health information, while providing tips and information based on their current pregnancy stage, as well as referring to health clinics.',
-        'Implemented Database First design and management, aiming for scalability and flexibility.',
-        'Developed and maintained stored procedures and other database logic, creating tailored information for users based on their pregnancy stage, symptom tracking and other information.',
+        'Designed and implemented APIs to provide stage-specific health tips, pregnancy tracking, and clinic referrals based on user profiles.',
+        'Built and optimized a relational database using a Database-First approach, focusing on scalability and flexible schema evolution.',
+        'Developed stored procedures and backend logic to tailor information dynamically to each user’s pregnancy stage and tracked health data.',
       ],
       skills: [
         icons.csharp,
@@ -572,14 +578,14 @@ export let profile: Profile = {
       url: 'https://gilasw.com/',
       position: 'Software Engineer',
       logo: 'GilaSW.png',
-      description: 'Worked on multiple projects for multiple clients as part of the backend development team, following scrum methdology, taking strong initiative on standardizing good coding practices across the company and the use of code quality tools.',
+      description: 'Worked on multiple client projects as part of the backend team, following Scrum methodology. Took strong initiative on addressing technical debt and improving code quality practices across the company.',
       items: [
-        'Developed the backend for a web application to create and manage dynamically generated inspections and inventory. From the design of the database, to the microservice achitecture using Azure functions, letting administrators create dynamic inspection surveys based on attributes and previous answers.',
-        'Contributed to the development and maintenance of a reporting tool that created formatted reports based on inspection answers and data, allowing to quickly obtained compliant fire and security results reports.',
-        'Development of the backend of a multiplatform mobile app for fire & security inspections, including API development as well as application features and logic, letting users fill out surveys on mobile devices from dynamically selected questions, while also working without a network connection to ensure an interruption free inspection.',
-        'Contributed to the development of a mobile social media platform tailored for entrepreneurs and startups to show case their projects, share progress and look for private investors or be selected by government programs.',
-        'Maintenance of a booking and travel content management system.',
-        'Researched and implemented a company wide code analysis tool to integrate into projects CI/CD pipelines to generate reports on bad coding practices, potential bugs and security problems.'
+        'Built backend services for a replacement inspection and inventory platform, focusing on database design and microservice architecture with Azure Functions.',
+        'Delivered APIs and offline-capable features for a fire & security inspection mobile app, essential for facilities where connectivity was unreliable.',
+        'Automated generation of regulatory fire and safety reports, eliminating manual report creation for clients.',
+        'Supported additional projects including a startup social media pilot and a travel CMS, contributing features and bug fixes as required.',
+        'Compiled and drove adoption of a technical debt reduction plan for the inspection app, which reduced bug rates and improved overall maintainability.',
+        'Researched and trialed SonarQube integration into CI/CD pipelines, laying groundwork for company-wide static analysis (though not fully adopted).'
       ],
       skills: [
         icons.csharp,
@@ -598,16 +604,13 @@ export let profile: Profile = {
       position: 'Software Engineer',
       logo: 'LYF.png',
       url: 'https://lopez-fernandez.com/',
-      description: 'Developed applications and libraries for money management devices, enhanching funcionality and integration with third party services.',
+      description: 'Developed applications and device libraries for money management systems, enhancing functionality, third-party integrations, and transaction monitoring.',
       items: [
-        'Created applications for end-users, deployed in kiosks with multiple money devices, allowing users to pay services, utilities or make bank transactions, focusing on accesibility and ease of use.',
-        'Designed and developed software interfaces for acceptors, dispensers, and other money devices to be used internally for application development or to be offered to customers for their own integration, focusing on usage and features documentation.',
-        'Integrated in-house monitoring services on end-user applications, keeping track of money transactions for quality and auditing purposes.',
-        'Integrated third-party banking and payment services, expanding payment options and enhancing transaction processing.',
-        'Developed and managed web services to support the core functionality of monitoring services.',
-        'Managed local and remote databases, ensuring data integrity and availability.',
-        'Implemented quality coding practices in the software department, contributing to the overall reliability of the software.',
-        'Temporary outsourced at Qualisys to aid in development of SAP Business One addons.'
+        'Built end-user kiosk applications integrating multiple money devices (acceptors, dispensers, validators) for payments, utilities, and banking transactions — deployed in production, including international installations.',
+        'Developed reusable software interfaces for MEI and CC-Talk devices, enabling both in-house and customer integrations.',
+        'Integrated real-time monitoring services into kiosk apps, providing transaction tracking and auditability.',
+        'Designed and managed supporting web services and databases to ensure transactional integrity and availability.',
+        'Contributed quality improvements while temporarily outsourced at Qualisys for SAP Business One addon development.'
       ],
       skills: [
         icons.csharp,
@@ -628,14 +631,13 @@ export let profile: Profile = {
       start: new Date('2015-06-12'),
       end: new Date('2017-12-29'),
       position: 'Innovation Development Engineer',
-      description: 'Development of innovation oriented projects in different areas. My work was focused on electronics, microcontrollers and software.',
+      description: 'Developed applied R&D projects at the intersection of embedded systems, Android applications, and hardware design.',
       items: [
-        'Created an Android app using Bluetooth LE technology to communicate with an embedded device, controlling ATV headlights to adjust for vehicle movement and ensure optimal illumination and visibility.',
-        'Designed and manufactured protective cases for electronic control devices, ensuring durability against environmental factors and strong movements.',
-        'Developed an Android app for remote monitoring of ambient conditions in aquaponic greenhouses, improving the life quality of fish and plants while reducing energy consumption.',
-        'Developed and implemented a backend system to monitor and collect sensor data from devices, providing historical data to assess the performance of aquaponic greenhouses.',
-        'Developed an embedded Android app serving as a user interface for dispensing machines, featuring a QR login system integrated with a companion mobile app to manage user credit and purchase history.',
-        'Researched and authored technical reports documenting project details, feasibility, and market studies.',
+        'Built an Android BLE app and UI to control ATV headlights, mounted and tested with embedded hardware systems.',
+        'Designed CAD-based protective enclosures for electronic control devices, ensuring functional durability in mechanical assemblies.',
+        'Developed an aquaponics greenhouse monitoring system, integrating sensors for temperature, pH, dissolved oxygen, humidity, and light, with a backend for real-time data collection.',
+        'Designed both the embedded UI and mobile companion app for a dispensing machine demo, featuring QR-based login and a credit management system backed by a database.',
+        'Produced detailed technical and feasibility reports supporting research and innovation activities.',
       ],
       skills: [
         icons.android,
@@ -657,10 +659,10 @@ export let profile: Profile = {
       url: 'https://www.unison.mx/',
       description: 'Assisted the technical manager and planned the project: <em>Feasibility study of photovoltaic cells for airport gas stations electricity supply</em>.',
       items: [
-        'Implemented solar tracking algorithms in microcontroller based systems.',
-        'Designed and assembled an embedded motor control system for protyping solar trackers.',
-        'Designed solar tracking mechanical structures for photovoltaic cells, featuring mechanisms to perform automatic facet canting to increase the energy efficiency of the cells.',
-        'Published patent as co-inventor: <em>System and method for the automatic facet canting of heliostats.</em> (Patent Number: MX2015008322A, December 2016).'
+        'Implemented dual-axis solar tracking algorithms on microcontroller-based systems.',
+        'Designed and assembled a motor control rig to prototype solar tracker mechanisms.',
+        'Created CAD-based mechanical structures for photovoltaic cells, featuring automatic facet canting.',
+        'Listed as co-inventor on patent <em>System and method for the automatic facet canting of heliostats.</em> (Patent Number: MX2015008322A, December 2016).'
       ],
       skills: [
         icons.cplusplus,
@@ -676,10 +678,10 @@ export let profile: Profile = {
       start: new Date('2014-07-14'),
       end: new Date('2014-11-01'),
       position: 'Developer',
-      description: 'Developed an energy saving control system, focused on school classrooms, based on configurable schedules obtained from a server, reducing manual efforts and providing energy savings to schools.',
+      description: 'Worked on an energy-saving classroom control system project, designed to automate air conditioning and other devices based on schedules.',
       items: [
-        'Designed and developed embedded systems to install in classrooms, using infrarred LED to emit sequences to control devices, with an internal memory storing code sequences.',
-        'Developed an Android application to create, view and modify classroom schedules to manage air conditioning units automatically.'
+        'Developed an embedded IR control system capable of learning sequences from existing remotes and persisting them with EEPROM memory.',
+        'Built a server-connected Android application for teachers to create and manage classroom schedules for automated device control.',
       ],
       skills: [
         icons.cplusplus,
@@ -697,10 +699,11 @@ export let profile: Profile = {
       logo: 'PSH.png',
       url: 'http://psh.isi.uson.mx/',
       position: 'Intern Developer',
-      description: 'Developed an alternative control system for heliostats solar tracking. An economic and open platform using Arduino, as an alternative to the private systems using CompactRIO by National Instruments.',
+      description: 'Worked at a solar energy research facility on alternative heliostat control systems.',
       items: [
-        'Adapted a solar position algorith to run efficiently on an embedded system with lower hardware specifications.',
-        'Developed graphical interfaces to control, monitor, and test solar tracking mechanisms, fine-tuning PID control values for optimal performance.'
+        'Developed a low-cost embedded control system for solar tracking, replacing expensive CompactRIO hardware with Arduino-based solutions at a fraction of the cost.',
+        'Adapted and optimized a solar position algorithm to run efficiently on limited embedded hardware.',
+        'Built graphical interfaces in Processing to control, monitor, and test heliostat mechanisms, including fine-tuning of PID control values.'
       ],
       skills: [
         icons.cplusplus,
@@ -750,15 +753,14 @@ export let profile: Profile = {
       url: 'https://nabbot.xyz',
       start: new Date('2016-03-02'),
       logo: 'NabBot.png',
-      description: 'Discord bot focused on the MMO Tibia used in over 15,000 Discord servers. An interactive bot that answers to different commands, handles a user database and does realtime updates based on game events.\nThe project is composed of multiple smaller services and applications to handle data gathering and communication.',
+      description: 'Discord bot ecosystem for the MMORPG Tibia, recognized as a Promoted Fansite by the game’s developers and listed on the official Tibia website. Used in over 17,000 servers worldwide.',
       items: [
-        'Developed a service that periodically scrapes the game\'s website in order to detect changes between scans, generating historical data for the players.',
-        'Developed a chat bot that offers users synthetized information from the game\'s website, and allows linking their game data to their Discord accounts.',
-        'Developed a notification system through Discord that notifies users of game events based on their specific settings.',
-        'Recognized as a <b>Promoted Fansite</b> by the game developers, being featured on their official website and being granted additional benefits for being part of their programme.',
-        'Implemented automated build, testing and deployment pipelines using GitLab CI/CD, generating Docker images on private registries for deployment.',
-        'Migrated of codebase from Python to Kotlin, redesigning the service architecture from scratch for better performance and scalability.',
-        'Set up and managed self-managed virtual server on Ubuntu, creating and installing tools for deployment and monitoring of application services.'
+        'Serves 6,000 monthly active users and handles an average of 114,000 command requests per month.',
+        'Built services to scrape and process game data, generating large historical datasets (235M+ records across player activity and events).',
+        'Provides real-time event notifications and account-linked insights for players.',
+        'Migrated the codebase from Python to Kotlin, consolidating into a monorepo and improving maintainability through static typing and unified service architecture.',
+        'Implemented automated pipelines with GitLab CI/CD to build, test, and deploy Docker images to a self-managed Ubuntu VDS.',
+        'Set up observability with Prometheus, Grafana, and Metabase, ensuring reliable monitoring and long-term uptime.',
       ],
       skills: [
         icons.discord,
@@ -785,13 +787,14 @@ export let profile: Profile = {
       hiddenBrand: true,
       start: new Date('2023-09-11'),
       end: new Date('2024-03-11'),
-      description: '',
+      description: 'Engineered the backend for a mobile platform connecting patients and doctors, with integrations for payments, mapping, and notifications.',
       items: [
-        'Designed and developed an HTTP API serving as the backend for an on-demand medical services mobile application (iOS & Android)',
-        'Designed SQL database for application storage, containing users, service history, ratings and more as well as using PostGIS to work with coordinates.',
-        'Integrated Stripe services using Stripe Connect workflow for in-app payments.',
-        'Integrated of Google Maps API for travel time calculations and geocoding, showing users estimated wait times.',
-        'Implemented Firebase Cloud Messaging service to allow communication of events and notifications between the server and mobile applications.',
+        'Designed and implemented an HTTP API backend to support iOS and Android apps.',
+        'Built a relational database with PostGIS extensions for geospatial queries, managing users, service history, and ratings.',
+        'Integrated Stripe Connect for in-app payments between patients and doctors.',
+        'Implemented Google Maps API for travel time estimation and geocoding.',
+        'Configured Firebase Cloud Messaging to deliver real-time server-to-mobile notifications.',
+        'Deployed as a Docker Compose project on a VPS, including application and database containers.',
       ],
       skills: [
         icons.python,
@@ -810,12 +813,13 @@ export let profile: Profile = {
       hiddenBrand: true,
       start: new Date('2021-04-29'),
       end: new Date('2021-12-14'),
-      description: 'Worked on the integration of a third party REST API containing geocoding information and car insurance quote generation.',
+      description: 'Took over development of a car insurance quotation platform, improving code quality while delivering new backend and frontend features.',
       items: [
-        'Integrated geocoding and insurance quoting API, and designed models for serialization and database.',
-        'Added admin panel sections to manage users, quotation and insurance policies.',
-        'Added front-facing sections to web app containing forms to generate quotes.',
-        'Cleaned up and made quality improvements in most of the app.'
+        'Integrated a third-party REST API for geocoding and insurance quote generation.',
+        'Designed models for serialization and database storage of users, quotations, and policies.',
+        'Extended the admin panel with tools to manage users, quotations, and insurance policies.',
+        'Built front-facing web forms for generating insurance quotes.',
+        'Cleaned up and standardized frontend code, significantly improving maintainability of the CSS and UI.',
       ],
       skills: [
         icons.python,
@@ -829,13 +833,14 @@ export let profile: Profile = {
     {
       name: 'tibia.py',
       url: 'http://tibiapy.rtfd.io/',
-      start: new Date('2018-06-31'),
-      description: 'Open source web scrapping library that extracts information from the website Tibia.com and deserializes it into Python data.',
+      start: new Date('2018-07-31'),
+      description: 'Python library for scraping and deserializing Tibia.com data, originally extracted from NabBot and maintained as a standalone package.',
       items: [
-        'Designed strongly typed data models to represent the scrapped data into standardized objects.',
-        'Developed an asynchronous HTTP client to fetch content HTML content and convert it into Python objects.',
-        'Developed a test-driven Python library for the community to use in their own projects without having to worry about data extraction.',
-        'Developed GitHub Actions workflows to run unit tests, static code analysis, documentation sites deployment, Docker image building and deployment.'
+        'Published on PyPI and GitHub with full documentation on Read the Docs, plus a Dockerized API server for quick deployment.',
+        'Reached 40+ GitHub stars and averages ~350 monthly downloads, with adoption by community developers beyond NabBot.',
+        'Designed strongly typed data models and a client API to standardize scraped content.',
+        'Maintained >90% test coverage, ensuring reliability even as Tibia.com changed its HTML structure.',
+        'Continues in active maintenance, providing fixes for site changes while the feature set remains stable and complete.',
       ],
       skills: [
         icons.python,
@@ -850,7 +855,13 @@ export let profile: Profile = {
       name: 'tibiawiki-sql',
       url: 'https://tibiawiki-sql.rtfd.io/',
       start: new Date('2017-10-27'),
-      description: 'Open source Python script that fetches TibiaWiki via its MediaWiki API. Article information is parsed and stored in a SQLite database.',
+      description: 'Python tool that ingests TibiaWiki articles via the MediaWiki API and converts them into a structured SQLite database.',
+      items: [
+        'Published on PyPI and GitHub with documentation built in MkDocs; also provides a Docker script for quick setup.',
+        'Reached 30+ GitHub stars and averages 100 monthly downloads, with community contributions alongside solo development.',
+        'Processes thousands of TibiaWiki articles into structured data, enabling developers to query and analyze content directly from a relational database.',
+        'Maintained as a stable project, still synchronized with TibiaWiki updates.',
+      ],
       skills: [
         icons.python,
         icons.sqlite,
@@ -864,7 +875,14 @@ export let profile: Profile = {
       name: 'TibiaKt',
       url: 'https://galarzaa.com/TibiaKt',
       start: new Date('2020-08-06'),
-      description: 'Open source Kotlin JVM library to parse Tibia.com content, including a Ktor asynchronous client.',
+      description: 'Kotlin JVM library for parsing Tibia.com content, developed during NabBot’s migration from Python to Kotlin and now powering NabBot in production.',
+      items: [
+        'Published on Maven Central, available for integration by other developers.',
+        'Provides strongly typed models and a Ktor-based client for reliable website parsing.',
+        'Handles ~2,500 requests per minute in production through NabBot.',
+        'Maintains 90%+ test coverage and automated builds with GitHub Actions and Docker.',
+        'Actively maintained with ongoing fixes for upstream site changes.',
+      ],
       skills: [
         icons.gradle,
         icons.kotlin,
@@ -879,12 +897,14 @@ export let profile: Profile = {
       logo: 'Dodo.png',
       start: new Date('2016-08-16'),
       end: new Date('2019-04-06'),
-      description: 'Android application and web service featuring a two-sided network for odd jobs.',
+      description: 'Side project developed with a small team as a two-sided job marketplace app.',
       items: [
-        'Developed native Android application with geolocation services to find users needing services in a close area.',
-        'Integrated Firebase Messaging Service to notify users of job offers and for them to trackt their progress.',
-        'Implemented authentication service using Firebase to allow users to sign-in through Google.',
-        'Designed SQL database to store user and job data.',
+        'Built a native Android application with geolocation services to match users offering and requesting odd jobs.',
+        'Migrated the codebase from Java to Kotlin during Android’s adoption of Kotlin as an official language, improving readability and maintainability.',
+        'Integrated Firebase Messaging Service for job notifications and progress tracking.',
+        'Implemented Google authentication using Firebase for account management.',
+        'Designed and connected the app to a SQL database for storing user and job data.',
+        'Introduced GitLab CI/CD pipelines to automatically generate APK builds, enabling the team to test and share updated versions throughout development.',
       ],
       skills: [
         icons.gradle,
@@ -901,7 +921,13 @@ export let profile: Profile = {
       url: 'https://github.com/Galarzaa90/android-things-rc522',
       start: new Date('2017-03-28'),
       end: new Date('2017-11-03'),
-      description: 'Open source Android Things library for the RFID module RC522. Handles communication between the module and compatible RFID tags, with support for operations like sector permissions.',
+      description: 'Android Things library for the RC522 RFID module, providing communication between the device and compatible tags.',
+      items: [
+        'Implemented complete functionality for card authentication, block read/write, and memory operations (increase, decrease, transfer).',
+        'Published to Bintray as one of my first publicly released libraries.',
+        'Reached 45 GitHub stars and received community use before Android Things was discontinued.',
+        'Now archived, but remains available on GitHub as a stable reference.',
+      ],
       skills: [
         icons.gradle,
         icons.java,
@@ -911,61 +937,73 @@ export let profile: Profile = {
     },
   ],
   skills: [
+    // Core backend & primary stack
     { name: 'Python', type: 'Programming Languages', icon: icons.python },
-    { name: 'Kotlin', type: 'Programming Languages', icon: icons.kotlin },
-    { name: 'C#', type: 'Programming Languages', icon: icons.csharp },
-    { name: 'Java', type: 'Programming Languages', icon: icons.java },
-    { name: 'JavaScript', type: 'Programming Languages', icon: icons.javascript },
-    { name: 'TypeScript', type: 'Programming Languages', icon: icons.typescript },
-    { name: 'C++', type: 'Programming Languages', icon: icons.cplusplus },
-    { name: 'Android', type: 'Platforms', icon: icons.android },
-    { name: '.NET', type: 'Platforms', icon: icons.dotnet },
-    { name: 'Node.js', type: 'Platforms', icon: icons.nodejs },
-    { name: 'Angular', type: 'Framework/Library', icon: icons.angular },
-    { name: 'Pydantic', type: 'Framework/Library', icon: icons.pydantic },
     { name: 'FastAPI', type: 'Framework/Library', icon: icons.fastapi },
-    { name: 'aiohttp', type: 'Framework/Library', icon: icons.aiohttp },
-    { name: 'Django', type: 'Framework/Library', icon: icons.django },
-    { name: 'Material for MkDocs', type: 'Framework/Library', icon: icons.mkdocsMaterial },
-    { name: 'Sphinx', type: 'Framework/Library', icon: icons.sphinx },
-    { name: 'Read The Docs', type: 'Framework/Library', icon: icons.rtd },
+    { name: 'Kotlin', type: 'Programming Languages', icon: icons.kotlin },
     { name: 'Ktor', type: 'Framework/Library', icon: icons.ktor },
-    { name: 'SQLAlchemy', type: 'Framework/Library', icon: icons.sqlAlchemy },
-    { name: 'Raspberry Pi', type: 'Platforms', icon: icons.raspberrypi },
-    { name: 'Arduino', type: 'Platforms', icon: icons.arduino },
-    { name: 'Processing', type: 'Platforms', icon: icons.processing },
-    { name: 'Discord', type: 'Platforms', icon: icons.discord },
     { name: 'PostgreSQL', type: 'Databases', icon: icons.postgresql },
+    { name: 'Docker', type: 'DevOps', icon: icons.docker },
+    { name: 'GitHub Actions', type: 'DevOps', icon: icons.githubActions },
+    { name: 'GitLab CI/CD', type: 'DevOps', icon: icons.gitlabCiCd },
+    { name: 'RabbitMQ', type: 'DevOps', icon: icons.rabbitMq }, // add here if you defined it in icons
+
+    // Secondary languages & frameworks you’re solid in
+    { name: 'Java', type: 'Programming Languages', icon: icons.java },
+    { name: 'C#', type: 'Programming Languages', icon: icons.csharp },
+    { name: 'TypeScript', type: 'Programming Languages', icon: icons.typescript },
+    { name: 'JavaScript', type: 'Programming Languages', icon: icons.javascript },
+    { name: 'Node.js', type: 'Platforms', icon: icons.nodejs },
+    { name: 'Django', type: 'Framework/Library', icon: icons.django },
+    { name: 'aiohttp', type: 'Framework/Library', icon: icons.aiohttp },
+    { name: 'SQLAlchemy', type: 'Framework/Library', icon: icons.sqlAlchemy },
+    { name: 'Pydantic', type: 'Framework/Library', icon: icons.pydantic },
+
+    // Databases (grouped)
+    { name: 'Redis', type: 'Databases', icon: icons.redis },
     { name: 'MySQL', type: 'Databases', icon: icons.mysql },
     { name: 'SQLite', type: 'Databases', icon: icons.sqlite },
     { name: 'Microsoft SQL Server', type: 'Databases', icon: icons.mssql },
     { name: 'SingleStore', type: 'Databases', icon: icons.singlestore },
     { name: 'Oracle', type: 'Databases', icon: icons.oracle },
-    { name: 'Redis', type: 'Databases', icon: icons.redis },
-    { name: 'GitHub Actions', type: 'DevOps', icon: icons.githubActions },
-    { name: 'GitLab CI/CD', type: 'DevOps', icon: icons.gitlabCiCd },
-    { name: 'Docker', type: 'DevOps', icon: icons.docker },
-    { name: 'Gradle', type: 'DevOps', icon: icons.portainer },
-    { name: 'Portainer', type: 'DevOps', icon: icons.portainer },
+
+    // DevOps & Infra (secondary tier)
+    { name: 'Caddy', type: 'DevOps', icon: icons.caddy },
     { name: 'nginx', type: 'DevOps', icon: icons.nginx },
+    { name: 'Prometheus', type: 'DevOps', icon: icons.prometheus },
     { name: 'Grafana', type: 'DevOps', icon: icons.grafana },
     { name: 'Metabase', type: 'DevOps', icon: icons.metabase },
-    { name: 'Prometheus', type: 'DevOps', icon: icons.prometheus },
     { name: 'SonarQube', type: 'DevOps', icon: icons.sonarqube },
     { name: 'Sentry', type: 'DevOps', icon: icons.sentry },
-    { name: 'Android Studio', type: 'Tools', icon: icons.androidStudio },
-    { name: 'IntelliJ IDEA', type: 'Tools', icon: icons.intelliJ },
-    { name: 'PyCharm', type: 'Tools', icon: icons.pycharm },
-    { name: 'Visual Studio', type: 'Tools', icon: icons.visualStudio },
-    { name: 'Visual Studio Code', type: 'Tools', icon: icons.vsCode },
+    { name: 'Portainer', type: 'DevOps', icon: icons.portainer },
+    { name: 'Gradle', type: 'DevOps', icon: icons.gradle },
+
+    // Tools / IDEs
     { name: 'git', type: 'Tools', icon: icons.git },
     { name: 'Postman', type: 'Tools', icon: icons.postman },
-    { name: 'SolidWorks', type: 'Other', icon: icons.solidWorks },
+    { name: 'IntelliJ IDEA', type: 'Tools', icon: icons.intelliJ },
+    { name: 'PyCharm', type: 'Tools', icon: icons.pycharm },
+    { name: 'Visual Studio Code', type: 'Tools', icon: icons.vsCode },
+    { name: 'Visual Studio', type: 'Tools', icon: icons.visualStudio },
+    { name: 'Android Studio', type: 'Tools', icon: icons.androidStudio },
+
+    // Other platforms (OS & misc)
     { name: 'Ubuntu', type: 'Platforms', icon: icons.ubuntu },
     { name: 'Windows', type: 'Platforms', icon: icons.windows },
     { name: 'macOS', type: 'Platforms', icon: icons.macOs },
-    { name: 'API Design', type: 'Other' },
-    { name: 'PCB Design', type: 'Other' },
-    { name: 'Digital Electronics', type: 'Other' }
+
+    // Side tech / hobbies (optional to mark printable: false)
+    { name: 'Android', type: 'Platforms', icon: icons.android },
+    { name: '.NET', type: 'Platforms', icon: icons.dotnet },
+    { name: 'Angular', type: 'Framework/Library', icon: icons.angular },
+    { name: 'Material for MkDocs', type: 'Framework/Library', icon: icons.mkdocsMaterial },
+    { name: 'Sphinx', type: 'Framework/Library', icon: icons.sphinx },
+    { name: 'Read The Docs', type: 'Framework/Library', icon: icons.rtd },
+    { name: 'Discord', type: 'Platforms', icon: icons.discord },
+    { name: 'Raspberry Pi', type: 'Platforms', icon: icons.raspberrypi },
+    { name: 'Arduino', type: 'Platforms', icon: icons.arduino },
+    { name: 'Processing', type: 'Platforms', icon: icons.processing },
+    { name: 'C++', type: 'Programming Languages', icon: icons.cplusplus }
   ]
+
 };
